@@ -12,9 +12,10 @@ class GoogleMapsAPI
   end
 
   # Given 2 points, obtain the distance and travel time.
-  # @param origin
-  # @param destination
-  # @option mode
+  # Refer to: https://developers.google.com/maps/documentation/distance-matrix/distance-matrix
+  # @param  origin      [String]  Can be addresses or coordinate.
+  # @param  destination [String]  Can be addresses or coordinate.
+  # @option mode        [String]  Possible values are ['driving', 'walking', 'transit', 'bicycling']
   def distance_matrix(origin, destination, mode = 'driving')
     @http.get('/maps/api/distancematrix/json', params: {
                 destinations: destination,

@@ -10,7 +10,7 @@ end
 
 # NTHUSA API
 nthu = NTHUAPI.new
-save_yaml('nthuapi_bus_schedule', nthu.bus_schedule('綜二', 'main', 'up', 'current')[0])
+save_yaml('nthuapi_bus_schedule', nthu.bus_schedule('綜二館', 'main', 'up', 'current')[0])
 
 # Google Maps API
 google = GoogleMapsAPI.new

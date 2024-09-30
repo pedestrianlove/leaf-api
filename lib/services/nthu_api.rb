@@ -9,11 +9,20 @@ class NTHUAPI
     @http = HTTP.accept(:json).persistent('https://api.nthusa.tw')
   end
 
-  def bus_schedule(stop_name, _type, _direction, _day)
+  # Given a bus stop, type, direction and day, obtain the schedule.
+  # Refer to: https://api.nthusa.tw/docs#/Buses/get_stop_bus_buses_stops__stop_name___get
+  # @param  stop_name   [String]  Possible values: [
+  #                                 '北校門口', '綜二館', '楓林小徑', '人社院&生科館',
+  #                                 '台積館', '奕園停車場', '南門停車場', '南大校區校門口右側(食品路校牆邊)'
+  #                                 ]
+  # @param  type        [String]  Possible values: ['all', 'main', 'nanda'].
+  # @param  direction   [String]  Possible values: ['up', 'down']
+  # @option day         [String]  Possible values: ['all', 'weekday', 'weekend', 'current']
+  def bus_schedule(stop_name, type, direction, day)
     @http.get("/buses/stops/#{stop_name}/", params: {
-                bus_type: 'type',
-                direction: 'up',
-                day: 'current'
+                bus_type: type,
+                direction: direction,
+                day: day
               }).parse
   end
 end
