@@ -1,0 +1,34 @@
+{
+  "name": "leaf-api",
+  "service": "cli",
+  "remoteUser": "root",
+  "shutdownAction": "stopCompose",
+  "workspaceFolder": "/workspaces/cli",
+  "dockerComposeFile": "compose.yaml",
+  "postCreateCommand": "bundle install",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "stateful.runme",
+        "castwide.solargraph",
+        "misogi.ruby-rubocop",
+      ],
+      "settings": {
+        "ruby.useLanguageServer": true,
+        "editor.fontSize": 18,
+        "editor.minimap.enabled": false,
+        "workbench.editorAssociations": {
+          "*.md": "markdown.preview.editor"
+        }
+      },
+      "[ruby]": {    
+        "editor.formatOnSave": false,    
+        "editor.tabSize": 2,    
+        "editor.insertSpaces": true,    
+        "files.trimTrailingWhitespace": true,    
+        "files.insertFinalNewline": true  
+      }
+    }
+  }
+}

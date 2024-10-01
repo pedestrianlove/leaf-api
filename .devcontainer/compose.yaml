@@ -1,0 +1,6 @@
+services:
+  cli:
+    image: "ghcr.io/pedestrianlove/hw-fizzbuzz:latest"
+    volumes:
+      - ..:/workspaces/cli
+      - ./fish:/root/.config/fish
