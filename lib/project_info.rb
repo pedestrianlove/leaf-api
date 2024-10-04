@@ -3,6 +3,7 @@
 require 'yaml'
 require_relative './services/nthu_api'
 require_relative './services/google_maps_api'
+require_relative './services/nominatim_api'
 
 def save_yaml(name, result)
   File.write("spec/fixtures/#{name}.yaml", result.to_yaml)
@@ -16,3 +17,8 @@ save_yaml('nthuapi_bus_schedule', nthu.bus_schedule('綜二館', 'main', 'up', '
 google = GoogleMapsAPI.new
 save_yaml('google_maps_distance_matrix',
           google.distance_matrix('光明里 300, Hsinchu City, East District', '24.8022,120.9901', 'walking'))
+
+# Nominatim API
+nominatim = NominatimAPI.new
+result = nominatim.search('清華大學')
+save_yaml('nominatim_serach_nthu', result)
