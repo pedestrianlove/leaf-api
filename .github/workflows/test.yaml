@@ -1,0 +1,24 @@
+name: Test API Calls
+
+on: [push, pull_request]
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+    - name: Setup the project secrets
+      run: |
+        cp config/secrets.yaml.example config/secrets.yaml
+
+    - name: Run the project_info.rb to generate API data.
+      run: |
+        bundle exec ruby lib/project_info.rb
