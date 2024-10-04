@@ -6,7 +6,7 @@ require_relative './services/google_maps_api'
 require_relative './services/nominatim_api'
 
 def save_yaml(name, result)
-  File.write("spec/fixtures/#{name}.yaml", result.to_yaml)
+  File.write("spec/fixtures/#{name}-results.yaml", result.to_yaml)
 end
 
 # NTHUSA API
