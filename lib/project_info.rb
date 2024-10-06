@@ -4,6 +4,7 @@ require 'yaml'
 require_relative './services/nthu_api'
 require_relative './services/google_maps_api'
 require_relative './services/nominatim_api'
+require_relative './services/llama_api'
 
 def save_yaml(name, result)
   File.write("spec/fixtures/#{name}-results.yaml", result.to_yaml)
@@ -22,3 +23,8 @@ save_yaml('google_maps_distance_matrix',
 nominatim = NominatimAPI.new
 result = nominatim.search('清華大學')
 save_yaml('nominatim_serach_nthu', result)
+
+# Llama API
+api = LlamaAPI.new
+response = api.generate_text('Tell me a joke')
+save_yaml('Llama_response', response)
