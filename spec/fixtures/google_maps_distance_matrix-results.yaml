@@ -1,0 +1,15 @@
+---
+destination_addresses:
+- No. 18, Lane 49, Zhongxiao Rd, East District, Hsinchu City, Taiwan 300
+origin_addresses:
+- 300, Taiwan, 新竹市東區光明里
+rows:
+- elements:
+  - distance:
+      text: 2.4 km
+      value: 2360
+    duration:
+      text: 31 mins
+      value: 1833
+    status: OK
+status: OK
