@@ -31,6 +31,7 @@ GEM
     llhttp-ffi (0.5.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
+    minitest (5.25.1)
     public_suffix (6.0.1)
     rake (13.2.1)
 
@@ -49,6 +50,7 @@ PLATFORMS
 
 DEPENDENCIES
   http
+  minitest
 
 BUNDLED WITH
    2.5.16
