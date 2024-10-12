@@ -1,2 +1,3 @@
 generate:
-	bundle exec ruby lib/project_info.rb
+	
+	bundle exec ruby spec/api/nthu_api_spec.rb

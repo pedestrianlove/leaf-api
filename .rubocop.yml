@@ -1,2 +1,14 @@
+# Apply latest style guide and new cops
+AllCops:
+  TargetRubyVersion: 3.3
+  NewCops: enable
+
+# ignore block length in test code only
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - spec/**/*
+
+# Fix hash shorthand to avoid weird syntax
 Style/HashSyntax:
   EnforcedShorthandSyntax: never

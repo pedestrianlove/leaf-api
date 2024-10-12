@@ -1,0 +1,8 @@
+---
+bus_info:
+  time: '7:20'
+  description: ''
+  route: 校園公車
+  dep_stop: 校門
+  line: red
+arrive_time: '07:20'
