@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'http'
+require_relative 'api_errors'
 
 # This is the service class to make API requests to NTHUSA API:
 # https://api.nthusa.tw/docs
@@ -19,10 +20,14 @@ class NTHUAPI
   # @param  direction   [String]  Possible values: ['up', 'down']
   # @option day         [String]  Possible values: ['all', 'weekday', 'weekend', 'current']
   def bus_schedule(stop_name, type, direction, day)
-    @http.get("/buses/stops/#{stop_name}/", params: {
-                bus_type: type,
-                direction: direction,
-                day: day
-              }).parse
+    response = @http.get("/buses/stops/#{stop_name}/", params: {
+                           bus_type: type,
+                           direction: direction,
+                           day: day
+                         })
+
+    raise HTTPError.new(response.status.to_s), 'by NTHUAPI' unless response.status.success?
+
+    response.parse
   end
 end

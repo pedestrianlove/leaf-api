@@ -1,16 +1,17 @@
 # frozen_string_literal: true
 
 require 'http'
-require 'yaml'
 require 'json'
+
+require_relative 'api_errors'
 
 # This is the service class to make API requests to Huggingface endpoint:
 # https://huggingface.co/docs/api-inference/index
 class LlamaAPI
-  def initialize
+  def initialize(secret)
     # Initialize the HTTP client and load API key from the secrets YAML file
     @http = HTTP.accept(:json).follow.persistent('https://api-inference.huggingface.co')
-    @secret = YAML.safe_load_file('config/secrets.yaml')['HUGGINGFACE_API_KEY'] # Load API key from secrets file
+    @secret = secret
   end
 
   # Generate a text completion based on a given prompt.
@@ -20,7 +21,9 @@ class LlamaAPI
     response = @http.post("/models/#{model}",
                           headers: { 'Authorization' => "Bearer #{@secret}" },
                           json: { inputs: prompt })
-    output = JSON.parse(response.body)
-    output[0]['generated_text']
+
+    raise HTTPError.new(response.status.to_s), 'by HuggingFaceAPI' unless response.status.success?
+
+    response.parse
   end
 end
