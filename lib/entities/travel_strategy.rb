@@ -37,7 +37,7 @@ module TravelStrategy
     def duration(starting_point, destination)
       google = GoogleMapsAPI.new
       payload = google.distance_matrix(starting_point, destination, 'walking')
-      payload['rows']['elements']['duration']['value']
+      payload['rows'][0]['elements'][0]['duration']['value']
     end
   end
 
@@ -45,8 +45,8 @@ module TravelStrategy
   class DrivingStrategy < BaseStrategy
     def duration(starting_point, destination)
       google = GoogleMapsAPI.new
-      google.distance_matrix(starting_point, destination, 'driving')
-      payload['rows']['elements']['duration']['value']
+      payload = google.distance_matrix(starting_point, destination, 'driving')
+      payload['rows'][0]['elements'][0]['duration']['value']
     end
   end
 
@@ -54,8 +54,8 @@ module TravelStrategy
   class TransitStrategy < BaseStrategy
     def duration(starting_point, destination)
       google = GoogleMapsAPI.new
-      google.distance_matrix(starting_point, destination, 'transit')
-      payload['rows']['elements']['duration']['value']
+      payload = google.distance_matrix(starting_point, destination, 'transit')
+      payload['rows'][0]['elements'][0]['duration']['value']
     end
   end
 
@@ -63,8 +63,8 @@ module TravelStrategy
   class BicyclingStrategy < BaseStrategy
     def duration(starting_point, destination)
       google = GoogleMapsAPI.new
-      google.distance_matrix(starting_point, destination, 'bicycling')
-      payload['rows']['elements']['duration']['value']
+      payload = google.distance_matrix(starting_point, destination, 'bicycling')
+      payload['rows'][0]['elements'][0]['duration']['value']
     end
   end
 

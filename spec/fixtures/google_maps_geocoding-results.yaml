@@ -1,0 +1,52 @@
+---
+results:
+- address_components:
+  - long_name: 光明里
+    short_name: 光明里
+    types:
+    - administrative_area_level_3
+    - political
+  - long_name: 東區
+    short_name: 東區
+    types:
+    - administrative_area_level_2
+    - political
+  - long_name: 新竹市
+    short_name: 新竹市
+    types:
+    - administrative_area_level_1
+    - political
+  - long_name: Taiwan
+    short_name: TW
+    types:
+    - country
+    - political
+  - long_name: '300'
+    short_name: '300'
+    types:
+    - postal_code
+  formatted_address: 300, Taiwan, 新竹市東區光明里
+  geometry:
+    bounds:
+      northeast:
+        lat: 24.7998215
+        lng: 121.0055793
+      southwest:
+        lat: 24.7826199
+        lng: 120.9778747
+    location:
+      lat: 24.7887403
+      lng: 120.9962356
+    location_type: APPROXIMATE
+    viewport:
+      northeast:
+        lat: 24.7998215
+        lng: 121.0055793
+      southwest:
+        lat: 24.7826199
+        lng: 120.9778747
+  place_id: ChIJXW0bawk2aDQRlSR_EpFgF9k
+  types:
+  - administrative_area_level_3
+  - political
+status: OK

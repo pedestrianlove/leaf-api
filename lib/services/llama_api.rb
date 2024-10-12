@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'http'
-require 'yaml'
 require 'json'
 
 require_relative 'api_errors'

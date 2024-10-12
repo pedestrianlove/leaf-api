@@ -17,7 +17,7 @@ class NominatimAPI
     response = @http.get('/search', params: {
                            q: query,
                            format: format
-                         }).parse
+                         })
 
     raise HTTPError.new(response.status.to_s), 'by NominatimAPI' unless response.status.success?
 

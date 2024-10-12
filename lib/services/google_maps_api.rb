@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'http'
-require 'yaml'
 require_relative 'api_errors'
 
 # This is the service class to make API requests to Google Maps API:
@@ -25,7 +24,26 @@ class GoogleMapsAPI
                            key: @secret
                          })
 
-    raise HTTPError.new(response.status.to_s), 'by GoogleMapsAPI' unless response.status.success?
+    raise HTTPError.new(response.status.to_s), 'by GoogleMapsAPI::DistanceMatrix' unless response.status.success?
+
+    unless response.parse['error_message'].nil?
+      raise HTTPError.new(response.parse['error_message']),
+            'by GoogleMapsAPI'
+    end
+
+    response.parse
+  end
+
+  # Given a string, obtain the longitude, latitude of the location.
+  # Refer to: https://developers.google.com/maps/documentation/geocoding/requests-geocoding
+  # @param address      [String] String of your address
+  def geocoding(address)
+    response = @http.get('/maps/api/geocode/json', params: {
+                           address: address,
+                           key: @secret
+                         })
+
+    raise HTTPError.new(response.status.to_s), 'by GoogleMapsAPI::Geocoding' unless response.status.success?
 
     unless response.parse['error_message'].nil?
       raise HTTPError.new(response.parse['error_message']),
