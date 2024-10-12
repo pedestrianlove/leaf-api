@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'http'
+require_relative 'api_errors'
 
 # This is the service class to make API requests to Nominatim API:
 # https://nominatim.org/release-docs/develop/api/Search/
@@ -13,9 +14,13 @@ class NominatimAPI
   # @param  query [String] The location to search for
   # @option format [String] Possible values: ['json', 'xml', etc.]
   def search(query, format = 'json')
-    @http.get('/search', params: {
-                q: query,
-                format: format
-              }).parse
+    response = @http.get('/search', params: {
+                           q: query,
+                           format: format
+                         }).parse
+
+    raise HTTPError.new(response.status.to_s), 'by NominatimAPI' unless response.status.success?
+
+    response.parse
   end
 end

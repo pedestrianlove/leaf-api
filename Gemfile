@@ -7,3 +7,4 @@ gem 'http'
 
 # Testing
 gem 'minitest'
+gem 'minitest-rg'

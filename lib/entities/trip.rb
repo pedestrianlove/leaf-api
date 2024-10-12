@@ -13,10 +13,10 @@ class Trip
   def initialize(starting_point, destination, strategy = 'walking')
     @starting_point = starting_point
     @destination = destination
-    @strategy = TravelStrategy.choose(strategy).new
+    @strategy = TravelStrategy.choose(strategy)
   end
 
   def duration
-    @strategy.duration(starting_point, destination)
+    @strategy.duration(starting_point.to_s, destination.to_s)
   end
 end

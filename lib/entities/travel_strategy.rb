@@ -18,7 +18,7 @@ module TravelStrategy
   def choose(strategy)
     raise UnknownStrategyError unless LIST.include? strategy
 
-    LIST[strategy]
+    LIST[strategy].new
   end
 
   # Base class for all strategies to ensure they implement compute_duration
@@ -36,7 +36,8 @@ module TravelStrategy
   class WalkingStrategy < BaseStrategy
     def duration(starting_point, destination)
       google = GoogleMapsAPI.new
-      google.distance_matrix(starting_point, destination, 'walking')
+      payload = google.distance_matrix(starting_point, destination, 'walking')
+      payload['rows']['elements']['duration']['value']
     end
   end
 
@@ -45,6 +46,7 @@ module TravelStrategy
     def duration(starting_point, destination)
       google = GoogleMapsAPI.new
       google.distance_matrix(starting_point, destination, 'driving')
+      payload['rows']['elements']['duration']['value']
     end
   end
 
@@ -53,6 +55,7 @@ module TravelStrategy
     def duration(starting_point, destination)
       google = GoogleMapsAPI.new
       google.distance_matrix(starting_point, destination, 'transit')
+      payload['rows']['elements']['duration']['value']
     end
   end
 
@@ -61,6 +64,7 @@ module TravelStrategy
     def duration(starting_point, destination)
       google = GoogleMapsAPI.new
       google.distance_matrix(starting_point, destination, 'bicycling')
+      payload['rows']['elements']['duration']['value']
     end
   end
 

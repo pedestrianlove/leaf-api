@@ -9,4 +9,8 @@ class Location
     @latitude = latitude
     @longtitude = longtitude
   end
+
+  def to_s
+    "#{@latitude},#{@longtitude}"
+  end
 end
