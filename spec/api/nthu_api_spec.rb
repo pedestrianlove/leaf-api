@@ -12,8 +12,10 @@ CORRECT_RESPONSE = [YAML.safe_load_file('spec/fixtures/nthuapi_bus_schedule-resu
 describe 'Test NTHUAPI library' do
   describe 'API Authentication Suceed' do
     it 'Receive correct data.' do
-      payload = NTHUAPI.new.bus_schedule('綜二館', 'main', 'up', 'current')
-      _(payload[0]).wont_be_nil
+      payload = NTHUAPI.new.bus_schedule('北校門口', 'main', 'up', 'all')[0]
+      _(payload).wont_be_nil
+      formatted_payload = payload.is_a?(Hash) ? [payload] : payload
+      _(formatted_payload).must_equal CORRECT_RESPONSE
     end
   end
 end
