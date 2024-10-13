@@ -1,0 +1,519 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=24.8022,120.9901&key=<GOOGLE_TOKEN>&mode=transit&origins=%E5%85%89%E6%98%8E%E9%87%8C%20300,%20Hsinchu%20City,%20East%20District
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 13 Oct 2024 08:45:24 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '805'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=165
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"No. 18, Lane 49,
+        Zhongxiao Rd, East District, Hsinchu City, Taiwan 300\"\n   ],\n   \"origin_addresses\"
+        : \n   [\n      \"300, Taiwan, 新竹市東區光明里\"\n   ],\n   \"rows\" : \n   [\n      {\n
+        \        \"elements\" : \n         [\n            {\n               \"distance\"
+        : \n               {\n                  \"text\" : \"2.6 km\",\n                  \"value\"
+        : 2637\n               },\n               \"duration\" : \n               {\n
+        \                 \"text\" : \"25 mins\",\n                  \"value\" : 1485\n
+        \              },\n               \"fare\" : \n               {\n                  \"currency\"
+        : \"TWD\",\n                  \"text\" : \"NT$25.00\",\n                  \"value\"
+        : 25\n               },\n               \"status\" : \"OK\"\n            }\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Sun, 13 Oct 2024 08:45:24 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=24.8022,120.9901&key=<GOOGLE_TOKEN>&mode=driving&origins=%E5%85%89%E6%98%8E%E9%87%8C%20300,%20Hsinchu%20City,%20East%20District
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 13 Oct 2024 08:45:24 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '636'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=49
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"No. 18, Lane 49,
+        Zhongxiao Rd, East District, Hsinchu City, Taiwan 300\"\n   ],\n   \"origin_addresses\"
+        : \n   [\n      \"300, Taiwan, 新竹市東區光明里\"\n   ],\n   \"rows\" : \n   [\n      {\n
+        \        \"elements\" : \n         [\n            {\n               \"distance\"
+        : \n               {\n                  \"text\" : \"3.4 km\",\n                  \"value\"
+        : 3388\n               },\n               \"duration\" : \n               {\n
+        \                 \"text\" : \"10 mins\",\n                  \"value\" : 615\n
+        \              },\n               \"status\" : \"OK\"\n            }\n         ]\n
+        \     }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Sun, 13 Oct 2024 08:45:24 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=24.8022,120.9901&key=<GOOGLE_TOKEN>&mode=walking&origins=%E5%85%89%E6%98%8E%E9%87%8C%20300,%20Hsinchu%20City,%20East%20District
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 13 Oct 2024 08:45:24 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '637'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=39
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"No. 18, Lane 49,
+        Zhongxiao Rd, East District, Hsinchu City, Taiwan 300\"\n   ],\n   \"origin_addresses\"
+        : \n   [\n      \"300, Taiwan, 新竹市東區光明里\"\n   ],\n   \"rows\" : \n   [\n      {\n
+        \        \"elements\" : \n         [\n            {\n               \"distance\"
+        : \n               {\n                  \"text\" : \"2.4 km\",\n                  \"value\"
+        : 2360\n               },\n               \"duration\" : \n               {\n
+        \                 \"text\" : \"31 mins\",\n                  \"value\" : 1834\n
+        \              },\n               \"status\" : \"OK\"\n            }\n         ]\n
+        \     }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Sun, 13 Oct 2024 08:45:24 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=24.8022,120.9901&key=<GOOGLE_TOKEN>&mode=bicycling&origins=%E5%85%89%E6%98%8E%E9%87%8C%20300,%20Hsinchu%20City,%20East%20District
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 13 Oct 2024 08:45:24 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '635'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=52
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"No. 18, Lane 49,
+        Zhongxiao Rd, East District, Hsinchu City, Taiwan 300\"\n   ],\n   \"origin_addresses\"
+        : \n   [\n      \"300, Taiwan, 新竹市東區光明里\"\n   ],\n   \"rows\" : \n   [\n      {\n
+        \        \"elements\" : \n         [\n            {\n               \"distance\"
+        : \n               {\n                  \"text\" : \"2.6 km\",\n                  \"value\"
+        : 2570\n               },\n               \"duration\" : \n               {\n
+        \                 \"text\" : \"8 mins\",\n                  \"value\" : 462\n
+        \              },\n               \"status\" : \"OK\"\n            }\n         ]\n
+        \     }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Sun, 13 Oct 2024 08:45:24 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=24.8134,120.97101&key=<GOOGLE_TOKEN>&mode=walking&origins=24.8022,120.9901
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 13 Oct 2024 09:02:52 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '660'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=119
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"No. 260, Minquan
+        Rd, East District, Hsinchu City, Taiwan 300\"\n   ],\n   \"origin_addresses\"
+        : \n   [\n      \"No. 18, Lane 49, Zhongxiao Rd, East District, Hsinchu City,
+        Taiwan 300\"\n   ],\n   \"rows\" : \n   [\n      {\n         \"elements\"
+        : \n         [\n            {\n               \"distance\" : \n               {\n
+        \                 \"text\" : \"3.0 km\",\n                  \"value\" : 3034\n
+        \              },\n               \"duration\" : \n               {\n                  \"text\"
+        : \"41 mins\",\n                  \"value\" : 2484\n               },\n               \"status\"
+        : \"OK\"\n            }\n         ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Sun, 13 Oct 2024 09:02:52 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=24.8134,120.97101&key=<GOOGLE_TOKEN>&mode=bicycling&origins=24.8022,120.9901
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 13 Oct 2024 09:02:52 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '659'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=48
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"No. 260, Minquan
+        Rd, East District, Hsinchu City, Taiwan 300\"\n   ],\n   \"origin_addresses\"
+        : \n   [\n      \"No. 18, Lane 49, Zhongxiao Rd, East District, Hsinchu City,
+        Taiwan 300\"\n   ],\n   \"rows\" : \n   [\n      {\n         \"elements\"
+        : \n         [\n            {\n               \"distance\" : \n               {\n
+        \                 \"text\" : \"3.2 km\",\n                  \"value\" : 3165\n
+        \              },\n               \"duration\" : \n               {\n                  \"text\"
+        : \"12 mins\",\n                  \"value\" : 737\n               },\n               \"status\"
+        : \"OK\"\n            }\n         ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Sun, 13 Oct 2024 09:02:52 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=24.8134,120.97101&key=<GOOGLE_TOKEN>&mode=driving&origins=24.8022,120.9901
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 13 Oct 2024 09:02:52 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '658'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=44
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"No. 260, Minquan
+        Rd, East District, Hsinchu City, Taiwan 300\"\n   ],\n   \"origin_addresses\"
+        : \n   [\n      \"No. 18, Lane 49, Zhongxiao Rd, East District, Hsinchu City,
+        Taiwan 300\"\n   ],\n   \"rows\" : \n   [\n      {\n         \"elements\"
+        : \n         [\n            {\n               \"distance\" : \n               {\n
+        \                 \"text\" : \"3.2 km\",\n                  \"value\" : 3179\n
+        \              },\n               \"duration\" : \n               {\n                  \"text\"
+        : \"8 mins\",\n                  \"value\" : 491\n               },\n               \"status\"
+        : \"OK\"\n            }\n         ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Sun, 13 Oct 2024 09:02:52 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=24.8134,120.97101&key=<GOOGLE_TOKEN>&mode=transit&origins=24.8022,120.9901
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 13 Oct 2024 09:02:52 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '828'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=72
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"No. 260, Minquan
+        Rd, East District, Hsinchu City, Taiwan 300\"\n   ],\n   \"origin_addresses\"
+        : \n   [\n      \"No. 18, Lane 49, Zhongxiao Rd, East District, Hsinchu City,
+        Taiwan 300\"\n   ],\n   \"rows\" : \n   [\n      {\n         \"elements\"
+        : \n         [\n            {\n               \"distance\" : \n               {\n
+        \                 \"text\" : \"3.7 km\",\n                  \"value\" : 3731\n
+        \              },\n               \"duration\" : \n               {\n                  \"text\"
+        : \"20 mins\",\n                  \"value\" : 1173\n               },\n               \"fare\"
+        : \n               {\n                  \"currency\" : \"TWD\",\n                  \"text\"
+        : \"NT$15.00\",\n                  \"value\" : 15\n               },\n               \"status\"
+        : \"OK\"\n            }\n         ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Sun, 13 Oct 2024 09:02:52 GMT
+recorded_with: VCR 6.3.1

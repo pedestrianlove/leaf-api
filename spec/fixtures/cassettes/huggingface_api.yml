@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
+    body:
+      encoding: UTF-8
+      string: '{"inputs":"Tell me a joke"}'
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <HUGGINGFACE_API_KEY>
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Host:
+      - api-inference.huggingface.co
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 12 Oct 2024 16:19:33 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '496'
+      Connection:
+      - keep-alive
+      X-Compute-Type:
+      - cache
+      X-Compute-Time:
+      - '16.363858221'
+      X-Sha:
+      - 221e3535e1ac4840bdf061a12b634139c84e144c
+      Vary:
+      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+      X-Request-Id:
+      - 7Fsnrqw8CIznHi-IgQn4T
+      Access-Control-Allow-Credentials:
+      - 'true'
+    body:
+      encoding: UTF-8
+      string: '[{"generated_text":"Tell me a joke, Vid. I need to know what you''re
+        all thinking.\nWhat''s a teen''s most perfect present, then?\nLand of Space
+        and Heavy Metal.\nHow to win all the women in your school to fame and limelight.\nHow
+        to survive Thanksgiving With My Family.\nDiscount for Life. Very Special Offer.\nIt
+        will likely be a wealth drowning sa would take.\nIntroduce yourself on our
+        chat line.\nBoil the kids until you hit a happy medium of boiled fresh while
+        boiling fats and through that"}]'
+  recorded_at: Sat, 12 Oct 2024 16:19:34 GMT
+- request:
+    method: post
+    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
+    body:
+      encoding: UTF-8
+      string: '{"inputs":"Tell me a joke"}'
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer YOUR_TOKEN_HERE
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Host:
+      - api-inference.huggingface.co
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sat, 12 Oct 2024 16:19:34 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '72'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Request-Id:
+      - iBwadrh16I3yXxsD7rrS-
+      Vary:
+      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+    body:
+      encoding: UTF-8
+      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
+  recorded_at: Sat, 12 Oct 2024 16:19:34 GMT
+recorded_with: VCR 6.3.1

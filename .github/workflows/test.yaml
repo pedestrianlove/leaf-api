@@ -17,8 +17,8 @@ jobs:
 
     - name: Setup the project secrets
       run: |
-        cp config/secrets.yaml.example config/secrets.yaml
+        cp config/secrets.yaml.testing config/secrets.yaml
 
-    - name: Run the project_info.rb to generate API data.
+    - name: Run the project tests via rake spec command
       run: |
-        bundle exec ruby lib/project_info.rb
+        bundle exec rake spec

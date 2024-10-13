@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/search?format=json&q=%E6%B8%85%E8%8F%AF%E5%A4%A7%E5%AD%B8
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - nominatim.openstreetmap.org
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sat, 12 Oct 2024 16:19:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1040'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+    body:
+      encoding: UTF-8
+      string: '[{"place_id":226607086,"licence":"Data © OpenStreetMap contributors,
+        ODbL 1.0. http://osm.org/copyright","osm_type":"relation","osm_id":7469216,"lat":"40.002290450000004","lon":"116.3209629696906","class":"amenity","type":"university","place_rank":30,"importance":0.5953525472779607,"addresstype":"amenity","name":"清华大学","display_name":"清华大学,
+        30, 双清路, 五道口, 东升镇, 海淀区, 北京市, 100084, 中国","boundingbox":["39.9913343","40.0119458","116.3092630","116.3308165"]},{"place_id":232325707,"licence":"Data
+        © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright","osm_type":"relation","osm_id":3605515,"lat":"24.7916987","lon":"120.99242952395865","class":"emergency","type":"assembly_point","place_rank":30,"importance":0.5076366205574476,"addresstype":"emergency","name":"國立清華大學","display_name":"國立清華大學,
+        101, 光復路二段298巷9弄, 文教新村, 建功里, 東區, 新竹市, 30013, 臺灣","boundingbox":["24.7849692","24.7983978","120.9832401","121.0025382"]}]'
+  recorded_at: Sat, 12 Oct 2024 16:19:33 GMT
+recorded_with: VCR 6.3.1
