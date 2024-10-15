@@ -28,9 +28,7 @@ module LeafAPI
                                day: day
                              })
 
-        raise HTTPError.new(response.status.to_s), 'by NTHUAPI' unless response.status.success?
-
-        response.parse
+        Response.new(response).handle_error('by NTHUSA API')
       end
     end
   end

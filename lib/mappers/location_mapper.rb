@@ -21,14 +21,17 @@ module LeafAPI
         )
       end
 
+      # TODO: Finish this function.
       def build_entity(data); end
 
+      # TODO: Finish this function.
       def name; end
 
+      # TODO: Finish this function.
       def latitude; end
 
+      # TODO: Finish this function.
       def longtitude; end
-      # TODO: Refer to the TripMapper and Finish the LocationMapper class...
     end
   end
 end

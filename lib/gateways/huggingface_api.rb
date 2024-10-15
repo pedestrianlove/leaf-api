@@ -2,7 +2,6 @@
 
 require 'http'
 require 'json'
-require 'yaml'
 
 require_relative '../utils'
 
@@ -11,10 +10,10 @@ module LeafAPI
     # This is the service class to make API requests to Huggingface endpoint:
     # https://huggingface.co/docs/api-inference/index
     class API
-      def initialize(secret = nil)
+      def initialize(secret)
         # Initialize the HTTP client and load API key from the secrets YAML file
         @http = HTTP.accept(:json).follow.persistent('https://api-inference.huggingface.co')
-        @secret = secret || YAML.safe_load_file('config/secrets.yaml')['HUGGINGFACE_API_KEY']
+        @secret = secret
       end
 
       # Generate a text completion based on a given prompt.
@@ -25,9 +24,7 @@ module LeafAPI
                               headers: { 'Authorization' => "Bearer #{@secret}" },
                               json: { inputs: prompt })
 
-        raise HTTPError.new(response.status.to_s), 'by HuggingFaceAPI' unless response.status.success?
-
-        response.parse
+        Response.new(response).handle_error('by HuggingFaceAPI')
       end
     end
   end
