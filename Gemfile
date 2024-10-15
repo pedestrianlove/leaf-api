@@ -19,3 +19,6 @@ gem 'webmock', '~> 3.24'
 gem 'flog', '~> 4.8'
 gem 'reek', '~> 6.3'
 gem 'rubocop', '~> 1.66'
+
+gem 'dry-struct', '~> 1.6'
+gem 'dry-types', '~> 1.7'

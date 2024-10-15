@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
 require 'http'
-require_relative 'api_errors'
+require_relative '../utils'
 
 module LeafAPI
-  module Service
+  module GoogleMaps
     # This is the service class to make API requests to Google Maps API:
     # https://api.nthusa.tw/docs
-    class GoogleMapsAPI
+    class API
       def initialize(secret = nil)
         @http = HTTP.accept(:json).follow.persistent('https://maps.googleapis.com')
-        @secret = secret.nil? ? YAML.safe_load_file('config/secrets.yaml')['GOOGLE_TOKEN'] : secret
+        @secret = secret || YAML.safe_load_file('config/secrets.yaml')['GOOGLE_TOKEN']
       end
 
       # Given 2 points, obtain the distance and travel time.
@@ -28,12 +28,9 @@ module LeafAPI
 
         raise HTTPError.new(response.status.to_s), 'by GoogleMapsAPI::DistanceMatrix' unless response.status.success?
 
-        unless response.parse['error_message'].nil?
-          raise HTTPError.new(response.parse['error_message']),
-                'by GoogleMapsAPI'
-        end
+        return response.parse if response.parse['error_message'].nil?
 
-        response.parse
+        raise HTTPError.new(response.parse['error_message']), 'by GoogleMapsAPI::DistanceMatrix'
       end
 
       # Given a string, obtain the longitude, latitude of the location.
@@ -47,12 +44,9 @@ module LeafAPI
 
         raise HTTPError.new(response.status.to_s), 'by GoogleMapsAPI::Geocoding' unless response.status.success?
 
-        unless response.parse['error_message'].nil?
-          raise HTTPError.new(response.parse['error_message']),
-                'by GoogleMapsAPI'
-        end
+        return response.parse if response.parse['error_message'].nil?
 
-        response.parse
+        raise HTTPError.new(response.parse['error_message']), 'by GoogleMapsAPI::Geocoding'
       end
     end
   end

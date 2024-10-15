@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 require 'http'
-require_relative 'api_errors'
+require_relative '../utils'
 
 module LeafAPI
-  module Service
+  module NTHUSA
     # This is the service class to make API requests to NTHUSA API:
     # https://api.nthusa.tw/docs
-    class NTHUAPI
+    class API
       def initialize
         @http = HTTP.accept(:json).persistent('https://api.nthusa.tw')
       end
