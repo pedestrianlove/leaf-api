@@ -38,9 +38,8 @@ describe 'Test TripMapper' do
         _(trip.distance).must_be_instance_of Integer
         _(trip.strategy).must_equal strategy
 
-        # TODO: Uncomment this after implementing LocationMapper
-        # _(trip.origin).must_be_kind_of LeafAPI::Entity::Location
-        # _(trip.destination).must_be_kind_of LeafAPI::Entity::Location
+        _(trip.origin).must_be_kind_of LeafAPI::Entity::Location
+        _(trip.destination).must_be_kind_of LeafAPI::Entity::Location
       end
     end
   end
