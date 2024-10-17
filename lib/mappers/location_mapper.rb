@@ -10,28 +10,46 @@ module LeafAPI
         @gateway = @gateway_class.new(@token)
       end
 
-      # TODO: Refer to the TripMapper and Finish the LocationMapper class...
       def find(address)
-        # FIXME: 為了先讓測試能過隨便給的，要改掉照著TripMapper的樣子寫!!!
-        LeafAPI::Entity::Location.new(
-          id: nil,
-          name: address,
-          latitude: 123.1,
-          longtitude: 456.1
-        )
+        data = @gateway.geocoding(address)
+        build_entity(data)
       end
 
-      # TODO: Finish this function.
-      def build_entity(data); end
+      def build_entity(data)
+        DataMapper.new(data, @token, @gateway_class).build_entity
+      end
 
-      # TODO: Finish this function.
-      def name; end
+      # This class maps the response data from Google Maps API to a Location entity.
+      # It extracts necessary information such as name, latitude, and longitude.
+      class DataMapper
+        def initialize(data, token, gateway_class)
+          @data = data
+          @location_mapper = LocationMapper.new(
+            gateway_class, token
+          )
+        end
 
-      # TODO: Finish this function.
-      def latitude; end
+        def build_entity
+          LeafAPI::Entity::Location.new(
+            id: nil,
+            name: name,
+            latitude: latitude,
+            longtitude: longtitude
+          )
+        end
 
-      # TODO: Finish this function.
-      def longtitude; end
+        def name
+          @data['results'][0]['formatted_address']
+        end
+
+        def latitude
+          @data['results'][0]['geometry']['location']['lat']
+        end
+
+        def longtitude
+          @data['results'][0]['geometry']['location']['lng']
+        end
+      end
     end
   end
 end
