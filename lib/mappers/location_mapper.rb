@@ -10,15 +10,7 @@ module LeafAPI
         @gateway = @gateway_class.new(@token)
       end
 
-      # TODO: Refer to the TripMapper and Finish the LocationMapper class...
       def find(address)
-        # FIXME: 為了先讓測試能過隨便給的，要改掉照著TripMapper的樣子寫!!!
-        # LeafAPI::Entity::Location.new(
-        #  id: nil,
-        #  name: address,
-        #  latitude: 123.1,
-        #  longtitude: 456.1
-        # )
         data = @gateway.geocoding(address)
         build_entity(data)
       end
@@ -47,25 +39,17 @@ module LeafAPI
         end
 
         def name
-          @data['result'][0]['formatted_address']
+          @data['results'][0]['formatted_address']
         end
 
         def latitude
-          @data['result'][0]['geometry']['location']['lat']
+          @data['results'][0]['geometry']['location']['lat']
         end
 
         def longtitude
-          @data['result'][0]['geometry']['location']['lng']
+          @data['results'][0]['geometry']['location']['lng']
         end
       end
-      # TODO: Finish this function.
-      #def name; end
-
-      # TODO: Finish this function.
-      #def latitude; end
-
-      # TODO: Finish this function.
-      #def longtitude; end
     end
   end
 end

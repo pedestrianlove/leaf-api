@@ -30,7 +30,7 @@ describe 'Test LocationMapper' do
       location = location_mapper.find('光明里 300, Hsinchu City, East District')
 
       _(location).must_be_kind_of LeafAPI::Entity::Location
-      _(location.name).must_equal '光明里 300, Hsinchu City, East District'
+      _(location.name).must_be_instance_of String
       _(location.latitude).must_be_instance_of Float
       _(location.longtitude).must_be_instance_of Float
     end
