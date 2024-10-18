@@ -13,7 +13,8 @@ require 'minitest/rg'
 require 'vcr'
 require 'webmock'
 
-require_relative '../lib/leaf_api'
+require_relative '../require_app'
+require_app
 
 CORRECT_SECRETS = YAML.safe_load_file('config/secrets.yaml')
 BAD_SECRETS = YAML.safe_load_file('config/secrets.yaml.example')

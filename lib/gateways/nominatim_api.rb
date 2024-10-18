@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 require 'http'
-require_relative 'api_errors'
+require_relative '../utils'
 
 module LeafAPI
-  module Service
+  module Nominatim
     # This is the service class to make API requests to Nominatim API:
     # https://nominatim.org/release-docs/develop/api/Search/
-    class NominatimAPI
+    class API
       def initialize
         @http = HTTP.accept(:json).persistent('https://nominatim.openstreetmap.org')
       end
@@ -21,9 +21,7 @@ module LeafAPI
                                format: format
                              })
 
-        raise HTTPError.new(response.status.to_s), 'by NominatimAPI' unless response.status.success?
-
-        response.parse
+        Response.new(response).handle_error('by NominatimAPI')
       end
     end
   end
