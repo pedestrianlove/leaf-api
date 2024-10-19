@@ -82,6 +82,7 @@ GEM
     llhttp-ffi (0.5.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
+    logger (1.6.1)
     method_source (1.1.0)
     minitest (5.25.1)
     minitest-rg (5.3.0)
@@ -171,6 +172,7 @@ DEPENDENCIES
   dry-types (~> 1.7)
   flog (~> 4.8)
   http
+  logger (~> 1.6)
   minitest
   minitest-rg
   pry (~> 0.14.2)
