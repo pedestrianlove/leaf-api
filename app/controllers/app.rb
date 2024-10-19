@@ -18,42 +18,68 @@ module LeafAPI
     route do |routing|
       routing.assets # load CSS
       response['Content-Type'] = 'text/html; charset=utf-8'
+      setup_routes(routing)
+    end
 
-      # GET /
+    private
+
+    def setup_routes(routing)
+      setup_root(routing)
+      setup_location_routes(routing)
+      setup_trip_routes(routing)
+    end
+
+    def setup_root(routing)
       routing.root do
         view 'home'
       end
+    end
 
-      # Manage Location resources
+    def setup_location_routes(routing)
       routing.on 'locations' do
-        # for search (POST /locations/search)
-        routing.post 'search' do
-          location_query = routing.params['location'].downcase
-          routing.redirect "/locations/#{CGI.escape(location_query)}"
-        end
+        setup_location_search(routing)
+        setup_location_form(routing)
+        setup_location_result(routing)
+      end
+    end
 
-        routing.is do
-          # show seraching table (GET /locations)
-          routing.get do
-            view 'location_form'
-          end
-        end
+    def setup_location_search(routing)
+      routing.post 'search' do
+        handle_search(routing)
+      end
+    end
 
-        # show the searching results (GET /locations/[location_query])
-        routing.on String do |location_query|
-          routing.get do
-            # apply Mapper to get location info
-            location_entity = LeafAPI::GoogleMaps::LocationMapper.new(
-              LeafAPI::GoogleMaps::API,
-              CORRECT_SECRETS['GOOGLE_TOKEN']
-            ).find(location_query)
-            # show the searching results
-            view 'location_result', locals: { location: location_entity }
-          end
+    def setup_location_form(routing)
+      routing.is do
+        routing.get do
+          view 'location_form'
         end
       end
+    end
 
-      # Manage Trip resources
+    def setup_location_result(routing)
+      routing.on String do |location_query|
+        routing.get do
+          handle_location_query(location_query)
+        end
+      end
+    end
+
+    def handle_search(routing)
+      location_query = routing.params['location'].downcase
+      routing.redirect "/locations/#{CGI.escape(location_query)}"
+    end
+
+    def handle_location_query(location_query)
+      location_entity = LeafAPI::GoogleMaps::LocationMapper.new(
+        LeafAPI::GoogleMaps::API,
+        CORRECT_SECRETS['GOOGLE_TOKEN']
+      ).find(location_query)
+
+      view 'location_result', locals: { location: location_entity }
+    end
+
+    def setup_trip_routes(routing)
       routing.on 'trips' do
         routing.get do
           view 'trip'
