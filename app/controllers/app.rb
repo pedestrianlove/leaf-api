@@ -43,7 +43,10 @@ module LeafAPI
         routing.on String do |location_query|
           routing.get do
             # apply Mapper to get location info
-            location_entity = LeafAPI::GoogleMaps::LocationMapper.new(LeafAPI::GoogleMaps::API, CORRECT_SECRETS['GOOGLE_TOKEN']).find(location_query)
+            location_entity = LeafAPI::GoogleMaps::LocationMapper.new(
+              LeafAPI::GoogleMaps::API,
+              CORRECT_SECRETS['GOOGLE_TOKEN']
+            ).find(location_query)
             # show the searching results
             view 'location_result', locals: { location: location_entity }
           end
