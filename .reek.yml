@@ -6,11 +6,5 @@ detectors:
   LongParameterList:
     exclude:
     - LeafAPI::NTHUSA::API#bus_schedule
-  UnusedParameters:
-    exclude:
-    - LeafAPI::GoogleMaps::LocationMapper#build_entity
-  UtilityFunction:
-    exclude:
-    - LeafAPI::GoogleMaps::LocationMapper#find
 exclude_paths:
-  - lib/project_info.rb # one-time test fixture creator
+  - spec/fixture/project_info.rb # one-time test fixture creator

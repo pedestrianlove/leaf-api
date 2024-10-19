@@ -1,42 +1,31 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/harvey/leaf-api/require_app.rb": {
+      "/Users/jsl/Work/leaf-api/require_app.rb": {
         "lines": [
           null,
           null,
           null,
           1,
           1,
-          9,
+          10,
           null,
           null
         ]
       },
-      "/home/harvey/leaf-api/lib/entities/location.rb": {
+      "/Users/jsl/Work/leaf-api/config/environment.rb": {
         "lines": [
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
           1,
           1,
           null,
           1,
           1,
           1,
-          1,
-          null,
           null,
           null
         ]
       },
-      "/home/harvey/leaf-api/lib/entities/trip.rb": {
+      "/Users/jsl/Work/leaf-api/app/models/entities/location.rb": {
         "lines": [
           null,
           null,
@@ -44,16 +33,12 @@
           1,
           null,
           1,
-          null,
-          1,
           1,
           null,
           null,
           1,
           1,
           null,
-          1,
-          1,
           1,
           1,
           1,
@@ -63,7 +48,34 @@
           null
         ]
       },
-      "/home/harvey/leaf-api/lib/gateways/google_maps_api.rb": {
+      "/Users/jsl/Work/leaf-api/app/models/entities/trip.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jsl/Work/leaf-api/app/models/gateways/google_maps_api.rb": {
         "lines": [
           null,
           null,
@@ -114,7 +126,7 @@
           null
         ]
       },
-      "/home/harvey/leaf-api/lib/utils.rb": {
+      "/Users/jsl/Work/leaf-api/app/models/utils.rb": {
         "lines": [
           null,
           null,
@@ -142,7 +154,7 @@
           null
         ]
       },
-      "/home/harvey/leaf-api/lib/gateways/huggingface_api.rb": {
+      "/Users/jsl/Work/leaf-api/app/models/gateways/huggingface_api.rb": {
         "lines": [
           null,
           null,
@@ -177,7 +189,7 @@
           null
         ]
       },
-      "/home/harvey/leaf-api/lib/gateways/nominatim_api.rb": {
+      "/Users/jsl/Work/leaf-api/app/models/gateways/nominatim_api.rb": {
         "lines": [
           null,
           null,
@@ -209,7 +221,7 @@
           null
         ]
       },
-      "/home/harvey/leaf-api/lib/gateways/nthusa_api.rb": {
+      "/Users/jsl/Work/leaf-api/app/models/gateways/nthusa_api.rb": {
         "lines": [
           null,
           null,
@@ -248,7 +260,7 @@
           null
         ]
       },
-      "/home/harvey/leaf-api/lib/mappers/location_mapper.rb": {
+      "/Users/jsl/Work/leaf-api/app/models/mappers/location_mapper.rb": {
         "lines": [
           null,
           null,
@@ -307,7 +319,7 @@
           null
         ]
       },
-      "/home/harvey/leaf-api/lib/mappers/trip_mapper.rb": {
+      "/Users/jsl/Work/leaf-api/app/models/mappers/trip_mapper.rb": {
         "lines": [
           null,
           null,
@@ -377,6 +389,6 @@
         ]
       }
     },
-    "timestamp": 1729169118
+    "timestamp": 1729309549
   }
 }
