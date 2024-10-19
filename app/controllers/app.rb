@@ -28,9 +28,7 @@ module LeafAPI
       routing.on 'locations' do
         # for search (POST /locations/search)
         routing.post 'search' do
-          # puts "Received params: #{routing.params.inspect}" # 輸出所有請求參數
           location_query = routing.params['location'].downcase
-          # puts "Received location query: #{location_query}" # 日誌輸出
           routing.redirect "/locations/#{CGI.escape(location_query)}"
         end
 
