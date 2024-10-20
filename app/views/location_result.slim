@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title Location Result
+  body
+    h1 Location Result
+    - if location
+      p Location Name: #{location.name}
+      p Latitude: #{location.latitude}
+      p Longitude: #{location.longtitude}
+    - else
+      p No location found.

@@ -8,6 +8,11 @@ task :default do
   puts `rake -T`
 end
 
+desc 'Run Development Server'
+task :run do
+  sh 'bundle exec puma'
+end
+
 desc 'run specs'
 Rake::TestTask.new(:spec) do |t|
   t.test_files = FileList['spec/**/*_spec.rb']

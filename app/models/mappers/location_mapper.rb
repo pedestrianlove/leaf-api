@@ -12,6 +12,7 @@ module LeafAPI
 
       def find(address)
         data = @gateway.geocoding(address)
+        puts "Received data: #{data.inspect}" # 加入這一行來輸出接收到的資料
         build_entity(data)
       end
 

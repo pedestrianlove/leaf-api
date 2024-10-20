@@ -1,0 +1,22 @@
+h1 旅行計劃表單
+
+form method="post" action="/trips/submit"
+  div
+    label for="origin" 起點:
+    input type="text" name="origin" id="origin" required placeholder="輸入出發地"
+
+  div
+    label for="destination" 終點:
+    input type="text" name="destination" id="destination" required placeholder="輸入目的地"
+
+  div
+    label for="strategy" 旅行策略:
+    select name="strategy" id="strategy" 
+      option value="walking" 步行
+      option value="driving" 開車
+      option value="bicycling" 騎自行車
+      option value="school_bus" 校園公車
+      option value="transit" 公共交通
+
+  div
+    input type="submit" value="提交" style="background-color: green; color: white; padding: 10px; border: none; cursor: pointer;"
