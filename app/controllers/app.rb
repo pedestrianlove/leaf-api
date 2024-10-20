@@ -58,7 +58,7 @@ module LeafAPI
 
     def setup_trip_submit(routing)
       routing.post 'submit' do
-        handle_submit(routing)
+        routing.redirect "#{routing.params['origin']}/#{routing.params['destination']}/#{routing.params['strategy']}"
       end
     end
 
@@ -71,13 +71,12 @@ module LeafAPI
     end
 
     def setup_trip_result(routing)
-      routing.on String, String do |origin, destination, strategy|
+      routing.on String, String, String do |origin, destination, strategy|
         routing.get do
-          origin = routing.params['origin'] || '北校門口'
-          destination = routing.params['destination'] || '台積館'
-          strategy = routing.params['strategy'] || 'walking'
+          origin ||= '24.795707, 120.996393'
+          destination ||= '24.786930, 120.988428'
+          strategy ||= 'walking'
           trip = trip_entities(origin, destination, strategy)
-          puts "Start: #{origin}, Destination: #{destination}, Strategy: #{strategy}"
 
           view 'trip_result', locals: { trip: trip }
         end
@@ -86,24 +85,24 @@ module LeafAPI
 
     def handle_submit(routing)
       trip_params = extract_trip_data(routing)
-      puts "Received form data: #{routing.params.inspect}"
       routing.redirect "#{trip_params[:origin]}/#{trip_params[:destination]}/#{trip_params[:strategy]}"
     end
 
     def extract_trip_data(routing)
       {
-        origin: routing.params['origin'],
-        destination: routing.params['destination'],
-        strategy: routing.params['strategy'] || 'walking'
+        origin: CGI.escape(routing.params['origin']),
+        destination: CGI.escape(routing.params['destination']),
+        strategy: CGI.escape(routing.params['strategy'])
       }
     end
 
     def trip_entities(origin, destination, strategy)
       mapper = LeafAPI::GoogleMaps::TripMapper.new(
         LeafAPI::GoogleMaps::API,
-        CORRECT_SECRETS['GOOGLE_TOKEN']
+        CONFIG['GOOGLE_TOKEN']
       )
-      mapper.find(origin, destination, strategy)
+      
+      mapper.find(CGI.unescape(origin), CGI.unescape(destination), CGI.unescape(strategy))
     end
   end
 end
