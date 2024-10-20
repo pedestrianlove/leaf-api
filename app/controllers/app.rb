@@ -4,8 +4,7 @@ require 'roda'
 require 'slim'
 require_relative '../models/mappers/location_mapper'
 require_relative '../models/gateways/google_maps_api'
-
-CORRECT_SECRETS = YAML.safe_load_file('config/secrets.yaml')
+require_relative '../../config/environment'
 
 module LeafAPI
   # Web App
@@ -73,7 +72,7 @@ module LeafAPI
     def handle_location_query(location_query)
       location_entity = LeafAPI::GoogleMaps::LocationMapper.new(
         LeafAPI::GoogleMaps::API,
-        CORRECT_SECRETS['GOOGLE_TOKEN']
+        CONFIG['GOOGLE_TOKEN']
       ).find(location_query)
 
       view 'location_result', locals: { location: location_entity }
