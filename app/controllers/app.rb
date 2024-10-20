@@ -42,7 +42,7 @@ module LeafAPI
         setup_location_result(routing)
       end
     end
-    
+
     def setup_location_search(routing)
       routing.post 'search' do
         handle_search(routing)
