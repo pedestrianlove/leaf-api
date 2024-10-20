@@ -8,8 +8,6 @@ require_relative '../models/mappers/trip_mapper'
 require_relative '../models/gateways/google_maps_api'
 require_relative '../../config/environment'
 
-CORRECT_SECRETS = YAML.safe_load_file('config/secrets.yaml')
-
 module LeafAPI
   # This is the main application class that handles routing in LeafAPI
   class App < Roda
@@ -101,7 +99,7 @@ module LeafAPI
         LeafAPI::GoogleMaps::API,
         CONFIG['GOOGLE_TOKEN']
       )
-      
+
       mapper.find(CGI.unescape(origin), CGI.unescape(destination), CGI.unescape(strategy))
     end
   end
