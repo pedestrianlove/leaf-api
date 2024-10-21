@@ -3,22 +3,14 @@
 require_relative '../spec_helper'
 
 describe 'Test TripMapper' do
-  VCR.configure do |c|
-    c.cassette_library_dir = CASSETTES_FOLDER
-    c.hook_into :webmock
-
-    c.filter_sensitive_data('<GOOGLE_TOKEN>') { CORRECT_SECRETS['GOOGLE_TOKEN'] }
-    c.filter_sensitive_data('<GOOGLE_TOKEN_ESC>') { CGI.escape(CORRECT_SECRETS['GOOGLE_TOKEN']) }
-  end
+  VCRHelper.setup_vcr
 
   before do
-    VCR.insert_cassette 'entity_trip',
-                        record: :new_episodes,
-                        match_requests_on: %i[method uri headers]
+    VCRHelper.configure_vcr_for('entity_trip', 'GOOGLE_TOKEN', CORRECT_SECRETS.GOOGLE_TOKEN)
   end
 
   after do
-    VCR.eject_cassette
+    VCRHelper.eject_vcr
   end
 
   describe 'Test duration method' do
@@ -26,7 +18,7 @@ describe 'Test TripMapper' do
       it "Return trip duration for #{strategy} travel strategy." do
         trip_mapper = LeafAPI::GoogleMaps::TripMapper.new(
           LeafAPI::GoogleMaps::API,
-          CORRECT_SECRETS['GOOGLE_TOKEN']
+          CORRECT_SECRETS.GOOGLE_TOKEN
         )
         trip = trip_mapper.find(
           '光明里 300, Hsinchu City, East District',

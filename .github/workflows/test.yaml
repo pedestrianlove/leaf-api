@@ -3,22 +3,26 @@ name: Test API Calls
 on: [push, pull_request]
 
 concurrency:
-    group: ${{ github.workflow }}-${{ github.ref }}
-    cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: ruby/setup-ruby@v1
-      with:
-        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-    - name: Setup the project secrets
-      run: |
-        cp config/secrets.yaml.testing config/secrets.yaml
+      - name: Setup the project secrets
+        run: |
+          cp config/secrets.yaml.testing config/secrets.yaml
 
-    - name: Run the project tests via rake spec command
-      run: |
-        bundle exec rake spec
+      - name: Run the migration
+        run: |
+          bundle exec rake db:migrate
+
+      - name: Run the project tests via rake spec command
+        run: |
+          bundle exec rake spec

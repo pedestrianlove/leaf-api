@@ -3,22 +3,14 @@
 require_relative '../spec_helper'
 
 describe 'Test Google API library' do
-  VCR.configure do |c|
-    c.cassette_library_dir = CASSETTES_FOLDER
-    c.hook_into :webmock
-
-    c.filter_sensitive_data('<GOOGLE_TOKEN>') { CORRECT_SECRETS['GOOGLE_TOKEN'] }
-    c.filter_sensitive_data('<GOOGLE_TOKEN_ESC>') { CGI.escape(CORRECT_SECRETS['GOOGLE_TOKEN']) }
-  end
+  VCRHelper.setup_vcr
 
   before do
-    VCR.insert_cassette 'google_api',
-                        record: :new_episodes,
-                        match_requests_on: %i[method uri headers]
+    VCRHelper.configure_vcr_for('google_api', 'GOOGLE_TOKEN', CORRECT_SECRETS.GOOGLE_TOKEN)
   end
 
   after do
-    VCR.eject_cassette
+    VCRHelper.eject_vcr
   end
 
   describe 'API Authentication Failed' do
@@ -41,7 +33,7 @@ describe 'Test Google API library' do
     it 'Receive correct data for distance matrix.' do
       correct_response = YAML.safe_load_file('spec/fixtures/google_maps_distance_matrix-results.yaml')
 
-      payload = LeafAPI::GoogleMaps::API.new(CORRECT_SECRETS['GOOGLE_TOKEN'])
+      payload = LeafAPI::GoogleMaps::API.new(CORRECT_SECRETS.GOOGLE_TOKEN)
                                         .distance_matrix(
                                           '光明里 300, Hsinchu City, East District',
                                           '24.8022,120.9901',
@@ -56,7 +48,7 @@ describe 'Test Google API library' do
 
     it 'Receive correct data for geocoding.' do
       correct_response = YAML.safe_load_file('spec/fixtures/google_maps_geocoding-results.yaml')
-      payload = LeafAPI::GoogleMaps::API.new(CORRECT_SECRETS['GOOGLE_TOKEN'])
+      payload = LeafAPI::GoogleMaps::API.new(CORRECT_SECRETS.GOOGLE_TOKEN)
                                         .geocoding('光明里 300, Hsinchu City, East District')
       _(payload['results'][0]['formatted_address'])
         .must_equal correct_response['results'][0]['formatted_address']

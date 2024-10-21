@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'http'
-require_relative '../utils'
+require_relative '../../utils'
 
 module LeafAPI
   module Nominatim

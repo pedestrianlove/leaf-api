@@ -2,10 +2,6 @@
 
 require 'roda'
 require 'slim'
-require_relative '../models/mappers/location_mapper'
-require_relative '../models/mappers/trip_mapper'
-require_relative '../models/gateways/google_maps_api'
-require_relative '../../config/environment'
 
 module LeafAPI
   # This is the main application class that handles routing in LeafAPI
@@ -42,7 +38,7 @@ module LeafAPI
         setup_location_result(routing)
       end
     end
-    
+
     def setup_location_search(routing)
       routing.post 'search' do
         handle_search(routing)

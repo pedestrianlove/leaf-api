@@ -3,29 +3,21 @@
 require_relative '../spec_helper'
 
 describe 'Test LocationMapper' do
-  VCR.configure do |c|
-    c.cassette_library_dir = CASSETTES_FOLDER
-    c.hook_into :webmock
-
-    c.filter_sensitive_data('<GOOGLE_TOKEN>') { CORRECT_SECRETS['GOOGLE_TOKEN'] }
-    c.filter_sensitive_data('<GOOGLE_TOKEN_ESC>') { CGI.escape(CORRECT_SECRETS['GOOGLE_TOKEN']) }
-  end
+  VCRHelper.setup_vcr
 
   before do
-    VCR.insert_cassette 'entity_location',
-                        record: :new_episodes,
-                        match_requests_on: %i[method uri headers]
+    VCRHelper.configure_vcr_for('entity_location', 'GOOGLE_TOKEN', CORRECT_SECRETS.GOOGLE_TOKEN)
   end
 
   after do
-    VCR.eject_cassette
+    VCRHelper.eject_vcr
   end
 
   describe 'Test find method' do
     it 'Returns a Location entity for a valid address' do
       location_mapper = LeafAPI::GoogleMaps::LocationMapper.new(
         LeafAPI::GoogleMaps::API,
-        CORRECT_SECRETS['GOOGLE_TOKEN']
+        CORRECT_SECRETS.GOOGLE_TOKEN
       )
       location = location_mapper.find('光明里 300, Hsinchu City, East District')
 
