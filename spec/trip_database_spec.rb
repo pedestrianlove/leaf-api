@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'spec_helper'
-require_relative '../app'
-require_relative '../app/infrastructure/database/orm/trip_orm'
-require_relative '../app/infrastructure/database/orm/location_orm'
+require_relative 'helpers/database_helper'
 
 describe 'Integration Tests of Trip ORM and Database' do
   before do
