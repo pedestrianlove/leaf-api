@@ -21,7 +21,7 @@ module LeafAPI
           id: id,
           name: name,
           latitude: latitude,
-          longtitude: longtitude
+          longitude: longitude
         }
       end
     end
