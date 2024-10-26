@@ -13,7 +13,7 @@ module LeafAPI
       attribute :id, Integer.optional
       attribute :name, String.optional
       attribute :latitude, Strict::Float
-      attribute :longtitude, Strict::Float
+      attribute :longitude, Strict::Float
     end
   end
 end

@@ -2,6 +2,7 @@
 
 require 'roda'
 require 'slim'
+require_relative 'routes/location_routes'
 
 module LeafAPI
   # This is the main application class that handles routing in LeafAPI
@@ -21,7 +22,7 @@ module LeafAPI
 
     def setup_routes(routing)
       setup_root(routing)
-      setup_location_routes(routing)
+      LeafAPI::LocationRoutes.setup(routing)
       setup_trip_routes(routing)
     end
 
@@ -29,50 +30,6 @@ module LeafAPI
       routing.root do
         view 'home'
       end
-    end
-
-    def setup_location_routes(routing)
-      routing.on 'locations' do
-        setup_location_search(routing)
-        setup_location_form(routing)
-        setup_location_result(routing)
-      end
-    end
-
-    def setup_location_search(routing)
-      routing.post 'search' do
-        handle_search(routing)
-      end
-    end
-
-    def setup_location_form(routing)
-      routing.is do
-        routing.get do
-          view 'location_form'
-        end
-      end
-    end
-
-    def setup_location_result(routing)
-      routing.on String do |location_query|
-        routing.get do
-          handle_location_query(location_query)
-        end
-      end
-    end
-
-    def handle_search(routing)
-      location_query = routing.params['location'].downcase
-      routing.redirect "/locations/#{CGI.escape(location_query)}"
-    end
-
-    def handle_location_query(location_query)
-      location_entity = LeafAPI::GoogleMaps::LocationMapper.new(
-        LeafAPI::GoogleMaps::API,
-        CONFIG['GOOGLE_TOKEN']
-      ).find(location_query)
-
-      view 'location_result', locals: { location: location_entity }
     end
 
     def setup_trip_routes(routing)
