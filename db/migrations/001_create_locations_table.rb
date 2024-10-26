@@ -9,7 +9,7 @@ Sequel.migration do
 
       String        :name, null: false
       Float         :latitude, null: false
-      Float         :longitude, null: false
+      Float         :longtitude, null: false
 
       DateTime      :created_at
       DateTime      :updated_at
