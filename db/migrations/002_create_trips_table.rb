@@ -6,8 +6,8 @@ Sequel.migration do
   change do
     create_table(:trips) do
       primary_key   :id
-      foreign_key   :origin_id, :locations
-      foreign_key   :destination_id, :locations
+      foreign_key   :origin_id, :locations, null: false, on_delete: :cascade
+      foreign_key   :destination_id, :locations, null: false, on_delete: :cascade
 
       String        :strategy, null: false
       Integer       :duration, null: false

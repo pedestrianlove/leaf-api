@@ -21,7 +21,11 @@ module VCRHelper
       end
     end
 
-    VCR.insert_cassette(gateway_name, record: :new_episodes, match_requests_on: %i[method uri headers])
+    VCR.insert_cassette(
+      gateway_name,
+      record: :new_episodes,
+      match_requests_on: %i[method uri headers]
+    )
   end
 
   def self.eject_vcr

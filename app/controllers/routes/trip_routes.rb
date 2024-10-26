@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative '../../models/mappers/trip_mapper'
-require_relative '../../models/gateways/google_maps_api'
+require_relative '../../infrastructure/google_maps/mappers/trip_mapper'
+require_relative '../../infrastructure/google_maps/gateways/google_maps_api'
 require_relative '../../../config/environment'
 
 module LeafAPI
@@ -44,7 +44,7 @@ module LeafAPI
       trip_params[:origin] ||= '24.795707, 120.996393'
       trip_params[:destination] ||= '24.786930, 120.988428'
       trip_params[:strategy] ||= 'walking'
-    
+
       trip_entities(trip_params, config)
     end
 

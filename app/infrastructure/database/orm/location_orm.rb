@@ -6,23 +6,22 @@ module LeafAPI
   module Database
     # Object-Relational Mapper for Location
     class LocationOrm < Sequel::Model(:locations)
-      one_to_many :trips,
-                  class: :'LeafAPI::Database::TripOrm',
-                  key: :location_id
-
       plugin :timestamps, update_on_create: true
 
-      def self.find_or_create(location_info)
-        first(name: location_info[:name]) || create(location_info)
-      end
+      one_to_many :trips_as_origin,
+                  class: :'LeafAPI::Database::TripOrm',
+                  key: :origin_id
 
-      def to_attr_hash
-        {
-          id: id,
-          name: name,
-          latitude: latitude,
-          longitude: longitude
-        }
+      one_to_many :trips_as_destination,
+                  class: :'LeafAPI::Database::TripOrm',
+                  key: :destination_id
+
+      def self.find_or_create(location_info)
+        first(
+          name: location_info[:name],
+          latitude: location_info[:latitude],
+          longitude: location_info[:longitude]
+        ) || create(location_info)
       end
     end
   end

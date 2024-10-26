@@ -7,7 +7,7 @@ module DatabaseHelper
     # FIXME
     LeafAPI::App.db.run('PRAGMA foreign_keys = OFF')
     # LeafAPI::Database::LocationOrm.map(&:destroy)
-    # LeafAPI::Database::TripOrm.map(&:destroy)
+    LeafAPI::Database::TripOrm.map(&:destroy)
     LeafAPI::App.db.run('PRAGMA foreign_keys = ON')
   end
 end

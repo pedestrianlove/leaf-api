@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative '../../models/mappers/location_mapper'
-require_relative '../../models/gateways/google_maps_api'
+require_relative '../../infrastructure/google_maps/mappers/location_mapper'
+require_relative '../../infrastructure/google_maps/gateways/google_maps_api'
 require_relative '../../../config/environment'
 
 module LeafAPI

@@ -12,12 +12,16 @@ module LeafAPI
     class Trip < Dry::Struct
       include Dry.Types
 
-      attribute :id, Integer.optional
+      attribute :id, Integer.optional.default(nil)
       attribute :strategy, String.enum('driving', 'bicycling', 'school_bus', 'walking', 'transit')
       attribute :origin, Location
       attribute :destination, Location
       attribute :duration, Strict::Integer
       attribute :distance, Strict::Integer
+
+      def to_attr_hash
+        to_hash.except(:id)
+      end
     end
   end
 end
