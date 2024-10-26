@@ -2,16 +2,15 @@
 
 require_relative '../../infrastructure/google_maps/mappers/location_mapper'
 require_relative '../../infrastructure/google_maps/gateways/google_maps_api'
-require_relative '../../../config/environment'
 
 module LeafAPI
   # Module handling location-related routes
   module LocationRoutes
-    def self.setup(routing, config)
+    def self.setup(routing)
       routing.on 'locations' do
         setup_location_search(routing)
         setup_location_form(routing)
-        setup_location_result(routing, config)
+        setup_location_result(routing)
       end
     end
 
@@ -30,18 +29,18 @@ module LeafAPI
       end
     end
 
-    def self.setup_location_result(routing, config)
+    def self.setup_location_result(routing)
       routing.on String do |location_query|
         routing.get do
-          handle_location_query(routing, location_query, config)
+          handle_location_query(routing, location_query)
         end
       end
     end
 
-    def self.handle_location_query(routing, location_query, config)
+    def self.handle_location_query(routing, location_query)
       location_entity = LeafAPI::GoogleMaps::LocationMapper.new(
         LeafAPI::GoogleMaps::API,
-        config['GOOGLE_TOKEN']
+        LeafAPI::App.config.GOOGLE_TOKEN
       ).find(location_query)
 
       routing.scope.view('location_result', locals: { location: location_entity })

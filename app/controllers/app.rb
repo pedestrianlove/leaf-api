@@ -4,6 +4,7 @@ require 'roda'
 require 'slim'
 require_relative 'routes/location_routes'
 require_relative 'routes/trip_routes'
+require_relative '../../config/environment'
 
 module LeafAPI
   # This is the main application class that handles routing in LeafAPI
@@ -24,8 +25,8 @@ module LeafAPI
 
     def setup_routes(routing)
       setup_root(routing)
-      LeafAPI::LocationRoutes.setup(routing, CONFIG)
-      LeafAPI::TripRoutes.setup(routing, CONFIG)
+      LeafAPI::LocationRoutes.setup(routing)
+      LeafAPI::TripRoutes.setup(routing)
     end
 
     def setup_root(routing)

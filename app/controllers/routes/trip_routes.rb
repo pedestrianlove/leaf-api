@@ -7,11 +7,11 @@ require_relative '../../../config/environment'
 module LeafAPI
   # Module handling trip-related routes
   module TripRoutes
-    def self.setup(routing, config)
+    def self.setup(routing)
       routing.on 'trips' do
         setup_trip_submit(routing)
         setup_trip_form(routing)
-        setup_trip_result(routing, config)
+        setup_trip_result(routing)
       end
     end
 
@@ -30,28 +30,28 @@ module LeafAPI
       end
     end
 
-    def self.setup_trip_result(routing, config)
+    def self.setup_trip_result(routing)
       routing.on String, String, String do |origin, destination, strategy|
         routing.get do
           trip_params = { origin: origin, destination: destination, strategy: strategy }
-          trip = find_trip(trip_params, config)
+          trip = find_trip(trip_params)
           routing.scope.view('trip_result', locals: { trip: trip })
         end
       end
     end
 
-    def self.find_trip(trip_params, config)
+    def self.find_trip(trip_params)
       trip_params[:origin] ||= '24.795707, 120.996393'
       trip_params[:destination] ||= '24.786930, 120.988428'
       trip_params[:strategy] ||= 'walking'
 
-      trip_entities(trip_params, config)
+      trip_entities(trip_params)
     end
 
-    def self.trip_entities(trip_params, config)
+    def self.trip_entities(trip_params)
       mapper = LeafAPI::GoogleMaps::TripMapper.new(
         LeafAPI::GoogleMaps::API,
-        config['GOOGLE_TOKEN']
+        LeafAPI::App.config.GOOGLE_TOKEN
       )
 
       mapper.find(
