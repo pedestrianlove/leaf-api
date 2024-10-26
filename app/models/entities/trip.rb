@@ -16,8 +16,8 @@ module LeafAPI
       attribute :strategy, String.enum('driving', 'bicycling', 'school_bus', 'walking', 'transit')
       attribute :origin, Location
       attribute :destination, Location
-      attribute :duration, Strict::Integer
-      attribute :distance, Strict::Integer
+      attribute :duration, Strict::Integer.optional
+      attribute :distance, Strict::Integer.optional
 
       def to_attr_hash
         to_hash.except(:id)

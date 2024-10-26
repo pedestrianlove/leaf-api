@@ -6,7 +6,7 @@ module DatabaseHelper
     # Ignore foreign key constraints when wiping tables
     # FIXME
     LeafAPI::App.db.run('PRAGMA foreign_keys = OFF')
-    # LeafAPI::Database::LocationOrm.map(&:destroy)
+    LeafAPI::Database::LocationOrm.map(&:destroy)
     LeafAPI::Database::TripOrm.map(&:destroy)
     LeafAPI::App.db.run('PRAGMA foreign_keys = ON')
   end
