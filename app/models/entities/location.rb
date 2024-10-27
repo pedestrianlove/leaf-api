@@ -10,10 +10,14 @@ module LeafAPI
     class Location < Dry::Struct
       include Dry.Types
 
-      attribute :id, Integer.optional
+      attribute :id, Integer.optional.default(nil)
       attribute :name, String.optional
-      attribute :latitude, Strict::Float
-      attribute :longtitude, Strict::Float
+      attribute :latitude, Strict::Float.optional
+      attribute :longitude, Strict::Float.optional
+
+      def to_attr_hash
+        to_hash.except(:id)
+      end
     end
   end
 end

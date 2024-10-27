@@ -3,19 +3,14 @@
 require_relative '../spec_helper'
 
 describe 'Test NTHUAPI library' do
-  VCR.configure do |c|
-    c.cassette_library_dir = CASSETTES_FOLDER
-    c.hook_into :webmock
-  end
+  VCRHelper.setup_vcr
 
   before do
-    VCR.insert_cassette 'nthu_api',
-                        record: :new_episodes,
-                        match_requests_on: %i[method uri headers]
+    VCRHelper.configure_vcr_for('nthu_api')
   end
 
   after do
-    VCR.eject_cassette
+    VCRHelper.eject_vcr
   end
 
   describe 'API Authentication Suceed' do

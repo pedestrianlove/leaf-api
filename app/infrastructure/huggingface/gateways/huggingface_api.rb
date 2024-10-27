@@ -3,7 +3,7 @@
 require 'http'
 require 'json'
 
-require_relative '../utils'
+require_relative '../../utils'
 
 module LeafAPI
   module HuggingFace

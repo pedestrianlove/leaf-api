@@ -12,6 +12,7 @@ Metrics/BlockLength:
   Enabled: true
   Exclude:
     - spec/**/*
+    - Rakefile
 
 # Fix hash shorthand to avoid weird syntax
 Style/HashSyntax:
