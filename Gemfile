@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-ruby '3.3.5'
+ruby File.read('.ruby-version').strip
 
 source 'https://rubygems.org'
 
