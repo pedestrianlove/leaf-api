@@ -6,6 +6,7 @@ source 'https://rubygems.org'
 
 # Utilities and Utilities
 gem 'figaro', '~> 1.2'
+gem 'pg'
 gem 'pry', '~> 0.14.2'
 gem 'rake'
 
@@ -48,6 +49,6 @@ group :development do
 end
 
 # heroku
-group :production do
-  gem 'pg', '~> 1.5'
-end
+# group :production do
+#   gem 'pg', '~> 1.5'
+# end
