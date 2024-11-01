@@ -44,3 +44,8 @@ group :development do
   gem 'reek', '~> 6.3'
   gem 'rubocop', '~> 1.66'
 end
+
+# heroku
+group :production do
+  gem 'pg'
+end
