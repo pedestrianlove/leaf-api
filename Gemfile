@@ -49,5 +49,5 @@ end
 
 # heroku
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 1.5.9'
 end

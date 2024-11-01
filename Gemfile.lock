@@ -198,7 +198,7 @@ DEPENDENCIES
   logger (~> 1.6)
   minitest
   minitest-rg
-  pg
+  pg (~> 1.5.9)
   pry (~> 0.14.2)
   puma (~> 6.4)
   rake
