@@ -4,7 +4,7 @@ require 'figaro'
 require 'roda'
 require 'sequel'
 
-module LeafAPI
+module Leaf
   # Initialize the App class with the environmental information.
   class App < Roda
     plugin :environments

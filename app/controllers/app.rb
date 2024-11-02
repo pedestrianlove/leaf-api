@@ -6,8 +6,8 @@ require_relative 'routes/location_routes'
 require_relative 'routes/trip_routes'
 require_relative '../../config/environment'
 
-module LeafAPI
-  # This is the main application class that handles routing in LeafAPI
+module Leaf
+  # This is the main application class that handles routing in Leaf
   class App < Roda
     plugin :render, engine: 'slim', views: 'app/views'
     plugin :assets, css: 'style.css', path: 'app/views/assets'
@@ -25,8 +25,8 @@ module LeafAPI
 
     def setup_routes(routing)
       setup_root(routing)
-      LeafAPI::LocationRoutes.setup(routing)
-      LeafAPI::TripRoutes.setup(routing)
+      Leaf::LocationRoutes.setup(routing)
+      Leaf::TripRoutes.setup(routing)
     end
 
     def setup_root(routing)

@@ -3,7 +3,7 @@
 require 'http'
 require_relative '../../utils'
 
-module LeafAPI
+module Leaf
   module GoogleMaps
     # This is the service class to make API requests to Google Maps API:
     # https://api.nthusa.tw/docs

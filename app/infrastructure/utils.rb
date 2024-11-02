@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module LeafAPI
+module Leaf
   # Class for representing HTTP related errors
   class HTTPError < StandardError
     attr_reader :message

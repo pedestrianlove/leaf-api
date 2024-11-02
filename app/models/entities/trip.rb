@@ -5,7 +5,7 @@ require 'dry-struct'
 
 require_relative 'location'
 
-module LeafAPI
+module Leaf
   module Entity
     # This is a class to represent the concept of trip on the map.
     # This may include strategies like 'driving', 'bicycling', 'school_bus', 'walking', 'trasit'...etc.

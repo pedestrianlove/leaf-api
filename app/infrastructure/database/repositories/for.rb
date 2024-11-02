@@ -3,7 +3,7 @@
 require_relative 'location'
 require_relative 'trip'
 
-module LeafAPI
+module Leaf
   module Repository
     # Finds the right repository for an entity object or class
     module For

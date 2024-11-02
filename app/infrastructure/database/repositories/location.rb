@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module LeafAPI
+module Leaf
   module Repository
     # Repository for Location
     class Location

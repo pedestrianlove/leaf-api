@@ -2,16 +2,16 @@
 
 require 'sequel'
 
-module LeafAPI
+module Leaf
   module Database
     # Object-Relational Mapper for Trip
     class TripOrm < Sequel::Model(:trips)
       many_to_one :origin,
-                  class: :'LeafAPI::Database::LocationOrm',
+                  class: :'Leaf::Database::LocationOrm',
                   key: :origin_id
 
       many_to_one :destination,
-                  class: :'LeafAPI::Database::LocationOrm',
+                  class: :'Leaf::Database::LocationOrm',
                   key: :destination_id
 
       plugin :timestamps, update_on_create: true
