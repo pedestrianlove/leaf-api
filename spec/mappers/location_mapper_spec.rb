@@ -25,6 +25,7 @@ describe 'Test LocationMapper' do
       _(location.name).must_be_instance_of String
       _(location.latitude).must_be_instance_of Float
       _(location.longitude).must_be_instance_of Float
+      _(location.plus_code).must_be_instance_of String
     end
   end
 end

@@ -11,6 +11,7 @@ module LeafAPI
       include Dry.Types
 
       attribute :id, Integer.optional.default(nil)
+      attribute :plus_code, String
       attribute :name, String.optional
       attribute :latitude, Strict::Float.optional
       attribute :longitude, Strict::Float.optional

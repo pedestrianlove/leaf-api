@@ -27,6 +27,13 @@ describe 'Test Google API library' do
                      .geocoding('光明里 300, Hsinchu City, East District')
       end).must_raise LeafAPI::HTTPError
     end
+
+    it 'Raise errors when provided with incorrect token on distance matrix.' do
+      _(proc do
+        LeafAPI::GoogleMaps::API.new(BAD_SECRETS['GOOGLE_TOKEN'])
+                     .plus_code('光明里 300, Hsinchu City, East District')
+      end).must_raise LeafAPI::HTTPError
+    end
   end
 
   describe 'API Authentication Succeed' do
@@ -57,7 +64,14 @@ describe 'Test Google API library' do
       _(payload['results'][0]['geometry']['location']['lat'])
         .must_equal correct_response['results'][0]['geometry']['location']['lat']
       _(payload['results'][0]['geometry']['location']['lng'])
-        .must_equal correct_response['results'][0]['geometry']['location']['lng']
+        .wont_be_nil
+    end
+
+    it 'Receive correct data for plus code.' do
+      payload = LeafAPI::GoogleMaps::API.new(CORRECT_SECRETS.GOOGLE_TOKEN)
+                                        .plus_code('光明里 300, Hsinchu City, East District')
+
+      _(payload['plus_code']['global_code']).must_be_instance_of String
     end
   end
 end

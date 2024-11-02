@@ -13,7 +13,8 @@ describe 'Integration Tests of Location ORM and Database' do
       location_info = {
         name: '清華大學',
         latitude: 24.795707,
-        longitude: 120.996393
+        longitude: 120.996393,
+        plus_code: '7QP2QXQR+XR'
       }
 
       rebuilt = LeafAPI::Database::LocationOrm.find_or_create(location_info)
@@ -32,7 +33,8 @@ describe 'Integration Tests of Location ORM and Database' do
       location_info = {
         name: '清華大學',
         latitude: 24.795707,
-        longitude: 120.996393
+        longitude: 120.996393,
+        plus_code: '7QP2QXQR+XR'
       }
 
       LeafAPI::Database::LocationOrm.find_or_create(location_info)
