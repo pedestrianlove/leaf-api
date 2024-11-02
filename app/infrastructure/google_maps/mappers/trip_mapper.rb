@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module LeafAPI
+module Leaf
   module GoogleMaps
     # Class to map the data from google maps api to the Trip entity
     class TripMapper
@@ -30,7 +30,7 @@ module LeafAPI
         end
 
         def build_entity
-          LeafAPI::Entity::Trip.new(
+          Leaf::Entity::Trip.new(
             id: nil,
             strategy: strategy,
             origin: origin,

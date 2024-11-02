@@ -16,8 +16,8 @@ describe 'Test TripMapper' do
   describe 'Test duration method' do
     %w[walking driving bicycling transit].each do |strategy|
       it "Return trip duration for #{strategy} travel strategy." do
-        trip_mapper = LeafAPI::GoogleMaps::TripMapper.new(
-          LeafAPI::GoogleMaps::API,
+        trip_mapper = Leaf::GoogleMaps::TripMapper.new(
+          Leaf::GoogleMaps::API,
           CORRECT_SECRETS.GOOGLE_TOKEN
         )
         trip = trip_mapper.find(
@@ -30,8 +30,8 @@ describe 'Test TripMapper' do
         _(trip.distance).must_be_instance_of Integer
         _(trip.strategy).must_equal strategy
 
-        _(trip.origin).must_be_kind_of LeafAPI::Entity::Location
-        _(trip.destination).must_be_kind_of LeafAPI::Entity::Location
+        _(trip.origin).must_be_kind_of Leaf::Entity::Location
+        _(trip.destination).must_be_kind_of Leaf::Entity::Location
       end
     end
   end

@@ -4,7 +4,7 @@ require_relative '../../infrastructure/google_maps/mappers/trip_mapper'
 require_relative '../../infrastructure/google_maps/gateways/google_maps_api'
 require_relative '../../../config/environment'
 
-module LeafAPI
+module Leaf
   # Module handling trip-related routes
   module TripRoutes
     def self.setup(routing)
@@ -49,9 +49,9 @@ module LeafAPI
     end
 
     def self.trip_entities(trip_params)
-      mapper = LeafAPI::GoogleMaps::TripMapper.new(
-        LeafAPI::GoogleMaps::API,
-        LeafAPI::App.config.GOOGLE_TOKEN
+      mapper = Leaf::GoogleMaps::TripMapper.new(
+        Leaf::GoogleMaps::API,
+        Leaf::App.config.GOOGLE_TOKEN
       )
 
       mapper.find(

@@ -2,7 +2,7 @@
 
 require_relative 'location'
 
-module LeafAPI
+module Leaf
   module Repository
     # Repository for Trip
     class Trip

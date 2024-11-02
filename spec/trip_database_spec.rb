@@ -9,7 +9,7 @@ describe 'Integration Tests of Trip ORM and Database' do
   end
 
   let(:origin_location) do
-    LeafAPI::Database::LocationOrm.create(
+    Leaf::Database::LocationOrm.create(
       name: 'North Gate',
       latitude: 24.7957,
       longitude: 120.9925,
@@ -18,7 +18,7 @@ describe 'Integration Tests of Trip ORM and Database' do
   end
 
   let(:destination_location) do
-    LeafAPI::Database::LocationOrm.create(
+    Leaf::Database::LocationOrm.create(
       name: 'South Gate',
       latitude: 24.7869,
       longitude: 120.9884,
@@ -28,7 +28,7 @@ describe 'Integration Tests of Trip ORM and Database' do
 
   describe 'Create and retrieve trip' do
     it 'HAPPY: should create a new trip and retrieve it from the database' do
-      trip = LeafAPI::Database::TripOrm.create(
+      trip = Leaf::Database::TripOrm.create(
         origin_id: origin_location.id,
         destination_id: destination_location.id,
         strategy: 'walking',
@@ -36,7 +36,7 @@ describe 'Integration Tests of Trip ORM and Database' do
         distance: 1500
       )
 
-      found_trip = LeafAPI::Database::TripOrm.first(id: trip.id)
+      found_trip = Leaf::Database::TripOrm.first(id: trip.id)
 
       expect(found_trip).wont_be_nil
       expect(found_trip.origin_id).must_equal origin_location.id
@@ -49,7 +49,7 @@ describe 'Integration Tests of Trip ORM and Database' do
 
   describe 'Update trip' do
     it 'HAPPY: should update the strategy of an existing trip' do
-      trip = LeafAPI::Database::TripOrm.create(
+      trip = Leaf::Database::TripOrm.create(
         origin_id: origin_location.id,
         destination_id: destination_location.id,
         strategy: 'walking',
@@ -58,7 +58,7 @@ describe 'Integration Tests of Trip ORM and Database' do
       )
 
       trip.update(strategy: 'driving')
-      updated_trip = LeafAPI::Database::TripOrm.first(id: trip.id)
+      updated_trip = Leaf::Database::TripOrm.first(id: trip.id)
 
       expect(updated_trip.strategy).must_equal 'driving'
     end
@@ -66,7 +66,7 @@ describe 'Integration Tests of Trip ORM and Database' do
 
   describe 'Delete trip' do
     it 'HAPPY: should delete a trip and ensure it is removed from the database' do
-      trip = LeafAPI::Database::TripOrm.create(
+      trip = Leaf::Database::TripOrm.create(
         origin_id: origin_location.id,
         destination_id: destination_location.id,
         strategy: 'walking',
@@ -76,13 +76,13 @@ describe 'Integration Tests of Trip ORM and Database' do
 
       trip_id = trip.id
       trip.destroy
-      expect(LeafAPI::Database::TripOrm.first(id: trip_id)).must_be_nil
+      expect(Leaf::Database::TripOrm.first(id: trip_id)).must_be_nil
     end
   end
 
   describe 'Associations' do
     it 'HAPPY: should access origin and destination locations through associations' do
-      trip = LeafAPI::Database::TripOrm.create(
+      trip = Leaf::Database::TripOrm.create(
         origin_id: origin_location.id,
         destination_id: destination_location.id,
         strategy: 'walking',

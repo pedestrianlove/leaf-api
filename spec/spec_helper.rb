@@ -17,5 +17,5 @@ require_relative 'helpers/database_helper'
 require_relative '../require_app'
 require_app
 
-CORRECT_SECRETS = LeafAPI::App.config
+CORRECT_SECRETS = Leaf::App.config
 BAD_SECRETS = YAML.safe_load_file('config/secrets.yaml')['test']

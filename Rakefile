@@ -40,7 +40,7 @@ namespace :db do
     require_relative 'config/environment' # load config info
     require_relative 'spec/helpers/database_helper'
 
-    def app = LeafAPI::App
+    def app = Leaf::App
   end
 
   desc 'Run migrations'
@@ -68,8 +68,8 @@ namespace :db do
       return
     end
 
-    FileUtils.rm(LeafAPI::App.config.DB_FILENAME)
-    puts "Deleted #{LeafAPI::App.config.DB_FILENAME}"
+    FileUtils.rm(Leaf::App.config.DB_FILENAME)
+    puts "Deleted #{Leaf::App.config.DB_FILENAME}"
   end
 end
 

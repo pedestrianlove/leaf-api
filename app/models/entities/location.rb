@@ -3,7 +3,7 @@
 require 'dry-types'
 require 'dry-struct'
 
-module LeafAPI
+module Leaf
   module Entity
     # This is a class to represent the concept of location on the map.
     # This may include user's location, bus stop's location, or destination's location.
