@@ -12,21 +12,16 @@ module LeafAPI
 
       def find(address)
         data = @gateway.geocoding(address)
-        build_entity(data)
-      end
-
-      def build_entity(data)
-        DataMapper.new(data, @token, @gateway_class).build_entity
+        plus_code = @gateway.plus_code(address)
+        DataMapper.new(data, plus_code).build_entity
       end
 
       # This class maps the response data from Google Maps API to a Location entity.
       # It extracts necessary information such as name, latitude, and longitude.
       class DataMapper
-        def initialize(data, token, gateway_class)
+        def initialize(data, plus_code)
           @data = data
-          @location_mapper = LocationMapper.new(
-            gateway_class, token
-          )
+          @plus_code = plus_code
         end
 
         def build_entity
@@ -34,7 +29,8 @@ module LeafAPI
             id: nil,
             name: name,
             latitude: latitude,
-            longitude: longitude
+            longitude: longitude,
+            plus_code: plus_code
           )
         end
 
@@ -48,6 +44,10 @@ module LeafAPI
 
         def longitude
           @data['results'][0]['geometry']['location']['lng']
+        end
+
+        def plus_code
+          @plus_code['plus_code']['global_code']
         end
       end
     end

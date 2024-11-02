@@ -19,6 +19,7 @@ module LeafAPI
       def self.find_or_create(location_info)
         first(
           name: location_info[:name],
+          plus_code: location_info[:plus_code],
           latitude: location_info[:latitude],
           longitude: location_info[:longitude]
         ) || create(location_info)

@@ -12,7 +12,8 @@ describe 'Integration Tests of Trip ORM and Database' do
     LeafAPI::Database::LocationOrm.create(
       name: 'North Gate',
       latitude: 24.7957,
-      longitude: 120.9925
+      longitude: 120.9925,
+      plus_code: '7QP2QXQR+XR'
     )
   end
 
@@ -20,7 +21,8 @@ describe 'Integration Tests of Trip ORM and Database' do
     LeafAPI::Database::LocationOrm.create(
       name: 'South Gate',
       latitude: 24.7869,
-      longitude: 120.9884
+      longitude: 120.9884,
+      plus_code: '7QP2QXQR+XA'
     )
   end
 

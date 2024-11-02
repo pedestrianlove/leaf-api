@@ -9,6 +9,7 @@ gem 'rake'
 
 # Web Application
 gem 'logger', '~> 1.6'
+gem 'plus_codes', '~> 0.2.1'
 gem 'puma', '~> 6.4'
 gem 'roda', '~> 3.85'
 gem 'slim', '~> 5.2'
