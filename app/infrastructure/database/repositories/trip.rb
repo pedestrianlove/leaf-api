@@ -39,7 +39,8 @@ module Leaf
           origin: origin_location,
           destination: destination_location,
           duration: db_record.duration,
-          distance: db_record.distance
+          distance: db_record.distance,
+          query_id: db_record.query_id
         )
       end
 
@@ -48,18 +49,27 @@ module Leaf
       end
 
       def self.db_find_or_create(entity)
-        origin = Location.db_find_or_create(entity.origin)
-        destination = Location.db_find_or_create(entity.destination)
+        origin = find_or_create_location(entity.origin)
+        destination = find_or_create_location(entity.destination)
 
-        db_record = Database::TripOrm.find_or_create(
+        db_record = find_or_create_trip(entity, origin, destination)
+
+        rebuild_entity(db_record)
+      end
+
+      def self.find_or_create_location(location_entity)
+        Location.db_find_or_create(location_entity)
+      end
+
+      def self.find_or_create_trip(entity, origin, destination)
+        Database::TripOrm.find_or_create(
           origin_id: origin.id,
           destination_id: destination.id,
           strategy: entity.strategy,
           duration: entity.duration,
-          distance: entity.distance
+          distance: entity.distance,
+          query_id: entity.query_id
         )
-
-        rebuild_entity(db_record)
       end
     end
   end

@@ -19,6 +19,7 @@ module Leaf
       attribute :strategy, String.enum('driving', 'bicycling', 'school_bus', 'walking', 'transit')
       attribute :trips, Strict::Array.of(Trip).optional
       attribute :distance_to, Strict::Integer.optional.default(0)
+      attribute :query_id, String
 
       def to_attr_hash
         to_hash.except(:id)

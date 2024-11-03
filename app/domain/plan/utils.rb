@@ -2,37 +2,54 @@
 
 module Leaf
   module Plan
-    # this is method for plan
+    # Utility methods for calculating distances
     module Utils
-      R = 3958.8
+      EARTH_RADIUS_MILES = 3958.8 # Radius of Earth in miles
+      DEGREE_TO_RADIAN = Math::PI / 180
 
-      # calculate distance between origin and destination
+      # Calculate the distance in meters between two points specified by latitude and longitude
       def self.calculate_distance(origin, destination)
-        return 0 if origin.nil? || destination.nil? # if invalid input
+        return 0 unless origin && destination # Guard clause for invalid input
 
-        rlat1, rlat2 = to_radians(origin.latitude, destination.latitude)
-        difflat = rlat2 - rlat1
-        difflon = to_radians_longitude(destination.longitude, origin.longitude)
-
-        1000 * calculate_haversine_distance(difflat, difflon, rlat1, rlat2)
+        haversine_data = prepare_haversine_data(origin, destination)
+        1000 * calculate_haversine_distance(haversine_data)
       end
 
-      def self.to_radians(lat1, lat2)
-        [lat1 * (Math::PI / 180), lat2 * (Math::PI / 180)]
+      # Converts two latitudes from degrees to radians
+      def self.to_radians(origin_lat, destination_lat)
+        [origin_lat * DEGREE_TO_RADIAN, destination_lat * DEGREE_TO_RADIAN]
       end
 
-      def self.to_radians_longitude(lon1, lon2)
-        (lon1 - lon2) * (Math::PI / 180)
+      # Converts the difference in longitude from degrees to radians
+      def self.to_radians_longitude(destination_lon, origin_lon)
+        (destination_lon - origin_lon) * DEGREE_TO_RADIAN
       end
 
-      def self.calculate_haversine_distance(difflat, difflon, rlat1, rlat2)
-        2 * R * Math.asin(
-          Math.sqrt(
-            (Math.sin(difflat / 2)**2) +
-            (Math.cos(rlat1) * Math.cos(rlat2) * (Math.sin(difflon / 2)**2))
-          )
-        )
+      # Prepares the Haversine data needed for calculation
+      def self.prepare_haversine_data(origin, destination)
+        origin_lat_rad, dest_lat_rad = to_radians(origin.latitude, destination.latitude)
+        lat_diff = dest_lat_rad - origin_lat_rad
+        lon_diff = to_radians_longitude(destination.longitude, origin.longitude)
+
+        HaversineData.new(lat_diff, lon_diff, origin_lat_rad, dest_lat_rad)
       end
+
+      # Calculate Haversine distance using HaversineData struct
+      def self.calculate_haversine_distance(haversine_data)
+        2 * EARTH_RADIUS_MILES * Math.asin(Math.sqrt(haversine_formula(haversine_data)))
+      end
+
+      # Helper method for the Haversine formula
+      def self.haversine_formula(haversine_data)
+        sin_lat_diff = Math.sin(haversine_data.lat_diff / 2)**2
+        cos_lat_product = Math.cos(haversine_data.origin_lat_rad) * Math.cos(haversine_data.dest_lat_rad)
+        sin_lon_diff = Math.sin(haversine_data.lon_diff / 2)**2
+
+        sin_lat_diff + (cos_lat_product * sin_lon_diff)
+      end
+
+      # Struct to encapsulate data needed for Haversine calculation
+      HaversineData = Struct.new(:lat_diff, :lon_diff, :origin_lat_rad, :dest_lat_rad)
     end
   end
 end

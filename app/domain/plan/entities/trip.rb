@@ -2,7 +2,6 @@
 
 require 'dry-types'
 require 'dry-struct'
-
 require_relative 'location'
 
 module Leaf
@@ -18,6 +17,7 @@ module Leaf
       attribute :destination, Location
       attribute :duration, Strict::Integer.optional
       attribute :distance, Strict::Integer.optional
+      attribute :query_id, String.optional
 
       def to_attr_hash
         to_hash.except(:id)

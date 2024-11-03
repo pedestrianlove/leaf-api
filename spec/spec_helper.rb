@@ -6,6 +6,7 @@ SimpleCov.start do
 end
 
 require 'yaml'
+require 'securerandom'
 
 require 'minitest/autorun'
 require 'minitest/unit' # minitest Github issue #17 requires
