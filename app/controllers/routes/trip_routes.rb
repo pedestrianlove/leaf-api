@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'securerandom'
 require_relative '../../infrastructure/google_maps/mappers/trip_mapper'
 require_relative '../../infrastructure/google_maps/gateways/google_maps_api'
 require_relative '../../../config/environment'
@@ -49,16 +50,31 @@ module Leaf
     end
 
     def self.trip_entities(trip_params)
-      mapper = Leaf::GoogleMaps::TripMapper.new(
+      query_id = generate_query_id
+      mapper = initialize_trip_mapper
+      origin, destination, strategy = prepare_params(trip_params)
+
+      mapper.find(origin, destination, strategy, query_id)
+    end
+
+    # Helper methods to make `trip_entities` more concise
+    def self.generate_query_id
+      SecureRandom.uuid
+    end
+
+    def self.initialize_trip_mapper
+      Leaf::GoogleMaps::TripMapper.new(
         Leaf::GoogleMaps::API,
         Leaf::App.config.GOOGLE_TOKEN
       )
+    end
 
-      mapper.find(
+    def self.prepare_params(trip_params)
+      [
         CGI.unescape(trip_params[:origin]),
         CGI.unescape(trip_params[:destination]),
         CGI.unescape(trip_params[:strategy])
-      )
+      ]
     end
   end
 end
