@@ -53,11 +53,11 @@ module Leaf
         end
 
         def duration
-          @data['rows'][0]['elements'][0]['duration']['value']
+          @data.dig('rows', 0, 'elements', 0, 'duration', 'value') || 0
         end
 
         def distance
-          @data['rows'][0]['elements'][0]['distance']['value']
+          @data.dig('rows', 0, 'elements', 0, 'distance', 'value') || 0
         end
       end
     end
