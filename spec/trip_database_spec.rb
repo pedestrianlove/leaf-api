@@ -26,6 +26,8 @@ describe 'Integration Tests of Trip ORM and Database' do
     )
   end
 
+  let(:query_id) { SecureRandom.uuid } # Generate a random query_id for testing
+
   describe 'Create and retrieve trip' do
     it 'HAPPY: should create a new trip and retrieve it from the database' do
       trip = Leaf::Database::TripOrm.create(
@@ -33,7 +35,8 @@ describe 'Integration Tests of Trip ORM and Database' do
         destination_id: destination_location.id,
         strategy: 'walking',
         duration: 600,
-        distance: 1500
+        distance: 1500,
+        query_id: query_id
       )
 
       found_trip = Leaf::Database::TripOrm.first(id: trip.id)
@@ -44,6 +47,7 @@ describe 'Integration Tests of Trip ORM and Database' do
       expect(found_trip.strategy).must_equal 'walking'
       expect(found_trip.duration).must_equal 600
       expect(found_trip.distance).must_equal 1500
+      expect(found_trip.query_id).must_equal query_id
     end
   end
 
@@ -54,13 +58,15 @@ describe 'Integration Tests of Trip ORM and Database' do
         destination_id: destination_location.id,
         strategy: 'walking',
         duration: 600,
-        distance: 1500
+        distance: 1500,
+        query_id: query_id
       )
 
       trip.update(strategy: 'driving')
       updated_trip = Leaf::Database::TripOrm.first(id: trip.id)
 
       expect(updated_trip.strategy).must_equal 'driving'
+      expect(updated_trip.query_id).must_equal query_id
     end
   end
 
@@ -71,7 +77,8 @@ describe 'Integration Tests of Trip ORM and Database' do
         destination_id: destination_location.id,
         strategy: 'walking',
         duration: 600,
-        distance: 1500
+        distance: 1500,
+        query_id: query_id
       )
 
       trip_id = trip.id
@@ -87,11 +94,13 @@ describe 'Integration Tests of Trip ORM and Database' do
         destination_id: destination_location.id,
         strategy: 'walking',
         duration: 600,
-        distance: 1500
+        distance: 1500,
+        query_id: query_id
       )
 
       expect(trip.origin.name).must_equal 'North Gate'
       expect(trip.destination.name).must_equal 'South Gate'
+      expect(trip.query_id).must_equal query_id
     end
   end
 end

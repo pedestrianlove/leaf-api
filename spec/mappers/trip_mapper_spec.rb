@@ -7,6 +7,7 @@ describe 'Test TripMapper' do
 
   before do
     VCRHelper.configure_vcr_for('entity_trip', 'GOOGLE_TOKEN', CORRECT_SECRETS.GOOGLE_TOKEN)
+    @query_id = SecureRandom.uuid
   end
 
   after do
@@ -23,7 +24,8 @@ describe 'Test TripMapper' do
         trip = trip_mapper.find(
           '光明里 300, Hsinchu City, East District',
           '24.8022,120.9901',
-          strategy
+          strategy,
+          @query_id
         )
 
         _(trip.duration).must_be_instance_of Integer

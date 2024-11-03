@@ -22,7 +22,8 @@ module Leaf
           destination_id: trip_info[:destination_id],
           strategy: trip_info[:strategy],
           duration: trip_info[:duration],
-          distance: trip_info[:distance]
+          distance: trip_info[:distance],
+          query_id: trip_info[:query_id]
         ) || create(trip_info)
       end
     end

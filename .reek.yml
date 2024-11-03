@@ -6,5 +6,6 @@ detectors:
   LongParameterList:
     exclude:
     - Leaf::NTHUSA::API#bus_schedule
+    - Leaf::GoogleMaps::TripMapper#find
 exclude_paths:
   - spec/fixture/project_info.rb # one-time test fixture creator

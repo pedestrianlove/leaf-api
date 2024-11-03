@@ -2,7 +2,7 @@
 
 module Leaf
   module GoogleMaps
-    # Class to map the data from google maps api to the Trip entity
+    # Class to map the data from Google Maps API to the Trip entity
     class TripMapper
       def initialize(gateway_class, token)
         @token = token
@@ -10,23 +10,22 @@ module Leaf
         @gateway = @gateway_class.new(@token)
       end
 
-      def find(starting_point, destination, mode)
+      def find(starting_point, destination, mode, query_id)
         data = @gateway.distance_matrix(starting_point, destination, mode)
         data['mode'] = mode
-        build_entity(data)
+        build_entity(data, query_id)
       end
 
-      def build_entity(data)
-        DataMapper.new(data, @token, @gateway_class).build_entity
+      def build_entity(data, query_id)
+        DataMapper.new(data, @token, @gateway_class, query_id).build_entity
       end
 
-      # Extracts entity specific elements from data structure
+      # DataMapper class extracts entity-specific elements from data structure
       class DataMapper
-        def initialize(data, token, gateway_class)
+        def initialize(data, token, gateway_class, query_id)
           @data = data
-          @location_mapper = LocationMapper.new(
-            gateway_class, token
-          )
+          @query_id = query_id
+          @location_mapper = LocationMapper.new(gateway_class, token)
         end
 
         def build_entity
@@ -36,7 +35,8 @@ module Leaf
             origin: origin,
             destination: destination,
             duration: duration,
-            distance: distance
+            distance: distance,
+            query_id: @query_id
           )
         end
 
