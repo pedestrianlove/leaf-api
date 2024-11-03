@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 # Utilities and Utilities
 gem 'figaro', '~> 1.2'
+gem 'pg', '~> 1.5'
 gem 'pry', '~> 0.14.2'
 gem 'rake'
 

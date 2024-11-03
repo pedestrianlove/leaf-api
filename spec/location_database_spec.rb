@@ -29,6 +29,26 @@ describe 'Integration Tests of Location ORM and Database' do
       _(db_record.longitude).must_equal(location_info[:longitude])
     end
 
+    it 'HAPPY: should be able to save National Chiao Tung University to database' do
+      location_info = {
+        name: '交通大學',
+        latitude: 24.784834,
+        longitude: 120.997929,
+        plus_code: '7QP2QRQ2+MP'
+      }
+
+      rebuilt = Leaf::Database::LocationOrm.find_or_create(location_info)
+
+      _(rebuilt.name).must_equal(location_info[:name])
+      _(rebuilt.latitude).must_equal(location_info[:latitude])
+      _(rebuilt.longitude).must_equal(location_info[:longitude])
+
+      db_record = Leaf::Database::LocationOrm.first(name: location_info[:name])
+      _(db_record).wont_be_nil
+      _(db_record.latitude).must_equal(location_info[:latitude])
+      _(db_record.longitude).must_equal(location_info[:longitude])
+    end
+
     it 'SAD: should not allow duplicate locations' do
       location_info = {
         name: '清華大學',
