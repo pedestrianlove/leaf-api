@@ -1,25 +1,33 @@
-h2 旅行結果
+section class="flex flex-col items-center justify-center dark:bg-gray-900"
+  h1 class="text-center text-2xl font-bold mb-4 dark:text-gray-200" 旅行查詢結果
+  div class="bg-white dark:bg-gray-800 dark:text-gray-200 p-6 rounded-lg shadow-lg border"
+    div class="mb-4 grid grid-cols-2 space-x-10"
+      div
+        label class="text-xl" for="origin" 起點:
+        p class="dark:bg-gray-50 dark:text-gray-700 rounded-lg p-2 px-3 mt-2 w-full border" type="text" name="origin" id="origin"
+          = trip.origin.name
+      div
+        label class="text-xl" for="destination" 終點:
+        p class="dark:bg-gray-50 dark:text-gray-700 rounded-lg p-2 px-3 mt-2 w-full border" type="text" name="destination" id="destination"
+          = trip.destination.name
+        
+    div class="mb-4 grid grid-cols-2 space-x-10"
+      div
+        label class="text-xl" for="strategy" 旅行策略:
+        p class="appearance-none bg-white dark:bg-gray-50 dark:text-gray-700 rounded-lg p-2 px-3 mt-2 w-full border" name="strategy" id="strategy"
+          = trip.strategy
+      div
 
-p
-  strong 起點:
-  = trip.origin
+    div class="mb-4 grid grid-cols-2 space-x-10"
+      div
+        label class="text-xl" for="strategy" 距離:
+        p class="appearance-none bg-white dark:bg-gray-50 dark:text-gray-700 rounded-lg p-2 px-3 mt-2 w-full border" name="strategy" id="strategy"
+          = "#{trip.distance} 公尺"
 
-p
-  strong 終點:
-  = trip.destination
+      div
+        label class="text-xl" for="strategy" 預計時間:
+        p class="appearance-none bg-white dark:bg-gray-50 dark:text-gray-700 rounded-lg p-2 px-3 mt-2 w-full border" name="strategy" id="strategy"
+          = "#{trip.duration / 60} 分鐘"
 
-p
-  strong 旅行方式:
-  = trip.strategy
-
-p
-  strong 距離:
-  = "#{trip.distance} 公尺"
-
-p
-  strong 預計時間:
-  = "#{trip.duration / 60} 分鐘"
-
-p
-  | 如果您想要進行新的查詢，請
-  a href="/trips" 返回表單頁面
+    div class="flex justify-end mt-5"
+      <a class="bg-gray-800 text-white dark:bg-gray-50 dark:text-gray-800 px-4 py-2 rounded-xl" href="/trips">重新查詢</a>
