@@ -24,7 +24,7 @@ module Leaf
     def self.setup_location_form(routing)
       routing.is do
         routing.get do
-          routing.scope.view('location_form')
+          routing.scope.view('location/location_form')
         end
       end
     end
@@ -43,7 +43,7 @@ module Leaf
         Leaf::App.config.GOOGLE_TOKEN
       ).find(location_query)
 
-      routing.scope.view('location_result', locals: { location: location_entity })
+      routing.scope.view('location/location_result', locals: { location: location_entity })
     end
   end
 end
