@@ -26,7 +26,7 @@ module Leaf
     def self.setup_trip_form(routing)
       routing.is do
         routing.get do
-          routing.scope.view 'trip_form'
+          routing.scope.view 'trip/trip_form'
         end
       end
     end
@@ -36,7 +36,7 @@ module Leaf
         routing.get do
           trip_params = { origin: origin, destination: destination, strategy: strategy }
           trip = find_trip(trip_params)
-          routing.scope.view('trip_result', locals: { trip: trip })
+          routing.scope.view('trip/trip_result', locals: { trip: trip })
         end
       end
     end
