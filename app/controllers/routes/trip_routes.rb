@@ -15,6 +15,9 @@ module Leaf
         setup_trip_result(routing)
       end
     end
+    # rubocop:disable Metrics/MethodLength
+    # rubocop:disable Metrics/LineLength
+    # rubocop:disable Metrics/AbcSize
 
     def self.setup_trip_submit(routing)
       routing.post 'submit' do
@@ -36,8 +39,6 @@ module Leaf
       end
     end
 
-    # rubocop:disable Metrics/MethodLength
-    # rubocop:disable Metrics/AbcSize
     def self.setup_trip_result(routing)
       routing.on String, String, String do |origin, destination, strategy|
         routing.get do
@@ -55,6 +56,7 @@ module Leaf
       end
     end
     # rubocop:enable Metrics/MethodLength
+    # rubocop:enable Metrics/LineLength
     # rubocop:enable Metrics/AbcSize
 
     def self.find_trip(trip_params)
