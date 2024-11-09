@@ -4,10 +4,10 @@
 module DatabaseHelper
   def self.wipe_database
     # Ignore foreign key constraints when wiping tables
-    db = LeafAPI::App.db
+    db = Leaf::App.db
     db.run('PRAGMA foreign_keys = OFF')
-    LeafAPI::Database::LocationOrm.map(&:destroy)
-    LeafAPI::Database::TripOrm.map(&:destroy)
+    Leaf::Database::LocationOrm.map(&:destroy)
+    Leaf::Database::TripOrm.map(&:destroy)
     db.run('PRAGMA foreign_keys = ON')
   end
 end

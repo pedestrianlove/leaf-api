@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
 require 'figaro'
+require 'logger'
+require 'rack/session'
 require 'roda'
 require 'sequel'
 
-module LeafAPI
+module Leaf
   # Initialize the App class with the environmental information.
   class App < Roda
     plugin :environments
@@ -17,6 +19,8 @@ module LeafAPI
       )
       Figaro.load
       def self.config = Figaro.env
+
+      use Rack::Session::Cookie, secret: config.SESSION_SECRET
 
       configure :development, :test do
         Figaro.require_keys('DB_FILENAME')

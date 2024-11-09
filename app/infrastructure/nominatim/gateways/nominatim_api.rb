@@ -3,7 +3,7 @@
 require 'http'
 require_relative '../../utils'
 
-module LeafAPI
+module Leaf
   module Nominatim
     # This is the service class to make API requests to Nominatim API:
     # https://nominatim.org/release-docs/develop/api/Search/

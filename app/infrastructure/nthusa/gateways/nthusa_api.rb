@@ -3,7 +3,7 @@
 require 'http'
 require_relative '../../utils'
 
-module LeafAPI
+module Leaf
   module NTHUSA
     # This is the service class to make API requests to NTHUSA API:
     # https://api.nthusa.tw/docs

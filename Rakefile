@@ -40,7 +40,7 @@ namespace :db do
     require_relative 'config/environment' # load config info
     require_relative 'spec/helpers/database_helper'
 
-    def app = LeafAPI::App
+    def app = Leaf::App
   end
 
   desc 'Run migrations'
@@ -68,9 +68,17 @@ namespace :db do
       return
     end
 
-    FileUtils.rm(LeafAPI::App.config.DB_FILENAME)
-    puts "Deleted #{LeafAPI::App.config.DB_FILENAME}"
+    FileUtils.rm(Leaf::App.config.DB_FILENAME)
+    puts "Deleted #{Leaf::App.config.DB_FILENAME}"
   end
+end
+
+desc 'Generates a 64 by secret for Rack::Session'
+task :new_session_secret do
+  require 'base64'
+  require 'securerandom'
+  secret = SecureRandom.random_bytes(64).then { Base64.urlsafe_encode64(_1) }
+  puts "SESSION_SECRET: #{secret}"
 end
 
 namespace :vcr do

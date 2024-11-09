@@ -5,7 +5,7 @@ require 'json'
 
 require_relative '../../utils'
 
-module LeafAPI
+module Leaf
   module HuggingFace
     # This is the service class to make API requests to Huggingface endpoint:
     # https://huggingface.co/docs/api-inference/index

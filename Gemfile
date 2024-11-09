@@ -8,11 +8,13 @@ source 'https://rubygems.org'
 gem 'figaro', '~> 1.2'
 gem 'pg'
 gem 'pry', '~> 0.14.2'
-gem 'rake'
+gem 'rake', '~> 13.0'
+gem 'securerandom'
 
 # Web Application
 gem 'logger', '~> 1.6'
 gem 'puma', '~> 6.4'
+gem 'rack-session', '~> 0.3'
 gem 'roda', '~> 3.85'
 gem 'slim', '~> 5.2'
 

@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module LeafAPI
+module Leaf
   module GoogleMaps
-    # Class to map the data from google maps api to the Trip entity
+    # Class to map the data from Google Maps API to the Trip entity
     class TripMapper
       def initialize(gateway_class, token)
         @token = token
@@ -20,17 +20,15 @@ module LeafAPI
         DataMapper.new(data, @token, @gateway_class).build_entity
       end
 
-      # Extracts entity specific elements from data structure
+      # DataMapper class extracts entity-specific elements from data structure
       class DataMapper
         def initialize(data, token, gateway_class)
           @data = data
-          @location_mapper = LocationMapper.new(
-            gateway_class, token
-          )
+          @location_mapper = LocationMapper.new(gateway_class, token)
         end
 
         def build_entity
-          LeafAPI::Entity::Trip.new(
+          Leaf::Entity::Trip.new(
             id: nil,
             strategy: strategy,
             origin: origin,
@@ -53,11 +51,11 @@ module LeafAPI
         end
 
         def duration
-          @data['rows'][0]['elements'][0]['duration']['value']
+          @data.dig('rows', 0, 'elements', 0, 'duration', 'value') || 0
         end
 
         def distance
-          @data['rows'][0]['elements'][0]['distance']['value']
+          @data.dig('rows', 0, 'elements', 0, 'distance', 'value') || 0
         end
       end
     end

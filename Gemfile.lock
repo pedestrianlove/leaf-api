@@ -106,6 +106,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.8)
+    rack-session (0.3.0)
+      rack (>= 3.0.0.beta1)
     rainbow (3.1.1)
     rake (13.2.1)
     rb-fsevent (0.11.2)
@@ -138,6 +140,7 @@ GEM
     ruby_parser (3.21.1)
       racc (~> 1.5)
       sexp_processor (~> 4.16)
+    securerandom (0.3.1)
     sequel (5.85.0)
       bigdecimal
     sexp_processor (4.17.2)
@@ -201,11 +204,13 @@ DEPENDENCIES
   pg
   pry (~> 0.14.2)
   puma (~> 6.4)
-  rake
+  rack-session (~> 0.3)
+  rake (~> 13.0)
   reek (~> 6.3)
   rerun (~> 0.14.0)
   roda (~> 3.85)
   rubocop (~> 1.66)
+  securerandom
   sequel (~> 5.85)
   simplecov (~> 0.22.0)
   slim (~> 5.2)
