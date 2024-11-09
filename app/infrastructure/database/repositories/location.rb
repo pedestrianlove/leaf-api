@@ -23,7 +23,8 @@ module Leaf
           id: db_record.id,
           name: db_record.name,
           latitude: db_record.latitude,
-          longitude: db_record.longitude
+          longitude: db_record.longitude,
+          plus_code: db_record.plus_code
         )
       end
 

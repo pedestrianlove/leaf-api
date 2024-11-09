@@ -27,6 +27,7 @@ module Leaf
       setup_root(routing)
       Leaf::LocationRoutes.setup(routing)
       Leaf::TripRoutes.setup(routing)
+      Leaf::QueryRoutes.setup(routing)
     end
 
     def setup_root(routing)

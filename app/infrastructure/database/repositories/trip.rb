@@ -39,8 +39,7 @@ module Leaf
           origin: origin_location,
           destination: destination_location,
           duration: db_record.duration,
-          distance: db_record.distance,
-          query_id: db_record.query_id
+          distance: db_record.distance
         )
       end
 
@@ -67,8 +66,7 @@ module Leaf
           destination_id: destination.id,
           strategy: entity.strategy,
           duration: entity.duration,
-          distance: entity.distance,
-          query_id: entity.query_id
+          distance: entity.distance
         )
       end
     end
