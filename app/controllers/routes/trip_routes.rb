@@ -50,18 +50,13 @@ module Leaf
     end
 
     def self.trip_entities(trip_params)
-      query_id = generate_query_id
       mapper = initialize_trip_mapper
       origin, destination, strategy = prepare_params(trip_params)
 
-      mapper.find(origin, destination, strategy, query_id)
+      mapper.find(origin, destination, strategy)
     end
 
     # Helper methods to make `trip_entities` more concise
-    def self.generate_query_id
-      SecureRandom.uuid
-    end
-
     def self.initialize_trip_mapper
       Leaf::GoogleMaps::TripMapper.new(
         Leaf::GoogleMaps::API,

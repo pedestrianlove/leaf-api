@@ -23,7 +23,6 @@ describe 'Test Plan Entity' do
     )
 
     @strategy = 'driving'
-    @query_id = SecureRandom.uuid # Generate a query_id for the test
     VCRHelper.configure_vcr_for('entity_trip', 'GOOGLE_TOKEN', CORRECT_SECRETS.GOOGLE_TOKEN)
   end
 
@@ -39,7 +38,7 @@ describe 'Test Plan Entity' do
 
     trips = []
     3.times do
-      trips << trip_mapper.find(@origin.name, @destination.name, @strategy, @query_id)
+      trips << trip_mapper.find(@origin.name, @destination.name, @strategy)
     end
 
     travel_plan = Leaf::Entity::Plan.new(
@@ -47,8 +46,7 @@ describe 'Test Plan Entity' do
       destination: @destination,
       strategy: @strategy,
       trips: trips,
-      distance_to: Leaf::Plan::Utils.calculate_distance(@origin, @destination).to_i,
-      query_id: @query_id # Include query_id in the Plan
+      distance: Leaf::Plan::Utils.calculate_distance(@origin, @destination).to_i
     )
 
     _(travel_plan).must_be_kind_of Leaf::Entity::Plan
@@ -56,8 +54,7 @@ describe 'Test Plan Entity' do
     _(travel_plan.destination).must_equal @destination
     _(travel_plan.strategy).must_equal @strategy
     _(travel_plan.trips.size).must_equal 3
-    _(travel_plan.distance_to).must_be_instance_of Integer
-    _(travel_plan.distance_to).must_be :>, 0
-    _(travel_plan.query_id).must_equal @query_id # Check if query_id is correctly set
+    _(travel_plan.distance).must_be_instance_of Integer
+    _(travel_plan.distance).must_be :>, 0
   end
 end

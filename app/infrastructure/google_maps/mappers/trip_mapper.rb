@@ -10,21 +10,20 @@ module Leaf
         @gateway = @gateway_class.new(@token)
       end
 
-      def find(starting_point, destination, mode, query_id)
+      def find(starting_point, destination, mode)
         data = @gateway.distance_matrix(starting_point, destination, mode)
         data['mode'] = mode
-        build_entity(data, query_id)
+        build_entity(data)
       end
 
-      def build_entity(data, query_id)
-        DataMapper.new(data, @token, @gateway_class, query_id).build_entity
+      def build_entity(data)
+        DataMapper.new(data, @token, @gateway_class).build_entity
       end
 
       # DataMapper class extracts entity-specific elements from data structure
       class DataMapper
-        def initialize(data, token, gateway_class, query_id)
+        def initialize(data, token, gateway_class)
           @data = data
-          @query_id = query_id
           @location_mapper = LocationMapper.new(gateway_class, token)
         end
 
@@ -35,8 +34,7 @@ module Leaf
             origin: origin,
             destination: destination,
             duration: duration,
-            distance: distance,
-            query_id: @query_id
+            distance: distance
           )
         end
 
