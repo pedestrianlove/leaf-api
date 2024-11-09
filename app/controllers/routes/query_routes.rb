@@ -47,6 +47,9 @@ module Leaf
         Leaf::Repository::Query.save(query)
         puts 'written to db.'
 
+        routing.session[:visited_queries] ||= []
+        routing.session[:visited_queries].insert(0, query.id).uniq!
+
         routing.redirect query.id
       end
     end
@@ -60,17 +63,23 @@ module Leaf
         end
       end
     end
+    # rubocop:disable Metrics/MethodLength
 
     def self.setup_query_result(routing)
       routing.on String do |query_id|
         routing.get do
           query = Leaf::Repository::Query.find_by_id(query_id)
-
           routing.scope.view('query/query_result', locals: {
                                query: query
                              })
         end
+        routing.delete do
+          routing.session[:visited_queries].delete(query_id)
+          routing.flash[:notice] = "Query '#{query_id}' has been removed from history."
+          routing.redirect '/queries'
+        end
       end
     end
+    # rubocop:enable Metrics/MethodLength
   end
 end

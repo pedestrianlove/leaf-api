@@ -15,10 +15,18 @@ module Leaf
         setup_trip_result(routing)
       end
     end
+    # rubocop:disable Metrics/MethodLength
+    # rubocop:disable Metrics/LineLength
+    # rubocop:disable Metrics/AbcSize
 
     def self.setup_trip_submit(routing)
       routing.post 'submit' do
         params = routing.params
+
+        routing.session[:visited_trips] ||= []
+        routing.session[:visited_trips].insert(0,
+                                               "#{params['origin']}-#{params['destination']}-#{params['strategy']}").uniq!
+
         routing.redirect "#{params['origin']}/#{params['destination']}/#{params['strategy']}"
       end
     end
@@ -38,8 +46,18 @@ module Leaf
           trip = find_trip(trip_params)
           routing.scope.view('trip/trip_result', locals: { trip: trip })
         end
+        routing.delete do
+          trip_key = "#{params['origin']}-#{params['destination']}-#{params['strategy']}"
+          remove_from_visited_trips(trip_key, routing)
+          flash[:notice] = "Trip '#{trip_key}' has been removed from history."
+
+          routing.redirect '/trips'
+        end
       end
     end
+    # rubocop:enable Metrics/MethodLength
+    # rubocop:enable Metrics/LineLength
+    # rubocop:enable Metrics/AbcSize
 
     def self.find_trip(trip_params)
       trip_params[:origin] ||= '24.795707, 120.996393'

@@ -73,6 +73,14 @@ namespace :db do
   end
 end
 
+desc 'Generates a 64 by secret for Rack::Session'
+task :new_session_secret do
+  require 'base64'
+  require 'securerandom'
+  secret = SecureRandom.random_bytes(64).then { Base64.urlsafe_encode64(_1) }
+  puts "SESSION_SECRET: #{secret}"
+end
+
 namespace :vcr do
   desc 'delete cassette fixtures'
   task :wipe do

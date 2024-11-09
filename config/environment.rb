@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require 'figaro'
+require 'logger'
+require 'rack/session'
 require 'roda'
 require 'sequel'
 
@@ -17,6 +19,8 @@ module Leaf
       )
       Figaro.load
       def self.config = Figaro.env
+
+      use Rack::Session::Cookie, secret: config.SESSION_SECRET
 
       configure :development, :test do
         Figaro.require_keys('DB_FILENAME')

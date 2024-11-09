@@ -2,3 +2,4 @@ config/secrets.yaml
 coverage/*
 !coverage/.resultset.json
 *.db
+.bundle/
