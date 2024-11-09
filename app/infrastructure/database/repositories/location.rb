@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module LeafAPI
+module Leaf
   module Repository
     # Repository for Location
     class Location
@@ -23,7 +23,8 @@ module LeafAPI
           id: db_record.id,
           name: db_record.name,
           latitude: db_record.latitude,
-          longitude: db_record.longitude
+          longitude: db_record.longitude,
+          plus_code: db_record.plus_code
         )
       end
 

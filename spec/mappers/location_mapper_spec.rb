@@ -15,16 +15,17 @@ describe 'Test LocationMapper' do
 
   describe 'Test find method' do
     it 'Returns a Location entity for a valid address' do
-      location_mapper = LeafAPI::GoogleMaps::LocationMapper.new(
-        LeafAPI::GoogleMaps::API,
+      location_mapper = Leaf::GoogleMaps::LocationMapper.new(
+        Leaf::GoogleMaps::API,
         CORRECT_SECRETS.GOOGLE_TOKEN
       )
       location = location_mapper.find('光明里 300, Hsinchu City, East District')
 
-      _(location).must_be_kind_of LeafAPI::Entity::Location
+      _(location).must_be_kind_of Leaf::Entity::Location
       _(location.name).must_be_instance_of String
       _(location.latitude).must_be_instance_of Float
       _(location.longitude).must_be_instance_of Float
+      _(location.plus_code).must_be_instance_of String
     end
   end
 end

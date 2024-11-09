@@ -3,8 +3,13 @@
 detectors:
   IrresponsibleModule:
     enabled: false
+  DuplicateMethodCall:
+    max_calls: 5
+  TooManyStatements:
+    max_statements: 15
   LongParameterList:
     exclude:
-    - LeafAPI::NTHUSA::API#bus_schedule
+    - Leaf::NTHUSA::API#bus_schedule
+    - Leaf::GoogleMaps::TripMapper#find
 exclude_paths:
   - spec/fixture/project_info.rb # one-time test fixture creator

@@ -1,0 +1,9 @@
+section class="flex flex-col items-center justify-center mt-10 dark:bg-gray-900"
+  h1 class="text-center text-2xl font-bold mb-4 dark:text-gray-200" 地點查詢
+  form class="bg-white dark:bg-gray-800 dark:text-gray-200 p-6 rounded-lg shadow-lg border" method="post" action="/locations/search"
+    div class="mb-4"
+      label class="text-xl" for="location" 地點:
+      input class="dark:bg-gray-50 dark:text-gray-700 rounded-lg p-2 px-3 mt-2 w-full border" type="text" name="location" id="location" required="true" placeholder="輸入要查詢的地點"
+
+    div class="flex justify-end mt-10"
+      input type="submit" value="查詢" class="bg-gray-800 text-white dark:bg-gray-50 dark:text-gray-800 px-4 py-2 rounded-xl"

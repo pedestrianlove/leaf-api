@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
+ruby '3.3.5'
 
 # Utilities and Utilities
 gem 'figaro', '~> 1.2'
@@ -9,6 +10,7 @@ gem 'rake'
 
 # Web Application
 gem 'logger', '~> 1.6'
+gem 'plus_codes', '~> 0.2.1'
 gem 'puma', '~> 6.4'
 gem 'roda', '~> 3.85'
 gem 'slim', '~> 5.2'
@@ -43,4 +45,8 @@ group :development do
   gem 'flog', '~> 4.8'
   gem 'reek', '~> 6.3'
   gem 'rubocop', '~> 1.66'
+end
+
+group :production do
+  gem 'pg', '~> 1.5'
 end

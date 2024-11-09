@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
+require 'securerandom'
 require_relative '../../infrastructure/google_maps/mappers/trip_mapper'
 require_relative '../../infrastructure/google_maps/gateways/google_maps_api'
 require_relative '../../../config/environment'
 
-module LeafAPI
+module Leaf
   # Module handling trip-related routes
   module TripRoutes
     def self.setup(routing)
@@ -25,7 +26,7 @@ module LeafAPI
     def self.setup_trip_form(routing)
       routing.is do
         routing.get do
-          routing.scope.view 'trip_form'
+          routing.scope.view 'trip/trip_form'
         end
       end
     end
@@ -35,7 +36,7 @@ module LeafAPI
         routing.get do
           trip_params = { origin: origin, destination: destination, strategy: strategy }
           trip = find_trip(trip_params)
-          routing.scope.view('trip_result', locals: { trip: trip })
+          routing.scope.view('trip/trip_result', locals: { trip: trip })
         end
       end
     end
@@ -49,16 +50,26 @@ module LeafAPI
     end
 
     def self.trip_entities(trip_params)
-      mapper = LeafAPI::GoogleMaps::TripMapper.new(
-        LeafAPI::GoogleMaps::API,
-        LeafAPI::App.config.GOOGLE_TOKEN
-      )
+      mapper = initialize_trip_mapper
+      origin, destination, strategy = prepare_params(trip_params)
 
-      mapper.find(
+      mapper.find(origin, destination, strategy)
+    end
+
+    # Helper methods to make `trip_entities` more concise
+    def self.initialize_trip_mapper
+      Leaf::GoogleMaps::TripMapper.new(
+        Leaf::GoogleMaps::API,
+        Leaf::App.config.GOOGLE_TOKEN
+      )
+    end
+
+    def self.prepare_params(trip_params)
+      [
         CGI.unescape(trip_params[:origin]),
         CGI.unescape(trip_params[:destination]),
         CGI.unescape(trip_params[:strategy])
-      )
+      ]
     end
   end
 end
