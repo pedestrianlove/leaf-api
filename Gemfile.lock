@@ -97,7 +97,6 @@ GEM
       ast (~> 2.4.1)
       racc
     path_expander (1.1.3)
-    pg (1.5.9)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -201,7 +200,6 @@ DEPENDENCIES
   logger (~> 1.6)
   minitest
   minitest-rg
-  pg
   pry (~> 0.14.2)
   puma (~> 6.4)
   rack-session (~> 0.3)

@@ -44,12 +44,20 @@ module Leaf
         routing.get do
           trip_params = { origin: origin, destination: destination, strategy: strategy }
           trip = find_trip(trip_params)
-          routing.scope.view('trip/trip_result', locals: { trip: trip })
+          if trip
+            routing.scope.view('trip/trip_result', locals: { trip: trip })
+          else
+            flash[:error] = MESSAGES[:info_not_found]
+            routing.redirect '/trips'
+          end
         end
         routing.delete do
           trip_key = "#{params['origin']}-#{params['destination']}-#{params['strategy']}"
-          remove_from_visited_trips(trip_key, routing)
-          flash[:notice] = "Trip '#{trip_key}' has been removed from history."
+          if remove_from_visited_trips(trip_key, routing)
+            flash[:notice] = "Trip '#{trip_key}' has been removed from history."
+          else
+            flash[:error] = MESSAGES[:info_not_found]
+          end
 
           routing.redirect '/trips'
         end
@@ -72,6 +80,13 @@ module Leaf
       origin, destination, strategy = prepare_params(trip_params)
 
       mapper.find(origin, destination, strategy)
+    rescue Leaf::GoogleMaps::APIError => api_error # rubocop:disable Naming/RescuedExceptionsVariableName
+      handle_api_error(api_error)
+      nil
+    end
+
+    def handle_api_error(error)
+      flash.now[:error] = "#{MESSAGES[:api_error]}: #{error.message}"
     end
 
     # Helper methods to make `trip_entities` more concise
@@ -88,6 +103,17 @@ module Leaf
         CGI.unescape(trip_params[:destination]),
         CGI.unescape(trip_params[:strategy])
       ]
+    end
+
+    def self.remove_from_visited_trips(trip_key, routing)
+      routing.session[:visited_trips]&.delete(trip_key)
+    rescue StandardError => save_error # rubocop:disable Naming/RescuedExceptionsVariableName
+      handle_save_error(save_error)
+      false
+    end
+
+    def handle_save_error(error)
+      flash.now[:error] = "#{MESSAGES[:save_error]}: #{error.message}"
     end
   end
 end
