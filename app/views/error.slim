@@ -6,11 +6,10 @@ html
     link rel="stylesheet" href="/assets/style.css"
   body
     h1 Error
-    - if flash[:error]
-      p.error
-        | An error occurred: #{flash[:error]}
-    - else
-      p
-        | An unexpected error occurred. Please try again later.
+
+    == render 'partials/flash_messages'
+
+    p
+      | An unexpected error occurred. Please try again later.
 
     a href="/" Return to Home

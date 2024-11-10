@@ -1,0 +1,6 @@
+- if flash[:error]
+  div.error-message
+    | #{flash[:error]}
+- if flash[:notice]
+  div.notice-message
+    | #{flash[:notice]}
