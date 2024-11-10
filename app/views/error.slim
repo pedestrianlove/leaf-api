@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Error - Leaf App
+    meta charset="utf-8"
+    link rel="stylesheet" href="/assets/style.css"
+  body
+    h1 Error
+    - if flash[:error]
+      p.error
+        | An error occurred: #{flash[:error]}
+    - else
+      p
+        | An unexpected error occurred. Please try again later.
+
+    a href="/" Return to Home
