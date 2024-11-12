@@ -51,6 +51,6 @@ group :development do
 end
 
 # heroku
-# group :production do
-#   gem 'pg', '~> 1.5'
-# end
+group :production do
+  gem 'pg', '~> 1.5'
+end
