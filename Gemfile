@@ -6,7 +6,6 @@ source 'https://rubygems.org'
 
 # Utilities and Utilities
 gem 'figaro', '~> 1.2'
-# gem 'pg'
 gem 'pry', '~> 0.14.2'
 gem 'rake', '~> 13.0'
 gem 'securerandom'
