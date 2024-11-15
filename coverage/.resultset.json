@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/jsl/Work/leaf-api/require_app.rb": {
+      "/home/winwu/SOA/leaf-api/require_app.rb": {
         "lines": [
           null,
           null,
@@ -16,26 +16,30 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/config/environment.rb": {
+      "/home/winwu/SOA/leaf-api/config/environment.rb": {
         "lines": [
           null,
           null,
           1,
           1,
           1,
-          null,
-          1,
-          null,
           1,
           1,
           null,
           1,
           null,
           1,
+          1,
+          null,
+          1,
+          null,
+          1,
           null,
           null,
           null,
           1,
+          1,
+          null,
           1,
           null,
           1,
@@ -51,7 +55,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/domain/plan/entities/location.rb": {
+      "/home/winwu/SOA/leaf-api/app/domain/plan/entities/location.rb": {
         "lines": [
           null,
           null,
@@ -79,7 +83,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/domain/plan/entities/plan.rb": {
+      "/home/winwu/SOA/leaf-api/app/domain/plan/entities/plan.rb": {
         "lines": [
           null,
           null,
@@ -149,7 +153,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/domain/plan/entities/trip.rb": {
+      "/home/winwu/SOA/leaf-api/app/domain/plan/entities/trip.rb": {
         "lines": [
           null,
           null,
@@ -179,7 +183,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/domain/plan/utils.rb": {
+      "/home/winwu/SOA/leaf-api/app/domain/plan/utils.rb": {
         "lines": [
           null,
           null,
@@ -238,7 +242,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/domain/query/entities/query.rb": {
+      "/home/winwu/SOA/leaf-api/app/domain/query/entities/query.rb": {
         "lines": [
           null,
           null,
@@ -275,7 +279,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/database/orm/location_orm.rb": {
+      "/home/winwu/SOA/leaf-api/app/infrastructure/database/orm/location_orm.rb": {
         "lines": [
           null,
           null,
@@ -308,7 +312,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/database/orm/plan_orm.rb": {
+      "/home/winwu/SOA/leaf-api/app/infrastructure/database/orm/plan_orm.rb": {
         "lines": [
           null,
           null,
@@ -347,7 +351,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/database/orm/trip_orm.rb": {
+      "/home/winwu/SOA/leaf-api/app/infrastructure/database/orm/trip_orm.rb": {
         "lines": [
           null,
           null,
@@ -386,7 +390,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/database/repositories/for.rb": {
+      "/home/winwu/SOA/leaf-api/app/infrastructure/database/repositories/for.rb": {
         "lines": [
           null,
           null,
@@ -414,7 +418,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/database/repositories/location.rb": {
+      "/home/winwu/SOA/leaf-api/app/infrastructure/database/repositories/location.rb": {
         "lines": [
           null,
           null,
@@ -474,7 +478,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/database/repositories/trip.rb": {
+      "/home/winwu/SOA/leaf-api/app/infrastructure/database/repositories/trip.rb": {
         "lines": [
           null,
           null,
@@ -552,7 +556,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/database/repositories/plan.rb": {
+      "/home/winwu/SOA/leaf-api/app/infrastructure/database/repositories/plan.rb": {
         "lines": [
           null,
           null,
@@ -614,7 +618,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/database/repositories/query.rb": {
+      "/home/winwu/SOA/leaf-api/app/infrastructure/database/repositories/query.rb": {
         "lines": [
           null,
           null,
@@ -648,7 +652,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/google_maps/gateways/google_maps_api.rb": {
+      "/home/winwu/SOA/leaf-api/app/infrastructure/google_maps/gateways/google_maps_api.rb": {
         "lines": [
           null,
           null,
@@ -712,7 +716,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/utils.rb": {
+      "/home/winwu/SOA/leaf-api/app/infrastructure/utils.rb": {
         "lines": [
           null,
           null,
@@ -740,7 +744,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/google_maps/mappers/location_mapper.rb": {
+      "/home/winwu/SOA/leaf-api/app/infrastructure/google_maps/mappers/location_mapper.rb": {
         "lines": [
           null,
           null,
@@ -799,7 +803,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/google_maps/mappers/trip_mapper.rb": {
+      "/home/winwu/SOA/leaf-api/app/infrastructure/google_maps/mappers/trip_mapper.rb": {
         "lines": [
           null,
           null,
@@ -866,7 +870,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/huggingface/gateways/huggingface_api.rb": {
+      "/home/winwu/SOA/leaf-api/app/infrastructure/huggingface/gateways/huggingface_api.rb": {
         "lines": [
           null,
           null,
@@ -901,7 +905,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/nominatim/gateways/nominatim_api.rb": {
+      "/home/winwu/SOA/leaf-api/app/infrastructure/nominatim/gateways/nominatim_api.rb": {
         "lines": [
           null,
           null,
@@ -933,7 +937,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/nthusa/gateways/nthusa_api.rb": {
+      "/home/winwu/SOA/leaf-api/app/infrastructure/nthusa/gateways/nthusa_api.rb": {
         "lines": [
           null,
           null,
@@ -972,7 +976,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/controllers/app.rb": {
+      "/home/winwu/SOA/leaf-api/app/controllers/app.rb": {
         "lines": [
           null,
           null,
@@ -981,6 +985,8 @@
           1,
           1,
           1,
+          1,
+          1,
           null,
           1,
           null,
@@ -989,6 +995,21 @@
           1,
           1,
           1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           1,
           0,
@@ -1009,13 +1030,71 @@
           1,
           0,
           0,
+          0,
           null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
           null,
           null,
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/controllers/routes/location_routes.rb": {
+      "/home/winwu/SOA/leaf-api/app/controllers/routes/location_routes.rb": {
         "lines": [
           null,
           null,
@@ -1036,6 +1115,9 @@
           1,
           0,
           0,
+          null,
+          0,
+          0,
           0,
           null,
           null,
@@ -1051,6 +1133,12 @@
           1,
           0,
           0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
           0,
           null,
           null,
@@ -1068,7 +1156,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/controllers/routes/trip_routes.rb": {
+      "/home/winwu/SOA/leaf-api/app/controllers/routes/trip_routes.rb": {
         "lines": [
           null,
           null,
@@ -1088,28 +1176,18 @@
           null,
           null,
           null,
-          1,
-          0,
-          0,
-          0,
           null,
           null,
           null,
           1,
           0,
           0,
+          null,
+          0,
           0,
           null,
           null,
-          null,
-          null,
-          1,
           0,
-          0,
-          0,
-          0,
-          0,
-          null,
           null,
           null,
           null,
@@ -1118,6 +1196,42 @@
           0,
           0,
           null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
           0,
           null,
           null,
@@ -1127,6 +1241,9 @@
           null,
           0,
           null,
+          0,
+          0,
+          null,
           null,
           null,
           1,
@@ -1142,12 +1259,19 @@
           null,
           null,
           null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
           null,
           null,
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/controllers/routes/query_routes.rb": {
+      "/home/winwu/SOA/leaf-api/app/controllers/routes/query_routes.rb": {
         "lines": [
           null,
           null,
@@ -1199,6 +1323,9 @@
           0,
           null,
           0,
+          0,
+          null,
+          0,
           null,
           null,
           null,
@@ -1212,13 +1339,19 @@
           null,
           null,
           null,
+          null,
           1,
           0,
           0,
           0,
-          null,
           0,
           null,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
           null,
           null,
           null,
@@ -1228,6 +1361,6 @@
         ]
       }
     },
-    "timestamp": 1731126507
+    "timestamp": 1731206945
   }
 }

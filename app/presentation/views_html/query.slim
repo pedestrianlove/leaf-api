@@ -1,0 +1,19 @@
+h1= "Query System"
+
+section
+  h2= "All Queries (#{@query_list.count})"
+
+  - if @query_list.any?
+    ul
+      - @query_list.each do |query|
+        li
+          strong= "Query ID: #{query.id}"
+          p= "From #{query.origin.name} to #{query.destination.name}"
+          p= "Strategy: #{query.strategy.capitalize}"
+          a href="/queries/#{query.id}" View Details
+  - else
+    p No queries available.
+
+section
+  h2 Create a New Query
+  a href="/queries/new" New Query
