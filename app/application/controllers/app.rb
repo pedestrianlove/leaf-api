@@ -11,7 +11,7 @@ require_relative '../../../config/environment'
 module Leaf
   # This is the main application class that handles routing in Leaf
   class App < Roda
-    plugin :render, engine: 'slim', views: 'app/presentation'
+    plugin :render, engine: 'slim', views: 'app/presentation/views_html'
     plugin :assets, css: 'style.css', path: 'app/presentation/assets'
     plugin :common_logger, $stderr
     plugin :halt
