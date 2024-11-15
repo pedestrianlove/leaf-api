@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../spec_helper'
+require_relative '../../../spec_helper'
 
 describe 'Test Nominatim API library' do
   VCRHelper.setup_vcr
