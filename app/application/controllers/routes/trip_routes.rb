@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'securerandom'
-require_relative '../../infrastructure/google_maps/mappers/trip_mapper'
-require_relative '../../infrastructure/google_maps/gateways/google_maps_api'
-require_relative '../../../config/environment'
+require_relative '../../../infrastructure/google_maps/mappers/trip_mapper'
+require_relative '../../../infrastructure/google_maps/gateways/google_maps_api'
+require_relative '../../../../config/environment'
 
 module Leaf
   # Module handling trip-related routes
