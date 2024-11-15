@@ -6,7 +6,7 @@ require 'rack'
 require_relative 'routes/location_routes'
 require_relative 'routes/trip_routes'
 require_relative 'routes/query_routes'
-require_relative '../../config/environment'
+require_relative '../../../config/environment'
 
 module Leaf
   # This is the main application class that handles routing in Leaf
