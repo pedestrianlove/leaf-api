@@ -26,16 +26,24 @@ module Leaf
       no_info: 'No info input',
       db_error: 'Database access error',
       info_not_found: 'Info not found',
-      api_error: 'Failed to retrieve data from external API',
-      invalid_data: 'Invalid data received',
-      save_error: 'Error saving data to database'
+      invalid_request: 'Invalid request parameters',
+      missing_session: 'Session data is missing',
+      route_error: 'Unexpected route error',
+      unauthorized_access: 'Unauthorized access attempt'
     }.freeze
 
     route do |routing|
       routing.assets
       response['Content-Type'] = 'text/html; charset=utf-8'
 
-      setup_routes(routing)
+      begin
+        setup_routes(routing)
+      rescue StandardError => error # rubocop:disable Naming/RescuedExceptionsVariableName
+        App.logger.error error.backtrace.join("\n")
+        flash[:error] = MESSAGES[:route_error]
+        response.status = 500
+        routing.redirect '/'
+      end
     end
 
     private
@@ -47,64 +55,20 @@ module Leaf
       Leaf::QueryRoutes.setup(routing)
     end
 
-    def setup_root(routing)
+    def setup_root(routing) # rubocop:disable Metrics/MethodLength,Metrics/AbcSize
       routing.root do
-        initialize_session
-        set_flash_message_for_empty_session
+        session[:query_id_visited] ||= []
 
-        render_home_view
-      rescue StandardError => standard_error # rubocop:disable Naming/RescuedExceptionsVariableName
-        handle_standard_error(standard_error)
+        flash.now[:notice] = MESSAGES[:no_info] if session[:query_id_visited].empty?
+
+        begin
+          view 'home', locals: { query_id: session[:query_id_visited] }
+        rescue StandardError => error # rubocop:disable Naming/RescuedExceptionsVariableName
+          App.logger.error error.backtrace.join("\n")
+          flash[:error] = MESSAGES[:db_error]
+          response.status = 500
+        end
       end
-    end
-
-    def initialize_session
-      session[:query_id_visited] ||= []
-    rescue StandardError => session_error # rubocop:disable Naming/RescuedExceptionsVariableName
-      handle_session_error(session_error)
-    end
-
-    def handle_session_error(error)
-      flash.now[:error] = "#{MESSAGES[:db_error]}: Failed to initialize session - #{error.message}"
-    end
-
-    def set_flash_message_for_empty_session
-      set_no_info_message if session[:query_id_visited].empty?
-    rescue StandardError => flash_error # rubocop:disable Naming/RescuedExceptionsVariableName
-      handle_flash_error(flash_error)
-    end
-
-    def set_session_error_message
-      flash.now[:error] = "#{MESSAGES[:db_error]}: Session data is missing"
-    end
-
-    def set_no_info_message
-      flash.now[:notice] = MESSAGES[:no_info]
-    end
-
-    def handle_flash_error(error)
-      flash.now[:error] = "#{MESSAGES[:db_error]}: Failed to set flash message - #{error.message}"
-    end
-
-    def render_home_view
-      if session[:query_id_visited]
-        view 'home', locals: { query_id: session[:query_id_visited] }
-      else
-        flash.now[:error] = "#{MESSAGES[:info_not_found]}: Unable to retrieve query data"
-        view 'error'
-      end
-    rescue StandardError => render_error # rubocop:disable Naming/RescuedExceptionsVariableName
-      handle_render_error(render_error)
-      view 'error'
-    end
-
-    def handle_render_error(error)
-      flash.now[:error] = "#{MESSAGES[:db_error]}: Failed to render home view - #{error.message}"
-    end
-
-    def handle_standard_error(error)
-      flash.now[:error] = "#{MESSAGES[:db_error]}: #{error.message}"
-      view 'home'
     end
   end
 end
