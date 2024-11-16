@@ -6,13 +6,13 @@ require 'rack'
 require_relative 'routes/location_routes'
 require_relative 'routes/trip_routes'
 require_relative 'routes/query_routes'
-require_relative '../../config/environment'
+require_relative '../../../config/environment'
 
 module Leaf
   # This is the main application class that handles routing in Leaf
   class App < Roda
-    plugin :render, engine: 'slim', views: 'app/views'
-    plugin :assets, css: 'style.css', path: 'app/views/assets'
+    plugin :render, engine: 'slim', views: 'app/presentation/views_html'
+    plugin :assets, css: 'style.css', path: 'app/presentation/assets'
     plugin :common_logger, $stderr
     plugin :halt
     plugin :flash

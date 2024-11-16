@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative 'spec_helper'
-require_relative 'helpers/database_helper'
+require_relative '../../../spec_helper'
+require_relative '../../../helpers/database_helper'
 
 describe 'Integration Tests of Location ORM and Database' do
   before do

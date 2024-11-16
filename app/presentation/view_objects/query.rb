@@ -1,19 +1,10 @@
 # frozen_string_literal: true
 
 module Views
-  # View for a query
+  # View for a single query entity
   class Query
-    def initialize(query, index = nil)
+    def initialize(query)
       @query = query
-      @index = index
-    end
-
-    def entity
-      @query
-    end
-
-    def id
-      @query.id
     end
 
     def origin_name
@@ -25,23 +16,15 @@ module Views
     end
 
     def strategy
-      @query.strategy.capitalize
+      @query.strategy
     end
 
-    def plans
-      @query.plans.map { |plan| Views::Plan.new(plan) }
+    def distance
+      @query.plans[0].distance
     end
 
-    def plans_summary
-      plans.map(&:summary)
-    end
-
-    def formatted_plans_summary
-      plans_summary.map { |summary| "Plan: #{summary}" }
-    end
-
-    def summary
-      "Query ID #{id}: From #{origin_name} to #{destination_name} using #{strategy} strategy."
+    def duration
+      @query.plans[0].duration / 60
     end
   end
 end
