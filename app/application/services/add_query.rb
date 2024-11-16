@@ -5,7 +5,6 @@ require 'dry/transaction'
 
 module Leaf
   module Service
-    # Transaction to store project from Github API to database
     # :reek:FeatureEnvy
     # :reek:UncommunicativeVariableName
     class AddQuery
