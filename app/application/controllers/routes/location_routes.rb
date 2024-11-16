@@ -2,10 +2,14 @@
 
 require_relative '../../../infrastructure/google_maps/mappers/location_mapper'
 require_relative '../../../infrastructure/google_maps/gateways/google_maps_api'
+require_relative '../../forms/new_location'
+require_relative '../../services/add_location'
+require_relative '../../../presentation/view_objects/location'
 
 module Leaf
   # Module handling location-related routes
   module LocationRoutes
+    # :reek:TooManyStatements
     def self.setup(routing)
       routing.on 'locations' do
         setup_location_search(routing)
@@ -14,13 +18,36 @@ module Leaf
       end
     end
 
-    def self.setup_location_search(routing)
+    def self.setup_location_search(routing) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
       routing.post 'search' do
-        location_query = routing.params['location'].downcase
-        # 新增地點到 session 中
-        routing.session[:visited_locations] ||= []
-        routing.session[:visited_locations].insert(0, location_query).uniq!
-        routing.redirect "/locations/#{CGI.escape(location_query)}"
+        # 使用 Form Object 驗證輸入
+        form = Forms::NewLocation.new.call(routing.params)
+
+        if form.failure?
+          routing.flash[:error] = form.errors.to_h.values.join(', ')
+          routing.redirect '/locations'
+        end
+
+        # 對輸入地點進行 URI 編碼
+        location_query = CGI.escape(form[:location].downcase)
+        puts("Encoded Location Query: #{location_query}")
+
+        # 呼叫 Service Object
+        result = Service::AddLocation.new.call(location_query: location_query)
+        puts("Service Result: #{result}")
+
+        if result.failure?
+          routing.flash[:error] = result.failure
+          routing.redirect '/locations'
+        else
+          location_entity = result.value!
+          puts("Location Entity Name: #{location_entity.name}")
+
+          # 儲存最近訪問的地點
+          routing.session[:visited_locations] ||= []
+          routing.session[:visited_locations].insert(0, location_entity.name).uniq!
+          routing.redirect "/locations/#{location_query}"
+        end
       end
     end
 
@@ -47,12 +74,16 @@ module Leaf
     end
 
     def self.handle_location_query(routing, location_query)
+      # 使用 LocationMapper 獲取地點資料
       location_entity = Leaf::GoogleMaps::LocationMapper.new(
         Leaf::GoogleMaps::API,
         Leaf::App.config.GOOGLE_TOKEN
       ).find(location_query)
 
-      routing.scope.view('location/location_result', locals: { location: location_entity })
+      puts(location_entity)
+      # 將地點資料轉換為 View Object
+      location_view = Views::Location.new(location_entity)
+      routing.scope.view('location/location_result', locals: { location: location_view })
     end
   end
 end
