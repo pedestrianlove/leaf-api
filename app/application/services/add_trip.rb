@@ -22,12 +22,12 @@ module Leaf
       end
 
       def map_trip(input)
-          origin, destination, strategy = prepare_trip_params(input)
-          mapper = initialize_trip_mapper
-          mapped_trip = mapper.find(origin, destination, strategy)
-          Success(mapped_trip.to_h)
+        origin, destination, strategy = prepare_trip_params(input)
+        mapper = initialize_trip_mapper
+        mapped_trip = mapper.find(origin, destination, strategy)
+        Success(mapped_trip.to_h)
       rescue StandardError => e
-          Failure("Mapping trip failed: #{e.message}")
+        Failure("Mapping trip failed: #{e.message}")
       end
 
       def create_trip(input)

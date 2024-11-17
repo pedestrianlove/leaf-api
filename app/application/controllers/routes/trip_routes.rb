@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'cgi'
 require 'securerandom'
 require_relative '../../../infrastructure/google_maps/mappers/trip_mapper'
 require_relative '../../../infrastructure/google_maps/gateways/google_maps_api'
