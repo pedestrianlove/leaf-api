@@ -4,6 +4,7 @@ require 'securerandom'
 require_relative '../../../infrastructure/google_maps/mappers/trip_mapper'
 require_relative '../../../infrastructure/google_maps/gateways/google_maps_api'
 require_relative '../../../../config/environment'
+require_relative '../../../presentation/view_objects/query'
 
 module Leaf
   # Module handling plan-related routes
@@ -37,9 +38,8 @@ module Leaf
         routing.on String do |query_id|
           routing.get do
             query = Leaf::Repository::Query.find_by_id(query_id)
-            routing.scope.view('query/query_result', locals: {
-                                 query: query
-                               })
+            query_view = Views::Query.new(query)
+            routing.scope.view('query/query_result', locals: { query: query_view })
           end
           routing.delete do
             routing.session[:visited_queries].delete(query_id)
