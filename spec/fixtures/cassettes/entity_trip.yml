@@ -2791,4 +2791,1296 @@ http_interactions:
           "status": "OK"
         }
   recorded_at: Sun, 03 Nov 2024 07:06:10 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%B8&key=<GOOGLE_TOKEN>&mode=driving&origins=%E6%B8%85%E8%8F%AF%E5%A4%A7%E5%AD%B8&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 18 Nov 2024 11:59:45 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '424'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=53
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"Student Dormitory
+        12, No. 1001號, Daxue Rd, East District, Hsinchu City, Taiwan 300\"\n   ],\n
+        \  \"origin_addresses\" : \n   [\n      \"30 Shuang Qing Lu, 蓝旗营 Hai Dian
+        Qu, Bei Jing Shi, China, 100190\"\n   ],\n   \"rows\" : \n   [\n      {\n
+        \        \"elements\" : \n         [\n            {\n               \"status\"
+        : \"ZERO_RESULTS\"\n            }\n         ]\n      }\n   ],\n   \"status\"
+        : \"OK\"\n}"
+  recorded_at: Mon, 18 Nov 2024 11:59:45 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=30%20Shuang%20Qing%20Lu,%20%E8%93%9D%E6%97%97%E8%90%A5%20Hai%20Dian%20Qu,%20Bei%20Jing%20Shi,%20China,%20100190&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 18 Nov 2024 11:59:45 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2745'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=23
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"30\",\n               \"short_name\"
+        : \"30\",\n               \"types\" : \n               [\n                  \"street_number\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"Shuang Qing Lu\",\n               \"short_name\" : \"Shuang Qing Lu\",\n
+        \              \"types\" : \n               [\n                  \"route\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"蓝旗营\",\n               \"short_name\" : \"蓝旗营\",\n               \"types\"
+        : \n               [\n                  \"neighborhood\",\n                  \"political\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"Hai Dian Qu\",\n               \"short_name\" : \"Hai Dian Qu\",\n               \"types\"
+        : \n               [\n                  \"political\",\n                  \"sublocality\",\n
+        \                 \"sublocality_level_1\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"Bei Jing Shi\",\n               \"short_name\"
+        : \"Bei Jing Shi\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"China\",\n               \"short_name\" :
+        \"CN\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"100190\",\n               \"short_name\"
+        : \"100190\",\n               \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"30 Shuang Qing Lu, 蓝旗营 Hai Dian Qu, Bei Jing Shi, China, 100190\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 39.9996674,\n               \"lng\" : 116.3264439\n            },\n            \"location_type\"
+        : \"ROOFTOP\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 40.0010163802915,\n                  \"lng\"
+        : 116.3277928802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 39.9983184197085,\n                  \"lng\"
+        : 116.3250949197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"ChIJjzweph9U8DURyeLg4P5QWtk\",\n         \"plus_code\" : \n         {\n
+        \           \"compound_code\" : \"X8XG+VH Haidian District, Beijing, China\",\n
+        \           \"global_code\" : \"8PFRX8XG+VH\"\n         },\n         \"types\"
+        : \n         [\n            \"establishment\",\n            \"point_of_interest\",\n
+        \           \"university\"\n         ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Mon, 18 Nov 2024 11:59:45 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Student%20Dormitory%2012,%20No.%201001%E8%99%9F,%20Daxue%20Rd,%20East%20District,%20Hsinchu%20City,%20Taiwan%20300&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 18 Nov 2024 11:59:45 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '5403'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=17
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"Student Dormitory
+        12\",\n               \"short_name\" : \"Student Dormitory 12\",\n               \"types\"
+        : \n               [\n                  \"premise\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"1001\",\n               \"short_name\"
+        : \"1001\",\n               \"types\" : \n               [\n                  \"street_number\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"大學路\",\n               \"short_name\" : \"大學路\",\n               \"types\"
+        : \n               [\n                  \"route\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"光明里\",\n               \"short_name\"
+        : \"光明里\",\n               \"types\" : \n               [\n                  \"administrative_area_level_3\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"Student Dormitory 12, No. 1001大學路 East District, Hsinchu City, Taiwan
+        300\",\n         \"geometry\" : \n         {\n            \"location\" : \n
+        \           {\n               \"lat\" : 24.7842293,\n               \"lng\"
+        : 120.99563\n            },\n            \"location_type\" : \"ROOFTOP\",\n
+        \           \"viewport\" : \n            {\n               \"northeast\" :
+        \n               {\n                  \"lat\" : 24.78566328029151,\n                  \"lng\"
+        : 120.9968514802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7829653197085,\n                  \"lng\"
+        : 120.9941535197085\n               }\n            }\n         },\n         \"partial_match\"
+        : true,\n         \"place_id\" : \"ChIJsQnjpAU2aDQRvbgwWqqCMEI\",\n         \"types\"
+        : \n         [\n            \"premise\"\n         ]\n      },\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"1001\",\n
+        \              \"short_name\" : \"1001\",\n               \"types\" : \n               [\n
+        \                 \"street_number\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Daxue Road\",\n               \"short_name\"
+        : \"Daxue Rd\",\n               \"types\" : \n               [\n                  \"route\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"光明里\",\n               \"short_name\" : \"光明里\",\n               \"types\"
+        : \n               [\n                  \"administrative_area_level_3\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"No. 1001, Daxue Rd, East District, Hsinchu City, Taiwan 300\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 24.7884305,\n               \"lng\" : 120.9986143\n            },\n            \"location_type\"
+        : \"ROOFTOP\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 24.7897780802915,\n                  \"lng\"
+        : 121.0000945802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7870801197085,\n                  \"lng\"
+        : 120.9973966197085\n               }\n            }\n         },\n         \"partial_match\"
+        : true,\n         \"place_id\" : \"ChIJKTr23BE2aDQRGVA8ii6513w\",\n         \"plus_code\"
+        : \n         {\n            \"compound_code\" : \"QXQX+9C 新竹市東區光明里\",\n            \"global_code\"
+        : \"7QP2QXQX+9C\"\n         },\n         \"types\" : \n         [\n            \"street_address\"\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Mon, 18 Nov 2024 11:59:45 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%B8&key=<GOOGLE_TOKEN>&mode=driving&origins=%E6%B8%85%E8%8F%AF%E5%A4%A7%E5%AD%B8&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 18 Nov 2024 11:59:45 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '424'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=25
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"Student Dormitory
+        12, No. 1001號, Daxue Rd, East District, Hsinchu City, Taiwan 300\"\n   ],\n
+        \  \"origin_addresses\" : \n   [\n      \"30 Shuang Qing Lu, 蓝旗营 Hai Dian
+        Qu, Bei Jing Shi, China, 100190\"\n   ],\n   \"rows\" : \n   [\n      {\n
+        \        \"elements\" : \n         [\n            {\n               \"status\"
+        : \"ZERO_RESULTS\"\n            }\n         ]\n      }\n   ],\n   \"status\"
+        : \"OK\"\n}"
+  recorded_at: Mon, 18 Nov 2024 11:59:45 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=30%20Shuang%20Qing%20Lu,%20%E8%93%9D%E6%97%97%E8%90%A5%20Hai%20Dian%20Qu,%20Bei%20Jing%20Shi,%20China,%20100190&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 18 Nov 2024 11:59:45 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2745'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=14
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"30\",\n               \"short_name\"
+        : \"30\",\n               \"types\" : \n               [\n                  \"street_number\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"Shuang Qing Lu\",\n               \"short_name\" : \"Shuang Qing Lu\",\n
+        \              \"types\" : \n               [\n                  \"route\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"蓝旗营\",\n               \"short_name\" : \"蓝旗营\",\n               \"types\"
+        : \n               [\n                  \"neighborhood\",\n                  \"political\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"Hai Dian Qu\",\n               \"short_name\" : \"Hai Dian Qu\",\n               \"types\"
+        : \n               [\n                  \"political\",\n                  \"sublocality\",\n
+        \                 \"sublocality_level_1\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"Bei Jing Shi\",\n               \"short_name\"
+        : \"Bei Jing Shi\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"China\",\n               \"short_name\" :
+        \"CN\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"100190\",\n               \"short_name\"
+        : \"100190\",\n               \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"30 Shuang Qing Lu, 蓝旗营 Hai Dian Qu, Bei Jing Shi, China, 100190\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 39.9996674,\n               \"lng\" : 116.3264439\n            },\n            \"location_type\"
+        : \"ROOFTOP\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 40.0010163802915,\n                  \"lng\"
+        : 116.3277928802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 39.9983184197085,\n                  \"lng\"
+        : 116.3250949197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"ChIJjzweph9U8DURyeLg4P5QWtk\",\n         \"plus_code\" : \n         {\n
+        \           \"compound_code\" : \"X8XG+VH Haidian District, Beijing, China\",\n
+        \           \"global_code\" : \"8PFRX8XG+VH\"\n         },\n         \"types\"
+        : \n         [\n            \"establishment\",\n            \"point_of_interest\",\n
+        \           \"university\"\n         ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Mon, 18 Nov 2024 11:59:45 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Student%20Dormitory%2012,%20No.%201001%E8%99%9F,%20Daxue%20Rd,%20East%20District,%20Hsinchu%20City,%20Taiwan%20300&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 18 Nov 2024 11:59:45 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '5403'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=13
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"Student Dormitory
+        12\",\n               \"short_name\" : \"Student Dormitory 12\",\n               \"types\"
+        : \n               [\n                  \"premise\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"1001\",\n               \"short_name\"
+        : \"1001\",\n               \"types\" : \n               [\n                  \"street_number\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"大學路\",\n               \"short_name\" : \"大學路\",\n               \"types\"
+        : \n               [\n                  \"route\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"光明里\",\n               \"short_name\"
+        : \"光明里\",\n               \"types\" : \n               [\n                  \"administrative_area_level_3\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"Student Dormitory 12, No. 1001大學路 East District, Hsinchu City, Taiwan
+        300\",\n         \"geometry\" : \n         {\n            \"location\" : \n
+        \           {\n               \"lat\" : 24.7842293,\n               \"lng\"
+        : 120.99563\n            },\n            \"location_type\" : \"ROOFTOP\",\n
+        \           \"viewport\" : \n            {\n               \"northeast\" :
+        \n               {\n                  \"lat\" : 24.78566328029151,\n                  \"lng\"
+        : 120.9968514802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7829653197085,\n                  \"lng\"
+        : 120.9941535197085\n               }\n            }\n         },\n         \"partial_match\"
+        : true,\n         \"place_id\" : \"ChIJsQnjpAU2aDQRvbgwWqqCMEI\",\n         \"types\"
+        : \n         [\n            \"premise\"\n         ]\n      },\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"1001\",\n
+        \              \"short_name\" : \"1001\",\n               \"types\" : \n               [\n
+        \                 \"street_number\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Daxue Road\",\n               \"short_name\"
+        : \"Daxue Rd\",\n               \"types\" : \n               [\n                  \"route\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"光明里\",\n               \"short_name\" : \"光明里\",\n               \"types\"
+        : \n               [\n                  \"administrative_area_level_3\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"No. 1001, Daxue Rd, East District, Hsinchu City, Taiwan 300\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 24.7884305,\n               \"lng\" : 120.9986143\n            },\n            \"location_type\"
+        : \"ROOFTOP\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 24.7897780802915,\n                  \"lng\"
+        : 121.0000945802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7870801197085,\n                  \"lng\"
+        : 120.9973966197085\n               }\n            }\n         },\n         \"partial_match\"
+        : true,\n         \"place_id\" : \"ChIJKTr23BE2aDQRGVA8ii6513w\",\n         \"plus_code\"
+        : \n         {\n            \"compound_code\" : \"QXQX+9C 新竹市東區光明里\",\n            \"global_code\"
+        : \"7QP2QXQX+9C\"\n         },\n         \"types\" : \n         [\n            \"street_address\"\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Mon, 18 Nov 2024 11:59:45 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%B8&key=<GOOGLE_TOKEN>&mode=driving&origins=%E6%B8%85%E8%8F%AF%E5%A4%A7%E5%AD%B8&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 18 Nov 2024 11:59:45 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '424'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=18
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"Student Dormitory
+        12, No. 1001號, Daxue Rd, East District, Hsinchu City, Taiwan 300\"\n   ],\n
+        \  \"origin_addresses\" : \n   [\n      \"30 Shuang Qing Lu, 蓝旗营 Hai Dian
+        Qu, Bei Jing Shi, China, 100190\"\n   ],\n   \"rows\" : \n   [\n      {\n
+        \        \"elements\" : \n         [\n            {\n               \"status\"
+        : \"ZERO_RESULTS\"\n            }\n         ]\n      }\n   ],\n   \"status\"
+        : \"OK\"\n}"
+  recorded_at: Mon, 18 Nov 2024 11:59:45 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=30%20Shuang%20Qing%20Lu,%20%E8%93%9D%E6%97%97%E8%90%A5%20Hai%20Dian%20Qu,%20Bei%20Jing%20Shi,%20China,%20100190&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 18 Nov 2024 11:59:45 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2745'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=12
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"30\",\n               \"short_name\"
+        : \"30\",\n               \"types\" : \n               [\n                  \"street_number\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"Shuang Qing Lu\",\n               \"short_name\" : \"Shuang Qing Lu\",\n
+        \              \"types\" : \n               [\n                  \"route\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"蓝旗营\",\n               \"short_name\" : \"蓝旗营\",\n               \"types\"
+        : \n               [\n                  \"neighborhood\",\n                  \"political\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"Hai Dian Qu\",\n               \"short_name\" : \"Hai Dian Qu\",\n               \"types\"
+        : \n               [\n                  \"political\",\n                  \"sublocality\",\n
+        \                 \"sublocality_level_1\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"Bei Jing Shi\",\n               \"short_name\"
+        : \"Bei Jing Shi\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"China\",\n               \"short_name\" :
+        \"CN\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"100190\",\n               \"short_name\"
+        : \"100190\",\n               \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"30 Shuang Qing Lu, 蓝旗营 Hai Dian Qu, Bei Jing Shi, China, 100190\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 39.9996674,\n               \"lng\" : 116.3264439\n            },\n            \"location_type\"
+        : \"ROOFTOP\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 40.0010163802915,\n                  \"lng\"
+        : 116.3277928802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 39.9983184197085,\n                  \"lng\"
+        : 116.3250949197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"ChIJjzweph9U8DURyeLg4P5QWtk\",\n         \"plus_code\" : \n         {\n
+        \           \"compound_code\" : \"X8XG+VH Haidian District, Beijing, China\",\n
+        \           \"global_code\" : \"8PFRX8XG+VH\"\n         },\n         \"types\"
+        : \n         [\n            \"establishment\",\n            \"point_of_interest\",\n
+        \           \"university\"\n         ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Mon, 18 Nov 2024 11:59:45 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Student%20Dormitory%2012,%20No.%201001%E8%99%9F,%20Daxue%20Rd,%20East%20District,%20Hsinchu%20City,%20Taiwan%20300&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 18 Nov 2024 11:59:46 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '5403'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=29
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"Student Dormitory
+        12\",\n               \"short_name\" : \"Student Dormitory 12\",\n               \"types\"
+        : \n               [\n                  \"premise\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"1001\",\n               \"short_name\"
+        : \"1001\",\n               \"types\" : \n               [\n                  \"street_number\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"大學路\",\n               \"short_name\" : \"大學路\",\n               \"types\"
+        : \n               [\n                  \"route\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"光明里\",\n               \"short_name\"
+        : \"光明里\",\n               \"types\" : \n               [\n                  \"administrative_area_level_3\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"Student Dormitory 12, No. 1001大學路 East District, Hsinchu City, Taiwan
+        300\",\n         \"geometry\" : \n         {\n            \"location\" : \n
+        \           {\n               \"lat\" : 24.7842293,\n               \"lng\"
+        : 120.99563\n            },\n            \"location_type\" : \"ROOFTOP\",\n
+        \           \"viewport\" : \n            {\n               \"northeast\" :
+        \n               {\n                  \"lat\" : 24.78566328029151,\n                  \"lng\"
+        : 120.9968514802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7829653197085,\n                  \"lng\"
+        : 120.9941535197085\n               }\n            }\n         },\n         \"partial_match\"
+        : true,\n         \"place_id\" : \"ChIJsQnjpAU2aDQRvbgwWqqCMEI\",\n         \"types\"
+        : \n         [\n            \"premise\"\n         ]\n      },\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"1001\",\n
+        \              \"short_name\" : \"1001\",\n               \"types\" : \n               [\n
+        \                 \"street_number\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Daxue Road\",\n               \"short_name\"
+        : \"Daxue Rd\",\n               \"types\" : \n               [\n                  \"route\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"光明里\",\n               \"short_name\" : \"光明里\",\n               \"types\"
+        : \n               [\n                  \"administrative_area_level_3\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"No. 1001, Daxue Rd, East District, Hsinchu City, Taiwan 300\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 24.7884305,\n               \"lng\" : 120.9986143\n            },\n            \"location_type\"
+        : \"ROOFTOP\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 24.7897780802915,\n                  \"lng\"
+        : 121.0000945802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7870801197085,\n                  \"lng\"
+        : 120.9973966197085\n               }\n            }\n         },\n         \"partial_match\"
+        : true,\n         \"place_id\" : \"ChIJKTr23BE2aDQRGVA8ii6513w\",\n         \"plus_code\"
+        : \n         {\n            \"compound_code\" : \"QXQX+9C 新竹市東區光明里\",\n            \"global_code\"
+        : \"7QP2QXQX+9C\"\n         },\n         \"types\" : \n         [\n            \"street_address\"\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Mon, 18 Nov 2024 11:59:46 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=24.8022,120.9901&key=<GOOGLE_TOKEN>&mode=bicycling&origins=%E5%85%89%E6%98%8E%E9%87%8C%20300,%20Hsinchu%20City,%20East%20District&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 18 Nov 2024 11:59:46 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '635'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=19
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"No. 18, Lane 49,
+        Zhongxiao Rd, East District, Hsinchu City, Taiwan 300\"\n   ],\n   \"origin_addresses\"
+        : \n   [\n      \"300, Taiwan, 新竹市東區光明里\"\n   ],\n   \"rows\" : \n   [\n      {\n
+        \        \"elements\" : \n         [\n            {\n               \"distance\"
+        : \n               {\n                  \"text\" : \"2.3 km\",\n                  \"value\"
+        : 2328\n               },\n               \"duration\" : \n               {\n
+        \                 \"text\" : \"7 mins\",\n                  \"value\" : 416\n
+        \              },\n               \"status\" : \"OK\"\n            }\n         ]\n
+        \     }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Mon, 18 Nov 2024 11:59:46 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%85%89%E6%98%8E%E9%87%8C&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 18 Nov 2024 11:59:46 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2409'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=13
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"光明里\",\n               \"short_name\"
+        : \"光明里\",\n               \"types\" : \n               [\n                  \"administrative_area_level_3\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"東區\",\n               \"short_name\" : \"東區\",\n
+        \              \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"新竹市\",\n               \"short_name\" : \"新竹市\",\n
+        \              \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"300, Taiwan, 新竹市東區光明里\",\n         \"geometry\" : \n         {\n            \"bounds\"
+        : \n            {\n               \"northeast\" : \n               {\n                  \"lat\"
+        : 24.7998215,\n                  \"lng\" : 121.0055793\n               },\n
+        \              \"southwest\" : \n               {\n                  \"lat\"
+        : 24.7826199,\n                  \"lng\" : 120.9778747\n               }\n
+        \           },\n            \"location\" : \n            {\n               \"lat\"
+        : 24.7887403,\n               \"lng\" : 120.9962356\n            },\n            \"location_type\"
+        : \"APPROXIMATE\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 24.7998215,\n                  \"lng\"
+        : 121.0055793\n               },\n               \"southwest\" : \n               {\n
+        \                 \"lat\" : 24.7826199,\n                  \"lng\" : 120.9778747\n
+        \              }\n            }\n         },\n         \"place_id\" : \"ChIJXW0bawk2aDQRlSR_EpFgF9k\",\n
+        \        \"types\" : \n         [\n            \"administrative_area_level_3\",\n
+        \           \"political\"\n         ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Mon, 18 Nov 2024 11:59:46 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=No.%2018,%20Lane%2049,%20Zhongxiao%20Rd,%20East%20District,%20Hsinchu%20City,%20Taiwan%20300&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 18 Nov 2024 11:59:46 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2685'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=15
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"18\",\n               \"short_name\"
+        : \"18\",\n               \"types\" : \n               [\n                  \"street_number\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"Lane 49, Zhongxiao Road\",\n               \"short_name\" : \"Lane 49,
+        Zhongxiao Rd\",\n               \"types\" : \n               [\n                  \"route\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"光復里\",\n               \"short_name\" : \"光復里\",\n               \"types\"
+        : \n               [\n                  \"administrative_area_level_3\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"No. 18, Lane 49, Zhongxiao Rd, East District, Hsinchu City, Taiwan 300\",\n
+        \        \"geometry\" : \n         {\n            \"location\" : \n            {\n
+        \              \"lat\" : 24.8023078,\n               \"lng\" : 120.9900567\n
+        \           },\n            \"location_type\" : \"ROOFTOP\",\n            \"viewport\"
+        : \n            {\n               \"northeast\" : \n               {\n                  \"lat\"
+        : 24.8036116802915,\n                  \"lng\" : 120.9914249802915\n               },\n
+        \              \"southwest\" : \n               {\n                  \"lat\"
+        : 24.8009137197085,\n                  \"lng\" : 120.9887270197085\n               }\n
+        \           }\n         },\n         \"place_id\" : \"ChIJDXOfyXU2aDQR5m7jEuR4uP4\",\n
+        \        \"plus_code\" : \n         {\n            \"compound_code\" : \"RX2R+W2
+        新竹市東區光復里\",\n            \"global_code\" : \"7QP2RX2R+W2\"\n         },\n
+        \        \"types\" : \n         [\n            \"street_address\"\n         ]\n
+        \     }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Mon, 18 Nov 2024 11:59:46 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=24.8022,120.9901&key=<GOOGLE_TOKEN>&mode=driving&origins=%E5%85%89%E6%98%8E%E9%87%8C%20300,%20Hsinchu%20City,%20East%20District&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 18 Nov 2024 11:59:46 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '636'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=27
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"No. 18, Lane 49,
+        Zhongxiao Rd, East District, Hsinchu City, Taiwan 300\"\n   ],\n   \"origin_addresses\"
+        : \n   [\n      \"300, Taiwan, 新竹市東區光明里\"\n   ],\n   \"rows\" : \n   [\n      {\n
+        \        \"elements\" : \n         [\n            {\n               \"distance\"
+        : \n               {\n                  \"text\" : \"3.4 km\",\n                  \"value\"
+        : 3388\n               },\n               \"duration\" : \n               {\n
+        \                 \"text\" : \"10 mins\",\n                  \"value\" : 612\n
+        \              },\n               \"status\" : \"OK\"\n            }\n         ]\n
+        \     }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Mon, 18 Nov 2024 11:59:46 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=24.8022,120.9901&key=<GOOGLE_TOKEN>&mode=transit&origins=%E5%85%89%E6%98%8E%E9%87%8C%20300,%20Hsinchu%20City,%20East%20District&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 18 Nov 2024 11:59:47 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '805'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=68
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"No. 18, Lane 49,
+        Zhongxiao Rd, East District, Hsinchu City, Taiwan 300\"\n   ],\n   \"origin_addresses\"
+        : \n   [\n      \"300, Taiwan, 新竹市東區光明里\"\n   ],\n   \"rows\" : \n   [\n      {\n
+        \        \"elements\" : \n         [\n            {\n               \"distance\"
+        : \n               {\n                  \"text\" : \"2.6 km\",\n                  \"value\"
+        : 2637\n               },\n               \"duration\" : \n               {\n
+        \                 \"text\" : \"25 mins\",\n                  \"value\" : 1497\n
+        \              },\n               \"fare\" : \n               {\n                  \"currency\"
+        : \"TWD\",\n                  \"text\" : \"NT$25.00\",\n                  \"value\"
+        : 25\n               },\n               \"status\" : \"OK\"\n            }\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Mon, 18 Nov 2024 11:59:47 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=24.8022,120.9901&key=<GOOGLE_TOKEN>&mode=walking&origins=%E5%85%89%E6%98%8E%E9%87%8C%20300,%20Hsinchu%20City,%20East%20District&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 18 Nov 2024 11:59:47 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '637'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=20
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"No. 18, Lane 49,
+        Zhongxiao Rd, East District, Hsinchu City, Taiwan 300\"\n   ],\n   \"origin_addresses\"
+        : \n   [\n      \"300, Taiwan, 新竹市東區光明里\"\n   ],\n   \"rows\" : \n   [\n      {\n
+        \        \"elements\" : \n         [\n            {\n               \"distance\"
+        : \n               {\n                  \"text\" : \"2.2 km\",\n                  \"value\"
+        : 2217\n               },\n               \"duration\" : \n               {\n
+        \                 \"text\" : \"28 mins\",\n                  \"value\" : 1705\n
+        \              },\n               \"status\" : \"OK\"\n            }\n         ]\n
+        \     }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Mon, 18 Nov 2024 11:59:47 GMT
 recorded_with: VCR 6.3.1
