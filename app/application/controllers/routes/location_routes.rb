@@ -29,7 +29,7 @@ module Leaf
         end
 
         # 對輸入地點進行 URI 編碼
-        location_query = CGI.escape(form[:location].downcase)
+        location_query = form[:location].downcase
         puts("Encoded Location Query: #{location_query}")
 
         # 呼叫 Service Object
@@ -46,7 +46,7 @@ module Leaf
           # 儲存最近訪問的地點
           routing.session[:visited_locations] ||= []
           routing.session[:visited_locations].insert(0, location_entity.name).uniq!
-          routing.redirect "/locations/#{location_query}"
+          routing.redirect "/locations/#{CGI.escape(location_query)}"
         end
       end
     end

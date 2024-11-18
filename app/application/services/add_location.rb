@@ -15,7 +15,7 @@ module Leaf
       private
 
       def fetch_location(input)
-        location_query = CGI.unescape(input[:location_query])
+        location_query = input[:location_query]
         puts("Decoded Location Query: #{location_query}")
 
         mapper = Leaf::GoogleMaps::LocationMapper.new(
