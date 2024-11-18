@@ -59,9 +59,10 @@ module Leaf
       end
     end
 
-    def self.setup_location_result(routing)
+    def self.setup_location_result(routing) # rubocop:disable Metrics/MethodLength
       routing.on String do |location_query|
         routing.get do
+          location_query = CGI.unescape(location_query)
           handle_location_query(routing, location_query)
         end
         routing.delete do

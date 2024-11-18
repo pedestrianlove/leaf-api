@@ -69,6 +69,23 @@ module Leaf
           distance: entity.distance
         )
       end
+
+      def self.save(entity) # rubocop:disable Metrics/MethodLength
+        origin = find_or_create_location(entity.origin)
+        destination = find_or_create_location(entity.destination)
+
+        db_trip = Database::TripOrm.find_or_create(
+          origin_id: origin.id,
+          destination_id: destination.id,
+          strategy: entity.strategy,
+          duration: entity.duration,
+          distance: entity.distance
+        )
+
+        rebuild_entity(db_trip)
+      rescue StandardError => e
+        raise "Failed to save trip: #{e.message}"
+      end
     end
   end
 end
