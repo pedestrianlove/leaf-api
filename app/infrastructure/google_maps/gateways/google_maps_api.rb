@@ -23,6 +23,7 @@ module Leaf
                                destinations: destination,
                                origins: origin,
                                mode: mode,
+                               region: 'tw',
                                key: @secret
                              })
 
@@ -36,6 +37,7 @@ module Leaf
       def geocoding(address)
         response = @http.get('https://maps.googleapis.com/maps/api/geocode/json', params: {
                                address: address,
+                               region: 'tw',
                                key: @secret
                              })
 
