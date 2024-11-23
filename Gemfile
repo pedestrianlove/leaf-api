@@ -12,8 +12,10 @@ gem 'securerandom'
 
 # Web Application
 gem 'logger', '~> 1.6'
+gem 'multi_json', '~> 1.15'
 gem 'puma', '~> 6.4'
 gem 'rack-session', '~> 0.3'
+gem 'roar', '~> 1.2'
 gem 'roda', '~> 3.85'
 gem 'slim', '~> 5.2'
 
@@ -39,6 +41,7 @@ end
 group :test do
   gem 'minitest'
   gem 'minitest-rg'
+  gem 'rack-test', '~> 2.1'
   gem 'rerun', '~> 0.14.0'
   gem 'simplecov', '~> 0.22.0'
   gem 'vcr', '~> 6.3'

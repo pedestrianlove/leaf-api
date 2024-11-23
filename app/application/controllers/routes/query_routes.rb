@@ -4,7 +4,7 @@ require 'securerandom'
 require_relative '../../../infrastructure/google_maps/mappers/trip_mapper'
 require_relative '../../../infrastructure/google_maps/gateways/google_maps_api'
 require_relative '../../../../config/environment'
-require_relative '../../../presentation/view_objects/query'
+require_relative '../../../presentation/representers/query'
 
 module Leaf
   # Module handling plan-related routes
