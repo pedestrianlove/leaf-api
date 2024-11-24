@@ -4,7 +4,7 @@ require_relative '../../../infrastructure/google_maps/mappers/location_mapper'
 require_relative '../../../infrastructure/google_maps/gateways/google_maps_api'
 require_relative '../../forms/new_location'
 require_relative '../../services/add_location'
-require_relative '../../../presentation/view_objects/location'
+require_relative '../../../presentation/representers/location'
 
 module Leaf
   # Module handling location-related routes
