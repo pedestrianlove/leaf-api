@@ -16,6 +16,7 @@ module Leaf
     plugin :halt
     plugin :flash
     plugin :all_verbs
+    # plugin :hash_branches
     use Rack::MethodOverride
 
     MESSAGES = {
@@ -45,6 +46,11 @@ module Leaf
       # TODO: 分檔放routes的方法請使用hash_branches:
       # https://roda.jeremyevans.net/rdoc/files/README_rdoc.html#label-hash_branches+plugin
       # https://fiachetti.gitlab.io/mastering-roda/#routing
+
+      routing.on 'locations' do
+        Leaf::LocationRoutes.setup(routing)
+        # puts 'Locations route loaded!' # 確認進入路由
+      end
     end
   end
 end

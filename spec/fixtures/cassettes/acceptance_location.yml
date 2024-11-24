@@ -1,0 +1,152 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=taipei&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 24 Nov 2024 12:54:54 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Taipei
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '1716'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=56
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"Taipei\",\n
+        \              \"short_name\" : \"Taipei\",\n               \"types\" : \n
+        \              [\n                  \"colloquial_area\",\n                  \"locality\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            }\n         ],\n
+        \        \"formatted_address\" : \"Taipei, Taiwan\",\n         \"geometry\"
+        : \n         {\n            \"bounds\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 25.2443731,\n                  \"lng\"
+        : 121.7300824\n               },\n               \"southwest\" : \n               {\n
+        \                 \"lat\" : 24.7900797,\n                  \"lng\" : 121.2826735\n
+        \              }\n            },\n            \"location\" : \n            {\n
+        \              \"lat\" : 25.0329694,\n               \"lng\" : 121.5654177\n
+        \           },\n            \"location_type\" : \"APPROXIMATE\",\n            \"viewport\"
+        : \n            {\n               \"northeast\" : \n               {\n                  \"lat\"
+        : 25.2443731,\n                  \"lng\" : 121.7300824\n               },\n
+        \              \"southwest\" : \n               {\n                  \"lat\"
+        : 24.7900797,\n                  \"lng\" : 121.2826735\n               }\n
+        \           }\n         },\n         \"place_id\" : \"ChIJmQrivHKsQjQR4MIK3c41aj8\",\n
+        \        \"types\" : \n         [\n            \"colloquial_area\",\n            \"locality\",\n
+        \           \"political\"\n         ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Sun, 24 Nov 2024 12:54:55 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=taipei&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Sun, 08 Dec 2024 12:54:54 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - 4326965dfe4622dce6bf8838e4ab185d
+      Date:
+      - Sun, 24 Nov 2024 12:54:54 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '427'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QQ32H00+",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 25.049999999999997,
+                  "lng": 121.60000000000002
+                },
+                "southwest": {
+                  "lat": 25,
+                  "lng": 121.55000000000001
+                }
+              },
+              "location": {
+                "lat": 25.025,
+                "lng": 121.57500000000002
+              }
+            },
+            "locality": {}
+          },
+          "status": "OK"
+        }
+  recorded_at: Sun, 24 Nov 2024 12:54:56 GMT
+recorded_with: VCR 6.3.1
