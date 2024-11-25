@@ -149,4 +149,712 @@ http_interactions:
           "status": "OK"
         }
   recorded_at: Sun, 24 Nov 2024 12:54:56 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=NonExistentPlace&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 25 Nov 2024 13:36:01 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '51'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=79
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+           "results" : [],
+           "status" : "ZERO_RESULTS"
+        }
+  recorded_at: Mon, 25 Nov 2024 13:36:02 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=NonExistentPlace&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - eb075cb8dda0a8318708011d5ea7cd3d
+      Date:
+      - Mon, 25 Nov 2024 13:36:01 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '30'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "status": "ZERO_RESULTS"
+        }
+  recorded_at: Mon, 25 Nov 2024 13:36:03 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=NewYork&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 25 Nov 2024 13:36:01 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - New York, NY
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '1968'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=99
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"New York\",\n
+        \              \"short_name\" : \"New York\",\n               \"types\" :
+        \n               [\n                  \"locality\",\n                  \"political\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"New York\",\n               \"short_name\" : \"NY\",\n               \"types\"
+        : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"United States\",\n               \"short_name\"
+        : \"US\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            }\n         ],\n
+        \        \"formatted_address\" : \"New York, NY, USA\",\n         \"geometry\"
+        : \n         {\n            \"bounds\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 40.9175771,\n                  \"lng\"
+        : -73.70027209999999\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 40.4773991,\n                  \"lng\"
+        : -74.25908989999999\n               }\n            },\n            \"location\"
+        : \n            {\n               \"lat\" : 40.7127753,\n               \"lng\"
+        : -74.0059728\n            },\n            \"location_type\" : \"APPROXIMATE\",\n
+        \           \"viewport\" : \n            {\n               \"northeast\" :
+        \n               {\n                  \"lat\" : 40.9175771,\n                  \"lng\"
+        : -73.70027209999999\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 40.4773991,\n                  \"lng\"
+        : -74.25908989999999\n               }\n            }\n         },\n         \"partial_match\"
+        : true,\n         \"place_id\" : \"ChIJOwg_06VPwokRYv534QaPC8g\",\n         \"types\"
+        : \n         [\n            \"locality\",\n            \"political\"\n         ]\n
+        \     }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Mon, 25 Nov 2024 13:36:03 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=NewYork&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Mon, 09 Dec 2024 13:36:02 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - '09181cef000f4225653095e3508ae655'
+      Date:
+      - Mon, 25 Nov 2024 13:36:02 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '403'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "87G7PX00+",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 40.75,
+                  "lng": -74
+                },
+                "southwest": {
+                  "lat": 40.69999999999999,
+                  "lng": -74.05
+                }
+              },
+              "location": {
+                "lat": 40.724999999999994,
+                "lng": -74.025
+              }
+            },
+            "locality": {}
+          },
+          "status": "OK"
+        }
+  recorded_at: Mon, 25 Nov 2024 13:36:03 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Taipei&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 25 Nov 2024 13:36:02 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Taipei
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '1716'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=71
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"Taipei\",\n
+        \              \"short_name\" : \"Taipei\",\n               \"types\" : \n
+        \              [\n                  \"colloquial_area\",\n                  \"locality\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            }\n         ],\n
+        \        \"formatted_address\" : \"Taipei, Taiwan\",\n         \"geometry\"
+        : \n         {\n            \"bounds\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 25.2443731,\n                  \"lng\"
+        : 121.7300824\n               },\n               \"southwest\" : \n               {\n
+        \                 \"lat\" : 24.7900797,\n                  \"lng\" : 121.2826735\n
+        \              }\n            },\n            \"location\" : \n            {\n
+        \              \"lat\" : 25.0329694,\n               \"lng\" : 121.5654177\n
+        \           },\n            \"location_type\" : \"APPROXIMATE\",\n            \"viewport\"
+        : \n            {\n               \"northeast\" : \n               {\n                  \"lat\"
+        : 25.2443731,\n                  \"lng\" : 121.7300824\n               },\n
+        \              \"southwest\" : \n               {\n                  \"lat\"
+        : 24.7900797,\n                  \"lng\" : 121.2826735\n               }\n
+        \           }\n         },\n         \"place_id\" : \"ChIJmQrivHKsQjQR4MIK3c41aj8\",\n
+        \        \"types\" : \n         [\n            \"colloquial_area\",\n            \"locality\",\n
+        \           \"political\"\n         ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Mon, 25 Nov 2024 13:36:03 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=Taipei&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Mon, 09 Dec 2024 13:36:02 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - a6a31267ffa2259bd0948b25353b679e
+      Date:
+      - Mon, 25 Nov 2024 13:36:02 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '427'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QQ32H00+",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 25.049999999999997,
+                  "lng": 121.60000000000002
+                },
+                "southwest": {
+                  "lat": 25,
+                  "lng": 121.55000000000001
+                }
+              },
+              "location": {
+                "lat": 25.025,
+                "lng": 121.57500000000002
+              }
+            },
+            "locality": {}
+          },
+          "status": "OK"
+        }
+  recorded_at: Mon, 25 Nov 2024 13:36:04 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=New%20York&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 25 Nov 2024 13:56:08 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - New York, NY
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '1935'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=84
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"New York\",\n
+        \              \"short_name\" : \"New York\",\n               \"types\" :
+        \n               [\n                  \"locality\",\n                  \"political\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"New York\",\n               \"short_name\" : \"NY\",\n               \"types\"
+        : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"United States\",\n               \"short_name\"
+        : \"US\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            }\n         ],\n
+        \        \"formatted_address\" : \"New York, NY, USA\",\n         \"geometry\"
+        : \n         {\n            \"bounds\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 40.9175771,\n                  \"lng\"
+        : -73.70027209999999\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 40.4773991,\n                  \"lng\"
+        : -74.25908989999999\n               }\n            },\n            \"location\"
+        : \n            {\n               \"lat\" : 40.7127753,\n               \"lng\"
+        : -74.0059728\n            },\n            \"location_type\" : \"APPROXIMATE\",\n
+        \           \"viewport\" : \n            {\n               \"northeast\" :
+        \n               {\n                  \"lat\" : 40.9175771,\n                  \"lng\"
+        : -73.70027209999999\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 40.4773991,\n                  \"lng\"
+        : -74.25908989999999\n               }\n            }\n         },\n         \"place_id\"
+        : \"ChIJOwg_06VPwokRYv534QaPC8g\",\n         \"types\" : \n         [\n            \"locality\",\n
+        \           \"political\"\n         ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Mon, 25 Nov 2024 13:56:10 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=New%20York&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Mon, 09 Dec 2024 13:56:09 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - 631ca96beab96fa843e0e50733cf91fe
+      Date:
+      - Mon, 25 Nov 2024 13:56:09 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '403'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "87G7PX00+",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 40.75,
+                  "lng": -74
+                },
+                "southwest": {
+                  "lat": 40.69999999999999,
+                  "lng": -74.05
+                }
+              },
+              "location": {
+                "lat": 40.724999999999994,
+                "lng": -74.025
+              }
+            },
+            "locality": {}
+          },
+          "status": "OK"
+        }
+  recorded_at: Mon, 25 Nov 2024 13:56:10 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Taipei,%20Taiwan&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 25 Nov 2024 13:56:09 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Taipei
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '1716'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=69
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"Taipei\",\n
+        \              \"short_name\" : \"Taipei\",\n               \"types\" : \n
+        \              [\n                  \"colloquial_area\",\n                  \"locality\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            }\n         ],\n
+        \        \"formatted_address\" : \"Taipei, Taiwan\",\n         \"geometry\"
+        : \n         {\n            \"bounds\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 25.2443731,\n                  \"lng\"
+        : 121.7300824\n               },\n               \"southwest\" : \n               {\n
+        \                 \"lat\" : 24.7900797,\n                  \"lng\" : 121.2826735\n
+        \              }\n            },\n            \"location\" : \n            {\n
+        \              \"lat\" : 25.0329694,\n               \"lng\" : 121.5654177\n
+        \           },\n            \"location_type\" : \"APPROXIMATE\",\n            \"viewport\"
+        : \n            {\n               \"northeast\" : \n               {\n                  \"lat\"
+        : 25.2443731,\n                  \"lng\" : 121.7300824\n               },\n
+        \              \"southwest\" : \n               {\n                  \"lat\"
+        : 24.7900797,\n                  \"lng\" : 121.2826735\n               }\n
+        \           }\n         },\n         \"place_id\" : \"ChIJmQrivHKsQjQR4MIK3c41aj8\",\n
+        \        \"types\" : \n         [\n            \"colloquial_area\",\n            \"locality\",\n
+        \           \"political\"\n         ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Mon, 25 Nov 2024 13:56:11 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=Taipei,%20Taiwan&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Mon, 09 Dec 2024 13:56:09 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - 0ac451099ed1fb2baedaae74f864e6e3
+      Date:
+      - Mon, 25 Nov 2024 13:56:09 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '427'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QQ32H00+",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 25.049999999999997,
+                  "lng": 121.60000000000002
+                },
+                "southwest": {
+                  "lat": 25,
+                  "lng": 121.55000000000001
+                }
+              },
+              "location": {
+                "lat": 25.025,
+                "lng": 121.57500000000002
+              }
+            },
+            "locality": {}
+          },
+          "status": "OK"
+        }
+  recorded_at: Mon, 25 Nov 2024 13:56:11 GMT
 recorded_with: VCR 6.3.1

@@ -2,7 +2,6 @@
 
 require_relative '../../spec_helper'
 require 'rack/test'
-require_relative '../../../app/infrastructure/database/orm/location_orm'
 
 def app
   Leaf::App
@@ -12,67 +11,97 @@ describe 'Test Location API' do
   include Rack::Test::Methods
 
   VCRHelper.setup_vcr
-  before(:each) do
+
+  before do
     VCRHelper.configure_vcr_for('acceptance_location', 'GOOGLE_TOKEN', CORRECT_SECRETS.GOOGLE_TOKEN)
     DatabaseHelper.wipe_database
 
     # 初始化測試數據
-    @session = { visited_locations: ['Taipei'] }
     Leaf::Database::LocationOrm.find_or_create(
-      name: 'Taipei',
+      name: 'Taipei, Taiwan',
       latitude: 25.033,
       longitude: 121.565,
       plus_code: '7QP2QVXF+PR'
     )
-    # puts Leaf::Database::LocationOrm.first(name: 'Taipei').inspect
   end
 
-  after(:each) do
+  after do
     DatabaseHelper.wipe_database
     VCRHelper.eject_vcr
   end
 
-  it 'should create a new location' do
-    post '/locations', { location: 'Taipei' }.to_json, 'CONTENT_TYPE' => 'application/json'
-    # puts 'POST request path: /locations'
-    # puts "POST request params: #{last_request.env['rack.input'].read}" # 查看原始請求體
-    # puts "Response status: #{last_response.status}" # 查看狀態碼
-    # puts "Response body: #{last_response.body}"     # 查看返回內容
-    _(last_response.status).must_equal 201
+  it 'should list all locations' do
+    get '/locations'
+    _(last_response.status).must_equal 200
 
-    location = JSON.parse(last_response.body)
-    _(location['name']).must_equal 'Taipei, Taiwan' # 傳回來會變Taipei, Taiwan
+    body = JSON.parse(last_response.body)
+    _(body['locations']).must_include 'Taipei, Taiwan'
   end
 
-  it 'should delete a location' do
-    delete '/locations/Taipei', {}, 'rack.session' => { visited_locations: ['Taipei'] }
-    # puts 'DELETE request path: /locations/Taipei'
-    # puts "DELETE request session: #{last_request.env['rack.session']}"
-    # puts "Response status: #{last_response.status}" # 調試輸出
-    # puts "Response body: #{last_response.body}" # 調試輸出
+  it 'should create a new location using Google Maps API' do
+    VCR.use_cassette('google_maps_new_york') do
+      post '/locations', { location: 'New York' }.to_json, 'CONTENT_TYPE' => 'application/json'
+      _(last_response.status).must_equal 201
+
+      body = JSON.parse(last_response.body)
+      _(body['status']).must_equal 'created'
+      _(body['message']).must_include 'New York'
+
+      # 確認資料庫是否已新增
+      db_location = Leaf::Database::LocationOrm.first(name: 'New York, NY, USA')
+      # 這個傳回來更特別，不是New York, USA是New York, NY, USA
+      _(db_location).wont_be_nil
+      _(db_location.plus_code).wont_be_nil
+      _(db_location.latitude).wont_be_nil
+      _(db_location.longitude).wont_be_nil
+    end
+  end
+
+  it 'should return 400 for missing location name' do
+    post '/locations', {}.to_json, 'CONTENT_TYPE' => 'application/json'
+    _(last_response.status).must_equal 400
+
+    body = JSON.parse(last_response.body)
+    _(body['status']).must_equal 'bad_request'
+    _(body['message']).must_include 'Missing location name'
+  end
+
+  it 'should return 404 when location is not found' do
+    VCR.use_cassette('google_maps_non_existent') do
+      post '/locations', { location: 'NonExistentPlace' }.to_json, 'CONTENT_TYPE' => 'application/json'
+      _(last_response.status).must_equal 404
+
+      body = JSON.parse(last_response.body)
+      _(body['status']).must_equal 'not_found'
+      _(body['message']).must_include 'NonExistentPlace'
+    end
+  end
+
+  it 'should return 409 for duplicate location' do
+    post '/locations', { location: 'Taipei, Taiwan' }.to_json, 'CONTENT_TYPE' => 'application/json'
+    _(last_response.status).must_equal 409
+
+    body = JSON.parse(last_response.body)
+    _(body['status']).must_equal 'conflict'
+    _(body['message']).must_include 'Taipei, Taiwan already exists'
+  end
+
+  it 'should delete an existing location' do
+    encoded_name = CGI.escape('Taipei, Taiwan')
+    delete "/locations/#{encoded_name}"
     _(last_response.status).must_equal 204
 
-    # 確認 session 狀態是否已清空
-    _(last_request.env['rack.session'][:visited_locations]).must_be_nil
-
-    # 確認資料庫中不再存在該位置
-    db_location = Leaf::Database::LocationOrm.first(name: 'Taipei')
+    db_location = Leaf::Database::LocationOrm.first(name: 'Taipei, Taiwan')
     _(db_location).must_be_nil
   end
 
-  # it 'should not allow creating duplicate locations' do
-  #   2.times do
-  #     post '/locations', { location: 'Taipei' }.to_json, 'CONTENT_TYPE' => 'application/json'
-  #   end
-
-  #   _(last_response.status).must_equal 201
-  #   db_count = Leaf::Database::LocationOrm.where(name: 'Taipei').count
-  #   _(db_count).must_equal 1
-  # end
-
-  it 'should return 404 when deleting non-existent location' do
-    delete '/locations/NonExistent', {}, 'rack.session' => { visited_locations: [] }
+  it 'should return 404 when deleting a non-existent location' do
+    encoded_name = CGI.escape('NonExistent')
+    delete "/locations/#{encoded_name}"
     _(last_response.status).must_equal 404
-    _(JSON.parse(last_response.body)['message']).must_include 'not found'
+
+    body = JSON.parse(last_response.body)
+    _(body['status']).must_equal 'not_found'
+    _(body['message']).must_include 'not found'
   end
 end
