@@ -6,6 +6,7 @@ require 'rack'
 require_relative 'routes/location_routes'
 require_relative 'routes/trip_routes'
 require_relative 'routes/query_routes'
+require_relative 'routes/demo_routes'
 require_relative '../../presentation/responses/api_result'
 require_relative '../../presentation/representers/http_response_representer'
 require_relative '../../../config/environment'
@@ -16,6 +17,7 @@ module Leaf
     plugin :halt
     plugin :flash
     plugin :all_verbs
+    plugin :multi_route
     use Rack::MethodOverride
 
     MESSAGES = {
@@ -41,6 +43,8 @@ module Leaf
         response.status = result_response.http_status_code
         result_response.to_json
       end
+
+      routing.multi_route
 
       # TODO: 分檔放routes的方法請使用hash_branches:
       # https://roda.jeremyevans.net/rdoc/files/README_rdoc.html#label-hash_branches+plugin
