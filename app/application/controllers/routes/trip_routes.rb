@@ -3,99 +3,48 @@
 require 'securerandom'
 require_relative '../../../infrastructure/google_maps/mappers/trip_mapper'
 require_relative '../../../infrastructure/google_maps/gateways/google_maps_api'
+require_relative '../../../presentation/representers/trip'
 require_relative '../../../../config/environment'
 
 module Leaf
   # Module handling trip-related routes
-  module TripRoutes
+  class App < Roda
     plugin :multi_route
+    plugin :flash
 
-    route('trip') do |r| # rubocop:disable Metrics/BlockLength
-      r.post 'submit' do
-        trip_result = Service::AddTrip.new.call(r.params)
-
+    route('trip') do |router| # rubocop:disable Metrics/BlockLength
+      router.post do
+        trip_result = Service::AddTrip.new.call(router.params)
         if trip_result.success?
           trip_id = trip_result.value!
-          r.session[:visited_trips] ||= []
-          r.session[:visited_trips].unshift(trip_id).uniq!
-          r.redirect trip_id
+          response.status = 201
+          { status: 'success', trip_id: trip_id }.to_json
         else
-          r.redirect '/trips'
+          response.status = 400
+          { status: 'error', message: trip_result.failure }.to_json
         end
       end
 
-      r.is do
-        r.get do
-          r.scope.view 'trip/trip_form'
+      router.is do
+        router.get do
+          response.status = 200
+          { status: 'success', message: 'Trip form loaded' }.to_json
         end
       end
 
-      r.on String do |trip_id|
-        r.get do
+      router.on String do |trip_id|
+        router.get do
           trip = Leaf::Repository::Trip.find_by_id(trip_id)
           if trip
-            r.scope.view('trip/trip_result', locals: { trip: trip })
+            trip_json = Leaf::Representers::Trip.new(trip).to_json
+            response.status = 200
+            trip_json
           else
-            flash[:error] = MESSAGES[:info_not_found]
-            r.redirect '/trips'
+            response.status = 404
+            { status: 'error', message: 'Trip not found' }.to_json
           end
-        end
-
-        r.delete do
-          if r.session[:visited_trips]&.delete(trip_id)
-            flash[:notice] = "Trip '#{trip_id}' has been removed from history."
-          else
-            flash[:error] = MESSAGES[:info_not_found]
-          end
-          r.redirect '/trips'
         end
       end
     end
   end
 end
-
-#     def self.setup(routing)
-#       routing.on 'trips' do
-#         routing.post 'submit' do
-#           trip_result = Service::AddTrip.new.call(routing.params)
-
-#           if trip_result.success?
-#             trip_id = trip_result.value!
-#             routing.session[:visited_trips] ||= []
-#             routing.session[:visited_trips].unshift(0, trip_id).uniq!
-#             routing.redirect trip_id
-#           else
-#             routing.redirect '/trips'
-#           end
-#         end
-
-#         routing.is do
-#           routing.get do
-#             routing.scope.view 'trip/trip_form'
-#           end
-#         end
-
-#         routing.on String do |trip_id|
-#           routing.get do
-#             trip = Leaf::Repository::Trip.find_by_id(trip_id)
-#             if trip
-#               routing.scope.view('trip/trip_result', locals: { trip: trip })
-#             else
-#               flash[:error] = MESSAGES[:info_not_found]
-#               routing.redirect '/trips'
-#             end
-#           end
-
-#           routing.delete do
-#             if routing.session[:visited_trips]&.delete(trip_id)
-#               flash[:notice] = "Trip '#{trip_id}' has been removed from history."
-#             else
-#               flash[:error] = MESSAGES[:info_not_found]
-#             end
-#             routing.redirect '/trips'
-#           end
-#         end
-#       end
-#     end
-#   end
-# end
