@@ -1,6 +1,7 @@
 {
   "RSpec": {
     "coverage": {
+      "/home/winwu/SOA/leaf-api/require_app.rb": {
       "/home/harvey/leaf-api/require_app.rb": {
         "lines": [
           null,

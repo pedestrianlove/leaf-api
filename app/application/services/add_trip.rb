@@ -17,7 +17,7 @@ module Leaf
       private
 
       def validate_input(input)
-        form = Leaf::Forms::NewTrip.new.call(input)
+        form = Leaf::Requests::NewTripRequest.new.call(input)
         form.success? ? Success(form.to_h) : Failure("Validation failed: #{form.errors.to_h.values.join(', ')}")
       end
 
