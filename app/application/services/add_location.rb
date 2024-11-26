@@ -10,13 +10,25 @@ module Leaf
     class AddLocation
       include Dry::Transaction
 
+      step :validate_input
       step :fetch_location
 
       private
 
+      # Step 1: Validate input
+      def validate_input(input)
+        if input[:location_query].to_s.strip.empty?
+          Failure('Validation failed: location_query cannot be empty')
+        else
+          Success(input)
+        end
+      rescue StandardError => e
+        Failure("Validation error: #{e.message}")
+      end
+
       def fetch_location(input)
         location_query = CGI.unescape(input[:location_query])
-        puts("Decoded Location Query: #{location_query}")
+        # puts("Decoded Location Query: #{location_query}")
 
         mapper = Leaf::GoogleMaps::LocationMapper.new(
           Leaf::GoogleMaps::API,

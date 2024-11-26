@@ -16,6 +16,7 @@ module Leaf
     plugin :halt
     plugin :flash
     plugin :all_verbs
+    plugin :multi_route
     use Rack::MethodOverride
 
     MESSAGES = {
@@ -41,6 +42,8 @@ module Leaf
         response.status = result_response.http_status_code
         result_response.to_json
       end
+
+      routing.multi_route
 
       # TODO: 分檔放routes的方法請使用hash_branches:
       # https://roda.jeremyevans.net/rdoc/files/README_rdoc.html#label-hash_branches+plugin
