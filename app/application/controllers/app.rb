@@ -48,6 +48,11 @@ module Leaf
       # TODO: 分檔放routes的方法請使用hash_branches:
       # https://roda.jeremyevans.net/rdoc/files/README_rdoc.html#label-hash_branches+plugin
       # https://fiachetti.gitlab.io/mastering-roda/#routing
+
+      routing.on do # Catch-all route for undefined paths
+        response.status = 404
+        { status: 'error', message: 'Route not found' }.to_json
+      end
     end
   end
 end

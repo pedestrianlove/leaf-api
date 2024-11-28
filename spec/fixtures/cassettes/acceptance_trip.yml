@@ -1,0 +1,376 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=Los%20Angeles&key=<GOOGLE_TOKEN>&mode=driving&origins=New%20York&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 26 Nov 2024 13:47:47 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - New York, NY
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '581'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=656
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"Los Angeles, CA,
+        USA\"\n   ],\n   \"origin_addresses\" : \n   [\n      \"New York, NY, USA\"\n
+        \  ],\n   \"rows\" : \n   [\n      {\n         \"elements\" : \n         [\n
+        \           {\n               \"distance\" : \n               {\n                  \"text\"
+        : \"4,492 km\",\n                  \"value\" : 4492291\n               },\n
+        \              \"duration\" : \n               {\n                  \"text\"
+        : \"1 day 17 hours\",\n                  \"value\" : 145888\n               },\n
+        \              \"status\" : \"OK\"\n            }\n         ]\n      }\n   ],\n
+        \  \"status\" : \"OK\"\n}"
+  recorded_at: Tue, 26 Nov 2024 13:47:45 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=New%20York,%20NY,%20USA&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 26 Nov 2024 13:47:47 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - New York, NY
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '1935'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=79
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"New York\",\n
+        \              \"short_name\" : \"New York\",\n               \"types\" :
+        \n               [\n                  \"locality\",\n                  \"political\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"New York\",\n               \"short_name\" : \"NY\",\n               \"types\"
+        : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"United States\",\n               \"short_name\"
+        : \"US\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            }\n         ],\n
+        \        \"formatted_address\" : \"New York, NY, USA\",\n         \"geometry\"
+        : \n         {\n            \"bounds\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 40.9175771,\n                  \"lng\"
+        : -73.70027209999999\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 40.4773991,\n                  \"lng\"
+        : -74.25908989999999\n               }\n            },\n            \"location\"
+        : \n            {\n               \"lat\" : 40.7127753,\n               \"lng\"
+        : -74.0059728\n            },\n            \"location_type\" : \"APPROXIMATE\",\n
+        \           \"viewport\" : \n            {\n               \"northeast\" :
+        \n               {\n                  \"lat\" : 40.9175771,\n                  \"lng\"
+        : -73.70027209999999\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 40.4773991,\n                  \"lng\"
+        : -74.25908989999999\n               }\n            }\n         },\n         \"place_id\"
+        : \"ChIJOwg_06VPwokRYv534QaPC8g\",\n         \"types\" : \n         [\n            \"locality\",\n
+        \           \"political\"\n         ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Tue, 26 Nov 2024 13:47:45 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=New%20York,%20NY,%20USA&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Tue, 10 Dec 2024 13:47:47 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - 450668bfa8fc63e8133da25dfdf0ce7c
+      Date:
+      - Tue, 26 Nov 2024 13:47:47 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '403'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "87G7PX00+",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 40.75,
+                  "lng": -74
+                },
+                "southwest": {
+                  "lat": 40.69999999999999,
+                  "lng": -74.05
+                }
+              },
+              "location": {
+                "lat": 40.724999999999994,
+                "lng": -74.025
+              }
+            },
+            "locality": {}
+          },
+          "status": "OK"
+        }
+  recorded_at: Tue, 26 Nov 2024 13:47:46 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Los%20Angeles,%20CA,%20USA&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 26 Nov 2024 13:47:47 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Los Angeles, CA
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2193'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=99
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"Los Angeles\",\n
+        \              \"short_name\" : \"Los Angeles\",\n               \"types\"
+        : \n               [\n                  \"locality\",\n                  \"political\"\n
+        \              ]\n            },\n            {\n               \"long_name\"
+        : \"Los Angeles County\",\n               \"short_name\" : \"Los Angeles County\",\n
+        \              \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"California\",\n               \"short_name\"
+        : \"CA\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"United States\",\n               \"short_name\"
+        : \"US\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            }\n         ],\n
+        \        \"formatted_address\" : \"Los Angeles, CA, USA\",\n         \"geometry\"
+        : \n         {\n            \"bounds\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 34.3373061,\n                  \"lng\"
+        : -118.1552891\n               },\n               \"southwest\" : \n               {\n
+        \                 \"lat\" : 33.7036519,\n                  \"lng\" : -118.6681759\n
+        \              }\n            },\n            \"location\" : \n            {\n
+        \              \"lat\" : 34.0549076,\n               \"lng\" : -118.242643\n
+        \           },\n            \"location_type\" : \"APPROXIMATE\",\n            \"viewport\"
+        : \n            {\n               \"northeast\" : \n               {\n                  \"lat\"
+        : 34.3373061,\n                  \"lng\" : -118.1552891\n               },\n
+        \              \"southwest\" : \n               {\n                  \"lat\"
+        : 33.7036519,\n                  \"lng\" : -118.6681759\n               }\n
+        \           }\n         },\n         \"place_id\" : \"ChIJE9on3F3HwoAR9AhGJW_fL-I\",\n
+        \        \"types\" : \n         [\n            \"locality\",\n            \"political\"\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Tue, 26 Nov 2024 13:47:46 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=Los%20Angeles,%20CA,%20USA&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Tue, 10 Dec 2024 13:47:48 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - 2e3a03b62c8e884218290db55d76e4f2
+      Date:
+      - Tue, 26 Nov 2024 13:47:48 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '409'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "85633Q00+",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 34.099999999999994,
+                  "lng": -118.2
+                },
+                "southwest": {
+                  "lat": 34.05,
+                  "lng": -118.25
+                }
+              },
+              "location": {
+                "lat": 34.074999999999996,
+                "lng": -118.225
+              }
+            },
+            "locality": {}
+          },
+          "status": "OK"
+        }
+  recorded_at: Tue, 26 Nov 2024 13:47:46 GMT
+recorded_with: VCR 6.3.1

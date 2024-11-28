@@ -17,52 +17,58 @@ module Leaf
       private
 
       def validate_input(input)
-        form = Leaf::Forms::NewTrip.new.call(input)
-        form.success? ? Success(form.to_h) : Failure("Validation failed: #{form.errors.to_h.values.join(', ')}")
+        result = Leaf::Requests::NewTripRequest.new(input).call
+        result.to_monad # Ensure result is already a Dry::Monads object (Success/Failure)
       end
 
       def map_trip(input)
-        origin, destination, strategy = prepare_trip_params(input)
-        mapper = initialize_trip_mapper
+        origin, destination, strategy = TripMapping.prepare_trip_params(input)
+        mapper = Leaf::GoogleMaps::TripMapper.new(
+          Leaf::GoogleMaps::API,
+          Leaf::App.config.GOOGLE_TOKEN
+        )
         mapped_trip = mapper.find(origin, destination, strategy)
         Success(mapped_trip.to_h)
-      rescue StandardError => e
-        Failure("Mapping trip failed: #{e.message}")
+      rescue StandardError => error # rubocop:disable Naming/RescuedExceptionsVariableName
+        Failure("Mapping trip failed: #{error.message}")
       end
 
       def create_trip(input)
-        trip = Entity::Trip.new(
-          origin: input[:origin],
-          destination: input[:destination],
-          strategy: input[:strategy],
-          distance: input[:distance],
-          duration: input[:duration]
-        )
+        trip = TripFactory.build(input)
         Success(trip: trip)
-      rescue StandardError => e
-        Failure("Trip creation failed: #{e.message}")
+      rescue StandardError => error # rubocop:disable Naming/RescuedExceptionsVariableName
+        Failure("Trip creation failed: #{error.message}")
       end
 
       def save_trip(input)
         trip = input[:trip]
         trip = Leaf::Repository::Trip.save(trip)
         Success(trip.id)
-      rescue StandardError => e
-        Failure("Trip saving failed: #{e.message}")
+      rescue StandardError => error # rubocop:disable Naming/RescuedExceptionsVariableName
+        Failure("Trip saving failed: #{error.message}")
       end
+    end
 
-      def prepare_trip_params(input)
+    # Factory to build a trip entity
+    class TripFactory
+      def self.build(input)
+        Entity::Trip.new(
+          origin: input[:origin],
+          destination: input[:destination],
+          strategy: input[:strategy],
+          distance: input[:distance],
+          duration: input[:duration]
+        )
+      end
+    end
+
+    # Mapping class to prepare trip parameters
+    class TripMapping
+      def self.prepare_trip_params(input)
         origin = CGI.unescape(input[:origin])
         destination = CGI.unescape(input[:destination])
         strategy = CGI.unescape(input[:strategy])
         [origin, destination, strategy]
-      end
-
-      def initialize_trip_mapper
-        Leaf::GoogleMaps::TripMapper.new(
-          Leaf::GoogleMaps::API,
-          Leaf::App.config.GOOGLE_TOKEN
-        )
       end
     end
   end

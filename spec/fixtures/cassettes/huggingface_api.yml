@@ -2977,23 +2977,23 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Sun, 24 Nov 2024 09:47:56 GMT
+      - Sun, 24 Nov 2024 11:00:28 GMT
       Content-Type:
       - application/json
       Content-Length:
       - '72'
       Connection:
       - keep-alive
-      X-Request-Id:
-      - 8wkz6zUFsIjAH2SAchdsX
       Vary:
       - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
       Access-Control-Allow-Credentials:
       - 'true'
+      X-Request-Id:
+      - nvxb6gaMJv89E1LWU4ASj
     body:
       encoding: UTF-8
       string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 09:47:58 GMT
+  recorded_at: Sun, 24 Nov 2024 11:00:27 GMT
 - request:
     method: post
     uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
@@ -3019,7 +3019,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Sun, 24 Nov 2024 09:48:54 GMT
+      - Tue, 26 Nov 2024 10:03:42 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -3031,11 +3031,11 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       X-Request-Id:
-      - m-yZ2Vveb6wfvZvBAJ6rk
+      - jkmiKouYslCYDm-_8flYL
     body:
       encoding: UTF-8
       string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 09:48:55 GMT
+  recorded_at: Tue, 26 Nov 2024 10:03:41 GMT
 - request:
     method: post
     uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
@@ -3061,23 +3061,23 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Sun, 24 Nov 2024 10:06:26 GMT
+      - Tue, 26 Nov 2024 12:44:45 GMT
       Content-Type:
       - application/json
       Content-Length:
       - '72'
       Connection:
       - keep-alive
-      X-Request-Id:
-      - fmScFxMDRBs0G16_jxa7b
-      Access-Control-Allow-Credentials:
-      - 'true'
       Vary:
       - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Request-Id:
+      - U28shqg-QJwrYwh6vy_n1
     body:
       encoding: UTF-8
       string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 10:06:27 GMT
+  recorded_at: Tue, 26 Nov 2024 12:44:43 GMT
 - request:
     method: post
     uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
@@ -3103,7 +3103,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Sun, 24 Nov 2024 10:10:35 GMT
+      - Tue, 26 Nov 2024 12:47:16 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -3111,7 +3111,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-Request-Id:
-      - YaPcMwqohOqDpu_ifTCq0
+      - o9hN9C75pANNjAsnAMQKd
       Access-Control-Allow-Credentials:
       - 'true'
       Vary:
@@ -3119,7 +3119,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 10:10:36 GMT
+  recorded_at: Tue, 26 Nov 2024 12:47:13 GMT
 - request:
     method: post
     uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
@@ -3145,7 +3145,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Sun, 24 Nov 2024 10:16:10 GMT
+      - Tue, 26 Nov 2024 12:52:46 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -3153,7 +3153,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-Request-Id:
-      - b0b8sswW67gt-oKySqtOh
+      - on7tDMPzSbRSsj2TKePew
       Access-Control-Allow-Credentials:
       - 'true'
       Vary:
@@ -3161,7 +3161,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 10:16:11 GMT
+  recorded_at: Tue, 26 Nov 2024 12:52:45 GMT
 - request:
     method: post
     uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
@@ -3187,7 +3187,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Sun, 24 Nov 2024 12:32:28 GMT
+      - Tue, 26 Nov 2024 13:03:42 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -3195,7 +3195,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-Request-Id:
-      - pUmplXGTJa5-OUkL4oYYu
+      - fHhuFph6FKEJD3jQ4ZxjJ
       Access-Control-Allow-Credentials:
       - 'true'
       Vary:
@@ -3203,7 +3203,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 12:32:29 GMT
+  recorded_at: Tue, 26 Nov 2024 13:03:41 GMT
 - request:
     method: post
     uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
@@ -3229,7 +3229,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Sun, 24 Nov 2024 12:37:32 GMT
+      - Tue, 26 Nov 2024 13:05:55 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -3237,15 +3237,15 @@ http_interactions:
       Connection:
       - keep-alive
       X-Request-Id:
-      - QvVG0AycW5X8YOKlxgo6g
-      Access-Control-Allow-Credentials:
-      - 'true'
+      - OD49P92d3fEwrFaUaxmYY
       Vary:
       - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+      Access-Control-Allow-Credentials:
+      - 'true'
     body:
       encoding: UTF-8
       string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 12:37:33 GMT
+  recorded_at: Tue, 26 Nov 2024 13:05:55 GMT
 - request:
     method: post
     uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
@@ -3271,7 +3271,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Sun, 24 Nov 2024 12:41:08 GMT
+      - Tue, 26 Nov 2024 13:07:54 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -3283,723 +3283,9 @@ http_interactions:
       Access-Control-Allow-Credentials:
       - 'true'
       X-Request-Id:
-      - 5xlUpUgq2_9uDUOy6Z2_E
+      - N91rcU-1nLKU61SeoUDg4
     body:
       encoding: UTF-8
       string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 12:41:09 GMT
-- request:
-    method: post
-    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
-    body:
-      encoding: UTF-8
-      string: '{"inputs":"Tell me a joke"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Bearer <HUGGINGFACE_API_KEY>
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Host:
-      - api-inference.huggingface.co
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Sun, 24 Nov 2024 12:42:13 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '72'
-      Connection:
-      - keep-alive
-      X-Request-Id:
-      - 5witMChEpJvgB3P-0Swpv
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Vary:
-      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-    body:
-      encoding: UTF-8
-      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 12:42:14 GMT
-- request:
-    method: post
-    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
-    body:
-      encoding: UTF-8
-      string: '{"inputs":"Tell me a joke"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Bearer <HUGGINGFACE_API_KEY>
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Host:
-      - api-inference.huggingface.co
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Sun, 24 Nov 2024 12:43:02 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '72'
-      Connection:
-      - keep-alive
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Vary:
-      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-      X-Request-Id:
-      - 3mnZpzOKyKSXxR8z9zGll
-    body:
-      encoding: UTF-8
-      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 12:43:04 GMT
-- request:
-    method: post
-    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
-    body:
-      encoding: UTF-8
-      string: '{"inputs":"Tell me a joke"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Bearer <HUGGINGFACE_API_KEY>
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Host:
-      - api-inference.huggingface.co
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Sun, 24 Nov 2024 12:44:24 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '72'
-      Connection:
-      - keep-alive
-      Vary:
-      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-      Access-Control-Allow-Credentials:
-      - 'true'
-      X-Request-Id:
-      - RL6VuSIN_gNwe_iPKbQd9
-    body:
-      encoding: UTF-8
-      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 12:44:25 GMT
-- request:
-    method: post
-    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
-    body:
-      encoding: UTF-8
-      string: '{"inputs":"Tell me a joke"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Bearer <HUGGINGFACE_API_KEY>
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Host:
-      - api-inference.huggingface.co
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Sun, 24 Nov 2024 12:46:18 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '72'
-      Connection:
-      - keep-alive
-      X-Request-Id:
-      - nRN8_NwDMLZgd6Xp2DAAU
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Vary:
-      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-    body:
-      encoding: UTF-8
-      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 12:46:19 GMT
-- request:
-    method: post
-    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
-    body:
-      encoding: UTF-8
-      string: '{"inputs":"Tell me a joke"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Bearer <HUGGINGFACE_API_KEY>
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Host:
-      - api-inference.huggingface.co
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Sun, 24 Nov 2024 12:46:37 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '72'
-      Connection:
-      - keep-alive
-      Vary:
-      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-      Access-Control-Allow-Credentials:
-      - 'true'
-      X-Request-Id:
-      - x3xfEOukhGYdlL2Dx4N26
-    body:
-      encoding: UTF-8
-      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 12:46:39 GMT
-- request:
-    method: post
-    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
-    body:
-      encoding: UTF-8
-      string: '{"inputs":"Tell me a joke"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Bearer <HUGGINGFACE_API_KEY>
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Host:
-      - api-inference.huggingface.co
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Sun, 24 Nov 2024 12:47:00 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '72'
-      Connection:
-      - keep-alive
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Vary:
-      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-      X-Request-Id:
-      - 2mzqA9C9Mvpb3gqwBDo-e
-    body:
-      encoding: UTF-8
-      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 12:47:02 GMT
-- request:
-    method: post
-    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
-    body:
-      encoding: UTF-8
-      string: '{"inputs":"Tell me a joke"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Bearer <HUGGINGFACE_API_KEY>
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Host:
-      - api-inference.huggingface.co
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Sun, 24 Nov 2024 12:48:25 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '72'
-      Connection:
-      - keep-alive
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Vary:
-      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-      X-Request-Id:
-      - 8tZFrU61QzIElDwnkzPdS
-    body:
-      encoding: UTF-8
-      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 12:48:27 GMT
-- request:
-    method: post
-    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
-    body:
-      encoding: UTF-8
-      string: '{"inputs":"Tell me a joke"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Bearer <HUGGINGFACE_API_KEY>
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Host:
-      - api-inference.huggingface.co
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Sun, 24 Nov 2024 12:49:48 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '72'
-      Connection:
-      - keep-alive
-      Vary:
-      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-      Access-Control-Allow-Credentials:
-      - 'true'
-      X-Request-Id:
-      - rp-NhY6IJn5X_AFN159yB
-    body:
-      encoding: UTF-8
-      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 12:49:50 GMT
-- request:
-    method: post
-    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
-    body:
-      encoding: UTF-8
-      string: '{"inputs":"Tell me a joke"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Bearer <HUGGINGFACE_API_KEY>
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Host:
-      - api-inference.huggingface.co
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Sun, 24 Nov 2024 12:50:31 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '72'
-      Connection:
-      - keep-alive
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Vary:
-      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-      X-Request-Id:
-      - QUwZESnNWYfGovgCQkkIq
-    body:
-      encoding: UTF-8
-      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 12:50:32 GMT
-- request:
-    method: post
-    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
-    body:
-      encoding: UTF-8
-      string: '{"inputs":"Tell me a joke"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Bearer <HUGGINGFACE_API_KEY>
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Host:
-      - api-inference.huggingface.co
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Sun, 24 Nov 2024 12:52:48 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '72'
-      Connection:
-      - keep-alive
-      Vary:
-      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-      Access-Control-Allow-Credentials:
-      - 'true'
-      X-Request-Id:
-      - m3pbLjnUzAddkxRHG32-c
-    body:
-      encoding: UTF-8
-      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 12:52:49 GMT
-- request:
-    method: post
-    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
-    body:
-      encoding: UTF-8
-      string: '{"inputs":"Tell me a joke"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Bearer <HUGGINGFACE_API_KEY>
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Host:
-      - api-inference.huggingface.co
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Sun, 24 Nov 2024 12:54:28 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '72'
-      Connection:
-      - keep-alive
-      Vary:
-      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-      Access-Control-Allow-Credentials:
-      - 'true'
-      X-Request-Id:
-      - YbWGPSyjifWs8GQ8e2XE1
-    body:
-      encoding: UTF-8
-      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 12:54:30 GMT
-- request:
-    method: post
-    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
-    body:
-      encoding: UTF-8
-      string: '{"inputs":"Tell me a joke"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Bearer <HUGGINGFACE_API_KEY>
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Host:
-      - api-inference.huggingface.co
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Sun, 24 Nov 2024 12:55:12 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '72'
-      Connection:
-      - keep-alive
-      X-Request-Id:
-      - fyHdHjYHoB8aXZmFk6atr
-      Vary:
-      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-      Access-Control-Allow-Credentials:
-      - 'true'
-    body:
-      encoding: UTF-8
-      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Sun, 24 Nov 2024 12:55:13 GMT
-- request:
-    method: post
-    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
-    body:
-      encoding: UTF-8
-      string: '{"inputs":"Tell me a joke"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Bearer <HUGGINGFACE_API_KEY>
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Host:
-      - api-inference.huggingface.co
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Mon, 25 Nov 2024 13:59:31 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '72'
-      Connection:
-      - keep-alive
-      X-Request-Id:
-      - eDS2yBQp-vs1VhiKjIyZW
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Vary:
-      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-    body:
-      encoding: UTF-8
-      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Mon, 25 Nov 2024 13:59:33 GMT
-- request:
-    method: post
-    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
-    body:
-      encoding: UTF-8
-      string: '{"inputs":"Tell me a joke"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Bearer <HUGGINGFACE_API_KEY>
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Host:
-      - api-inference.huggingface.co
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Mon, 25 Nov 2024 14:20:07 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '72'
-      Connection:
-      - keep-alive
-      X-Request-Id:
-      - N_vZSpnBK_HekfF7LrniP
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Vary:
-      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-    body:
-      encoding: UTF-8
-      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Mon, 25 Nov 2024 14:20:08 GMT
-- request:
-    method: post
-    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
-    body:
-      encoding: UTF-8
-      string: '{"inputs":"Tell me a joke"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Bearer <HUGGINGFACE_API_KEY>
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Host:
-      - api-inference.huggingface.co
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Mon, 25 Nov 2024 14:23:33 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '72'
-      Connection:
-      - keep-alive
-      X-Request-Id:
-      - raQ33H7pmb2N_JjXoi5ua
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Vary:
-      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-    body:
-      encoding: UTF-8
-      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Mon, 25 Nov 2024 14:23:35 GMT
-- request:
-    method: post
-    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
-    body:
-      encoding: UTF-8
-      string: '{"inputs":"Tell me a joke"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Bearer <HUGGINGFACE_API_KEY>
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Host:
-      - api-inference.huggingface.co
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Mon, 25 Nov 2024 14:24:00 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '72'
-      Connection:
-      - keep-alive
-      X-Request-Id:
-      - 8ndEUu3RapWL2gIz4WnZV
-      Vary:
-      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-      Access-Control-Allow-Credentials:
-      - 'true'
-    body:
-      encoding: UTF-8
-      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Mon, 25 Nov 2024 14:24:01 GMT
-- request:
-    method: post
-    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
-    body:
-      encoding: UTF-8
-      string: '{"inputs":"Tell me a joke"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Bearer <HUGGINGFACE_API_KEY>
-      Connection:
-      - Keep-Alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Host:
-      - api-inference.huggingface.co
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Date:
-      - Mon, 25 Nov 2024 14:25:28 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '72'
-      Connection:
-      - keep-alive
-      X-Request-Id:
-      - djzGgy7BaSsDXD-wwAgOT
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Vary:
-      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-    body:
-      encoding: UTF-8
-      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
-  recorded_at: Mon, 25 Nov 2024 14:25:30 GMT
+  recorded_at: Tue, 26 Nov 2024 13:07:53 GMT
 recorded_with: VCR 6.3.1
