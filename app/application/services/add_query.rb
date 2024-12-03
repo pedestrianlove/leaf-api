@@ -2,6 +2,7 @@
 
 require 'securerandom'
 require 'dry/transaction'
+require_relative '../../presentation/responses/api_result'
 
 module Leaf
   module Service
@@ -27,7 +28,8 @@ module Leaf
 
           Success(origin: origin, destination: destination, strategy: strategy)
         else
-          Failure("Parse query location: #{input.errors.messages.first}")
+          Failure(APIResponse::ApiResult.new(status: :internal_error,
+                                             message: "Parse query location: #{input.errors.messages.first}"))
         end
       end
 
@@ -39,7 +41,7 @@ module Leaf
                                     plans: [], distance: 0, duration: 0 })
         Success(query: query)
       rescue StandardError => e
-        Failure("Create query: #{e}")
+        Failure(APIResponse::ApiResult.new(status: :internal_error, message: "Create query: #{e}"))
       end
 
       def compute_query(input)
@@ -53,9 +55,9 @@ module Leaf
       def save_query(input)
         query = input[:query]
         Leaf::Repository::Query.save(query)
-        Success(query.id)
+        Success(APIResponse::ApiResult.new(status: :created, message: query))
       rescue StandardError => e
-        Failure("Save query: #{e}")
+        Failure(APIResponse::ApiResult.new(status: :internal_error, message: "Save query: #{e}"))
       end
     end
   end
