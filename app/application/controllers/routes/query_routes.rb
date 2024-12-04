@@ -4,6 +4,7 @@ require_relative '../../../infrastructure/google_maps/mappers/trip_mapper'
 require_relative '../../../infrastructure/google_maps/gateways/google_maps_api'
 require_relative '../../../../config/environment'
 require_relative '../../../presentation/representers/query_create_result'
+require_relative '../../../presentation/representers/query'
 
 module Leaf
   # Module handling plan-related routes
@@ -39,9 +40,17 @@ module Leaf
 
       routing.on String do |query_id|
         routing.get do
-          query = Leaf::Repository::Query.find_by_id(query_id)
-          query_view = Views::Query.new(query)
-          routing.scope.view('query/query_result', locals: { query: query_view })
+          query_result = Leaf::Service::GetQuery.new.call(query_id)
+
+          if query_result.failure?
+            failed = Representer::HttpResponse.new(query_result.failure)
+            routing.halt failed.http_status_code, failed.to_json
+          end
+
+          http_response = Representer::HttpResponse.new(query_result.value!)
+          response.status = http_response.http_status_code
+
+          Representer::Query.new(query_result.value!.message).to_json
         end
         routing.delete do
           routing.session[:visited_queries].delete(query_id)

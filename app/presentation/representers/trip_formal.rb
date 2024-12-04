@@ -3,20 +3,20 @@
 require 'ostruct'
 require 'roar/decorator'
 require 'roar/json'
-
-require_relative 'plan'
+require_relative 'location_formal'
 
 module Leaf
   module Representer
     # Represents a CreditShare value
-    class Query < Roar::Decorator
+    class Trip < Roar::Decorator
       include Roar::JSON
 
       property :id
+      property :strategy
       property :origin, extend: Representer::Location, class: OpenStruct
       property :destination, extend: Representer::Location, class: OpenStruct
-      property :strategy
-      collection :plans, extend: Representer::Plan, class: OpenStruct
+      property :duration
+      property :distance
     end
   end
 end
