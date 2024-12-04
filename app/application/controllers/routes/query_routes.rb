@@ -52,11 +52,11 @@ module Leaf
 
           Representer::Query.new(query_result.value!.message).to_json
         end
-        routing.delete do
-          routing.session[:visited_queries].delete(query_id)
-          routing.flash[:notice] = "Query '#{query_id}' has been removed from history."
-          routing.redirect '/queries'
-        end
+        # routing.delete do
+        #   routing.session[:visited_queries].delete(query_id)
+        #   routing.flash[:notice] = "Query '#{query_id}' has been removed from history."
+        #   routing.redirect '/queries'
+        # end
       end
     end
   end
