@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'dry/transaction'
 require_relative '../../presentation/responses/api_result'
 

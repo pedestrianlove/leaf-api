@@ -17,3 +17,7 @@ Metrics/BlockLength:
 # Fix hash shorthand to avoid weird syntax
 Style/HashSyntax:
   EnforcedShorthandSyntax: never
+
+# Ignore use of OpenStruct for representers
+Style/OpenStructUse:
+  Enabled: false
