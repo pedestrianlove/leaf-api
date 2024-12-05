@@ -1,52 +1,62 @@
 # frozen_string_literal: true
 
-require 'securerandom'
 require_relative '../../../infrastructure/google_maps/mappers/trip_mapper'
 require_relative '../../../infrastructure/google_maps/gateways/google_maps_api'
 require_relative '../../../../config/environment'
+require_relative '../../../presentation/representers/query_create_result'
 require_relative '../../../presentation/representers/query'
 
 module Leaf
   # Module handling plan-related routes
-  module QueryRoutes
-    # :reek:TooManyStatements
-    def self.setup(routing) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
-      routing.on 'queries' do # rubocop:disable Metrics/BlockLength
-        routing.post 'submit' do
-          query_request = Forms::NewQuery.new.call(routing.params)
+  class App < Roda
+    plugin :multi_route
+    route('queries') do |routing| # rubocop:disable Metrics/BlockLength
+      routing.is do
+        routing.post do
+          begin
+            request_json = JSON.parse(routing.body.read)
+          rescue JSON::ParserError
+            failed_result = APIResponse::ApiResult.new(status: :bad_request, message: 'Roda: Bad JSON format.')
+            failed = Representer::HttpResponse.new(failed_result)
+            routing.halt failed.http_status_code, failed.to_json
+          end
+
+          query_request = Request::NewQuery.new.call(request_json)
           query_result = Service::AddQuery.new.call(query_request)
 
           if query_result.failure?
-            puts(query_result.failure)
-            # routing.flash[:error] = query_result.failure
-            routing.redirect '/queries'
+            failed = Representer::HttpResponse.new(query_result.failure)
+            routing.halt failed.http_status_code, failed.to_json
           end
 
-          query_id = query_result.value!
-          routing.session[:visited_queries] ||= []
-          routing.session[:visited_queries].insert(0, query_id).uniq!
-          # routing.flash[:notice] = "Query #{query_id} created."
-          routing.redirect query_id
-        end
+          http_response = Representer::HttpResponse.new(query_result.value!)
+          response.status = http_response.http_status_code
 
-        routing.is do
-          routing.get do
-            routing.scope.view 'query/query_form'
-          end
+          Representer::QueryCreateResult.new(
+            query_result.value!.message
+          ).to_json
         end
+      end
 
-        routing.on String do |query_id|
-          routing.get do
-            query = Leaf::Repository::Query.find_by_id(query_id)
-            query_view = Views::Query.new(query)
-            routing.scope.view('query/query_result', locals: { query: query_view })
+      routing.on String do |query_id|
+        routing.get do
+          query_result = Leaf::Service::GetQuery.new.call(query_id)
+
+          if query_result.failure?
+            failed = Representer::HttpResponse.new(query_result.failure)
+            routing.halt failed.http_status_code, failed.to_json
           end
-          routing.delete do
-            routing.session[:visited_queries].delete(query_id)
-            routing.flash[:notice] = "Query '#{query_id}' has been removed from history."
-            routing.redirect '/queries'
-          end
+
+          http_response = Representer::HttpResponse.new(query_result.value!)
+          response.status = http_response.http_status_code
+
+          Representer::Query.new(query_result.value!.message).to_json
         end
+        # routing.delete do
+        #   routing.session[:visited_queries].delete(query_id)
+        #   routing.flash[:notice] = "Query '#{query_id}' has been removed from history."
+        #   routing.redirect '/queries'
+        # end
       end
     end
   end

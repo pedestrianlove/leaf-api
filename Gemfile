@@ -25,6 +25,7 @@ gem 'dry-struct', '~> 1.6'
 gem 'dry-transaction', '~> 0.16.0'
 gem 'dry-types', '~> 1.7'
 gem 'dry-validation', '~> 1.10'
+gem 'ostruct', '~> 0.6.1'
 
 # Network dependency
 gem 'http'
