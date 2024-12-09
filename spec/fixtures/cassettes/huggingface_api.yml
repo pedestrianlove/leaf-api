@@ -4842,4 +4842,172 @@ http_interactions:
       encoding: UTF-8
       string: '{"error":"Authorization header is correct, but the token seems invalid"}'
   recorded_at: Wed, 04 Dec 2024 03:00:54 GMT
+- request:
+    method: post
+    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
+    body:
+      encoding: UTF-8
+      string: '{"inputs":"Tell me a joke"}'
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <HUGGINGFACE_API_KEY>
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Host:
+      - api-inference.huggingface.co
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Mon, 09 Dec 2024 02:33:48 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '72'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+      X-Request-Id:
+      - oeQad9OpibU9f_EJn2r6J
+      Access-Control-Allow-Credentials:
+      - 'true'
+    body:
+      encoding: UTF-8
+      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
+  recorded_at: Mon, 09 Dec 2024 02:33:48 GMT
+- request:
+    method: post
+    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
+    body:
+      encoding: UTF-8
+      string: '{"inputs":"Tell me a joke"}'
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <HUGGINGFACE_API_KEY>
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Host:
+      - api-inference.huggingface.co
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Mon, 09 Dec 2024 02:38:07 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '72'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Request-Id:
+      - 2gfSz-UMw6ES2oosI-pn1
+      Vary:
+      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+    body:
+      encoding: UTF-8
+      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
+  recorded_at: Mon, 09 Dec 2024 02:38:07 GMT
+- request:
+    method: post
+    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
+    body:
+      encoding: UTF-8
+      string: '{"inputs":"Tell me a joke"}'
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <HUGGINGFACE_API_KEY>
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Host:
+      - api-inference.huggingface.co
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Mon, 09 Dec 2024 02:46:36 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '72'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Request-Id:
+      - Z9PH2FrHpacQXC9cwwuI5
+      Vary:
+      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+    body:
+      encoding: UTF-8
+      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
+  recorded_at: Mon, 09 Dec 2024 02:46:36 GMT
+- request:
+    method: post
+    uri: https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-1B
+    body:
+      encoding: UTF-8
+      string: '{"inputs":"Tell me a joke"}'
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <HUGGINGFACE_API_KEY>
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Host:
+      - api-inference.huggingface.co
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Mon, 09 Dec 2024 02:50:11 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '72'
+      Connection:
+      - keep-alive
+      X-Request-Id:
+      - 0Xsyis6ayLYoxtmOpQwAq
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Vary:
+      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+    body:
+      encoding: UTF-8
+      string: '{"error":"Authorization header is correct, but the token seems invalid"}'
+  recorded_at: Mon, 09 Dec 2024 02:50:12 GMT
 recorded_with: VCR 6.3.1
