@@ -36,7 +36,7 @@ module Leaf
         router.get do
           trip = Leaf::Repository::Trip.find_by_id(trip_id)
           if trip
-            trip_json = Leaf::Representers::Trip.new(trip).to_json
+            trip_json = Leaf::Representer::Trip.new(trip).to_json
             response.status = 200
             trip_json
           else

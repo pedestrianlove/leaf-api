@@ -3,7 +3,7 @@
 require 'ostruct'
 require 'roar/decorator'
 require 'roar/json'
-require_relative 'trip_formal'
+require_relative 'trip'
 
 module Leaf
   module Representer

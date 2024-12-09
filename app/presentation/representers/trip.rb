@@ -1,17 +1,19 @@
 # frozen_string_literal: true
 
+require 'ostruct'
 require 'roar/decorator'
 require 'roar/json'
+require_relative 'location_formal'
 
 module Leaf
-  module Representers
+  module Representer
     # Representer for converting Trip entity to and from JSON
     class Trip < Roar::Decorator
       include Roar::JSON
 
       property :id
-      property :origin
-      property :destination
+      property :origin, extend: Representer::Location, class: OpenStruct
+      property :destination, extend: Representer::Location, class: OpenStruct
       property :strategy
       property :distance
       property :duration
