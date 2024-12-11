@@ -6,21 +6,18 @@ require 'rack'
 require_relative 'routes/location_routes'
 require_relative 'routes/trip_routes'
 require_relative 'routes/query_routes'
+require_relative '../../presentation/responses/api_result'
+require_relative '../../presentation/representers/http_response_representer'
 require_relative '../../../config/environment'
 
 module Leaf
   # This is the main application class that handles routing in Leaf
   class App < Roda
-    plugin :render, engine: 'slim', views: 'app/presentation/views_html'
-    plugin :assets, css: 'style.css', path: 'app/presentation/assets'
-    plugin :common_logger, $stderr
     plugin :halt
     plugin :flash
     plugin :all_verbs
+    plugin :multi_route
     use Rack::MethodOverride
-
-    # Configure Rack::Session for cookie-based session management
-    use Rack::Session::Cookie, secret: App.config.SESSION_SECRET
 
     MESSAGES = {
       no_info: 'No info input',
@@ -33,41 +30,24 @@ module Leaf
     }.freeze
 
     route do |routing|
-      routing.assets
-      response['Content-Type'] = 'text/html; charset=utf-8'
+      response['Content-Type'] = 'application/json'
 
-      begin
-        setup_routes(routing)
-      rescue StandardError => error # rubocop:disable Naming/RescuedExceptionsVariableName
-        App.logger.error error.backtrace.join("\n")
-        flash[:error] = MESSAGES[:route_error]
-        response.status = 500
-        routing.redirect '/'
-      end
-    end
-
-    private
-
-    def setup_routes(routing)
-      setup_root(routing)
-      Leaf::LocationRoutes.setup(routing)
-      Leaf::TripRoutes.setup(routing)
-      Leaf::QueryRoutes.setup(routing)
-    end
-
-    def setup_root(routing) # rubocop:disable Metrics/MethodLength,Metrics/AbcSize
       routing.root do
-        session[:query_id_visited] ||= []
+        message = "Leaf API v1 at / in #{App.environment} mode"
 
-        flash.now[:notice] = MESSAGES[:no_info] if session[:query_id_visited].empty?
+        result_response = Leaf::Representer::HttpResponse.new(
+          Leaf::APIResponse::ApiResult.new(status: :ok, message: message)
+        )
 
-        begin
-          view 'home', locals: { query_id: session[:query_id_visited] }
-        rescue StandardError => error # rubocop:disable Naming/RescuedExceptionsVariableName
-          App.logger.error error.backtrace.join("\n")
-          flash[:error] = MESSAGES[:db_error]
-          response.status = 500
-        end
+        response.status = result_response.http_status_code
+        result_response.to_json
+      end
+
+      routing.multi_route
+
+      routing.on do # Catch-all route for undefined paths
+        response.status = 404
+        { status: 'error', message: 'Route not found' }.to_json
       end
     end
   end

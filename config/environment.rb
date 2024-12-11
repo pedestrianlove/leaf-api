@@ -20,9 +20,7 @@ module Leaf
       Figaro.load
       def self.config = Figaro.env
 
-      use Rack::Session::Cookie, secret: config.SESSION_SECRET
-
-      configure :development, :test do
+      configure :development, :test, :app_test do
         Figaro.require_keys('DB_FILENAME')
         ENV['DATABASE_URL'] = "sqlite://#{config.DB_FILENAME}"
       end

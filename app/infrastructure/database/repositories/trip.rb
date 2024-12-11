@@ -83,8 +83,8 @@ module Leaf
         )
 
         rebuild_entity(db_trip)
-      rescue StandardError => e
-        raise "Failed to save trip: #{e.message}"
+      rescue StandardError => error # rubocop:disable Naming/RescuedExceptionsVariableName
+        raise "Failed to save trip: #{error.message}"
       end
     end
   end
