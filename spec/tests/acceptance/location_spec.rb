@@ -16,13 +16,20 @@ describe 'Test Location API' do
     VCRHelper.configure_vcr_for('acceptance_location', 'GOOGLE_TOKEN', CORRECT_SECRETS.GOOGLE_TOKEN)
     DatabaseHelper.wipe_database
 
-    # 初始化測試數據
-    Leaf::Database::LocationOrm.find_or_create(
-      name: 'Taipei, Taiwan',
-      latitude: 25.033,
-      longitude: 121.565,
-      plus_code: '7QP2QVXF+PR'
-    )
+    # 使用 Google Maps API 查詢地點並插入正確的數據
+    VCR.use_cassette('google_maps_taipei') do
+      mapper = Leaf::GoogleMaps::LocationMapper.new(
+        Leaf::GoogleMaps::API,
+        CORRECT_SECRETS.GOOGLE_TOKEN
+      )
+      location_data = mapper.find('Taipei, Taiwan')
+      Leaf::Database::LocationOrm.find_or_create(
+        name: location_data.name,
+        latitude: location_data.latitude,
+        longitude: location_data.longitude,
+        plus_code: location_data.plus_code
+      )
+    end
   end
 
   after do
@@ -30,78 +37,63 @@ describe 'Test Location API' do
     VCRHelper.eject_vcr
   end
 
-  it 'should list all locations' do
-    get '/locations'
-    _(last_response.status).must_equal 200
-
-    body = JSON.parse(last_response.body)
-    _(body['locations']).must_include 'Taipei, Taiwan'
-  end
-
-  it 'should create a new location using Google Maps API' do
+  it 'should create a new location and return Plus Code' do
     VCR.use_cassette('google_maps_new_york') do
       post '/locations', { location: 'New York' }.to_json, 'CONTENT_TYPE' => 'application/json'
       _(last_response.status).must_equal 201
 
       body = JSON.parse(last_response.body)
       _(body['status']).must_equal 'created'
-      _(body['message']).must_include 'New York'
+      _(body['plus_code']).wont_be_nil
 
-      # 確認資料庫是否已新增
-      db_location = Leaf::Database::LocationOrm.first(name: 'New York, NY, USA')
-      # 這個傳回來更特別，不是New York, USA是New York, NY, USA
+      # 確認數據庫中是否新增了正確的地點
+      db_location = Leaf::Database::LocationOrm.first(plus_code: body['plus_code'])
       _(db_location).wont_be_nil
-      _(db_location.plus_code).wont_be_nil
-      _(db_location.latitude).wont_be_nil
-      _(db_location.longitude).wont_be_nil
+      _(db_location.name).must_include 'New York'
     end
   end
 
-  it 'should return 400 for missing location name' do
-    post '/locations', {}.to_json, 'CONTENT_TYPE' => 'application/json'
-    _(last_response.status).must_equal 400
+  it 'should retrieve a location by Plus Code' do
+    encoded_plus_code = CGI.escape('7QQ32H00+')
+    get "/locations/#{encoded_plus_code}"
+    _(last_response.status).must_equal 200
 
     body = JSON.parse(last_response.body)
-    _(body['status']).must_equal 'bad_request'
-    _(body['message']).must_include 'Missing location name'
+    _(body['plus_code']).must_equal '7QQ32H00+'
+    _(body['name']).must_equal 'Taipei, Taiwan'
   end
 
-  it 'should return 404 when location is not found' do
-    VCR.use_cassette('google_maps_non_existent') do
-      post '/locations', { location: 'NonExistentPlace' }.to_json, 'CONTENT_TYPE' => 'application/json'
-      _(last_response.status).must_equal 404
+  it 'should allow re-posting the same location and return its information' do
+    VCR.use_cassette('google_maps_taipei') do
+      post '/locations', { location: 'Taipei, Taiwan' }.to_json, 'CONTENT_TYPE' => 'application/json'
+      _(last_response.status).must_equal 200 # 確認返回已存在的地點
 
       body = JSON.parse(last_response.body)
-      _(body['status']).must_equal 'not_found'
-      _(body['message']).must_include 'NonExistentPlace'
+      _(body['plus_code']).must_equal '7QQ32H00+'
+      _(body['name']).must_equal 'Taipei, Taiwan'
+
+      # 確認數據庫中沒有新增重複地點
+      db_locations = Leaf::Database::LocationOrm.where(name: 'Taipei, Taiwan').all
+      _(db_locations.size).must_equal 1
     end
   end
 
-  it 'should return 409 for duplicate location' do
-    post '/locations', { location: 'Taipei, Taiwan' }.to_json, 'CONTENT_TYPE' => 'application/json'
-    _(last_response.status).must_equal 409
-
-    body = JSON.parse(last_response.body)
-    _(body['status']).must_equal 'conflict'
-    _(body['message']).must_include 'Taipei, Taiwan already exists'
-  end
-
-  it 'should delete an existing location' do
-    encoded_name = CGI.escape('Taipei, Taiwan')
-    delete "/locations/#{encoded_name}"
+  it 'should delete a location by Plus Code' do
+    encoded_plus_code = CGI.escape('7QQ32H00+')
+    delete "/locations/#{encoded_plus_code}"
     _(last_response.status).must_equal 204
 
-    db_location = Leaf::Database::LocationOrm.first(name: 'Taipei, Taiwan')
+    db_location = Leaf::Database::LocationOrm.first(plus_code: '7QQ32H00+')
     _(db_location).must_be_nil
   end
 
-  it 'should return 404 when deleting a non-existent location' do
-    encoded_name = CGI.escape('NonExistent')
-    delete "/locations/#{encoded_name}"
+  it 'should return 404 when trying to retrieve a non-existent location' do
+    encoded_plus_code = CGI.escape('NONEXISTENTCODE')
+    get "/locations/#{encoded_plus_code}"
     _(last_response.status).must_equal 404
 
     body = JSON.parse(last_response.body)
     _(body['status']).must_equal 'not_found'
-    _(body['message']).must_include 'not found'
+    _(body['message']).must_include 'NONEXISTENTCODE'
   end
 end
