@@ -13,7 +13,7 @@ module Leaf
     route('locations') do |routing| # rubocop:disable Metrics/BlockLength
       routing.is do # rubocop:disable Metrics/BlockLength
         # POST /locations - Add a new location
-        routing.post do
+        routing.post do # rubocop:disable Metrics/BlockLength
           begin
             params = JSON.parse(routing.body.read)
           rescue JSON::ParserError
