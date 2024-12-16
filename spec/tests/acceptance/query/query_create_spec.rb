@@ -28,14 +28,10 @@ describe 'Test Query Create API' do
       destination: 'National Yang Ming Chiao Tung University, Taiwan',
       strategy: 'walking'
     }.to_json, 'CONTENT_TYPE' => 'application/json'
-    _(last_response.status).must_equal 201
+    _(last_response.status).must_equal 202
 
     body = JSON.parse(last_response.body)
     _(body['id']).must_be_instance_of String
-
-    # Check Database
-    query = Leaf::Repository::Query.find_by_id(body['id'])
-    _(query).wont_be_nil
   end
 
   it 'should return error on request with bad json' do
@@ -52,11 +48,11 @@ describe 'Test Query Create API' do
       destination: 'National Yang Ming Chiao Tung University, Taiwan',
       strategy: 'walking'
     }.to_json, 'CONTENT_TYPE' => 'application/json'
-    _(last_response.status).must_equal 500
+    _(last_response.status).must_equal 400
 
     body = JSON.parse(last_response.body)
-    _(body['status']).must_include 'internal_error'
-    _(body['message']).must_include 'Parse query location: is missing'
+    _(body['status']).must_include 'bad_request'
+    _(body['message']).must_include 'Parsing query: is missing'
   end
 
   it 'should return error on request missing fields: destination' do
@@ -64,11 +60,11 @@ describe 'Test Query Create API' do
       origin: 'National Tsing Hua University, Taiwan',
       strategy: 'walking'
     }.to_json, 'CONTENT_TYPE' => 'application/json'
-    _(last_response.status).must_equal 500
+    _(last_response.status).must_equal 400
 
     body = JSON.parse(last_response.body)
-    _(body['status']).must_include 'internal_error'
-    _(body['message']).must_include 'Parse query location: is missing'
+    _(body['status']).must_include 'bad_request'
+    _(body['message']).must_include 'Parsing query: is missing'
   end
 
   it 'should return error on request missing fields: strategy' do
@@ -76,11 +72,11 @@ describe 'Test Query Create API' do
       origin: 'National Tsing Hua University, Taiwan',
       destination: 'National Yang Ming Chiao Tung University, Taiwan'
     }.to_json, 'CONTENT_TYPE' => 'application/json'
-    _(last_response.status).must_equal 500
+    _(last_response.status).must_equal 400
 
     body = JSON.parse(last_response.body)
-    _(body['status']).must_include 'internal_error'
-    _(body['message']).must_include 'Parse query location: is missing'
+    _(body['status']).must_include 'bad_request'
+    _(body['message']).must_include 'Parsing query: is missing'
   end
 
   it 'should return error on request with bad strategy type' do
@@ -89,10 +85,10 @@ describe 'Test Query Create API' do
       destination: 'National Yang Ming Chiao Tung University, Taiwan',
       strategy: 'dancing'
     }.to_json, 'CONTENT_TYPE' => 'application/json'
-    _(last_response.status).must_equal 500
+    _(last_response.status).must_equal 400
 
     body = JSON.parse(last_response.body)
-    _(body['status']).must_include 'internal_error'
+    _(body['status']).must_include 'bad_request'
     _(body['message']).must_include 'is an invalid strategy'
   end
 end

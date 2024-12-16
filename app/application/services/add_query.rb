@@ -19,22 +19,19 @@ module Leaf
       private
 
       def parse_locations(input)
-        if input.success?
-          location_mapper = GoogleMaps::LocationMapper.new(GoogleMaps::API, App.config.GOOGLE_TOKEN)
+        location_mapper = GoogleMaps::LocationMapper.new(GoogleMaps::API, App.config.GOOGLE_TOKEN)
 
-          origin = location_mapper.find(input[:origin])
-          destination = location_mapper.find(input[:destination])
-          strategy = input[:strategy]
+        origin = location_mapper.find(input['origin'])
+        destination = location_mapper.find(input['destination'])
 
-          Success(origin: origin, destination: destination, strategy: strategy)
-        else
-          Failure(APIResponse::ApiResult.new(status: :internal_error,
-                                             message: "Parse query location: #{input.errors.messages.first}"))
-        end
+        Success(id: input['id'], origin: origin, destination: destination, strategy: input['strategy'])
+      rescue StandardError => e
+        Failure(APIResponse::ApiResult.new(status: :internal_error,
+                                           message: "Parse query location: #{e.message}"))
       end
 
       def create_query(input)
-        query = Entity::Query.new({ id: SecureRandom.uuid,
+        query = Entity::Query.new({ id: input[:id],
                                     origin: input[:origin],
                                     destination: input[:destination],
                                     strategy: input[:strategy],
