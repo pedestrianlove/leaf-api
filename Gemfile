@@ -38,6 +38,13 @@ group :development, :test do
   gem 'sqlite3', '~> 2.1'
 end
 
+# Async
+gem 'shoryuken', '~> 6.2'
+
+gem 'concurrent-ruby', '~> 1.3'
+
+gem 'aws-sdk-sqs', '~> 1.89'
+
 # Testing
 group :test do
   gem 'minitest'

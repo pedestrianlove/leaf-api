@@ -16,7 +16,9 @@ end
 
 desc 'run specs'
 Rake::TestTask.new(:spec) do |t|
+  puts 'Make sure worker is running in separate process'
   t.test_files = FileList['spec/**/*_spec.rb']
+  t.warning = false
 end
 
 desc 'Keep rerunning tests upon changes'
@@ -27,6 +29,56 @@ end
 desc 'Keep rerunning web app upon changes'
 task :rerun do
   sh "rerun -c --ignore 'coverage/*' -- bundle exec puma"
+end
+
+namespace :queues do
+  task :config do
+    require 'aws-sdk-sqs'
+    require_relative 'config/environment' # load config info
+    @api = Leaf::App
+    @sqs = Aws::SQS::Client.new(
+      access_key_id: @api.config.AWS_ACCESS_KEY_ID,
+      secret_access_key: @api.config.AWS_SECRET_ACCESS_KEY,
+      region: @api.config.AWS_REGION
+    )
+    @q_name = @api.config.WORKER_QUEUE
+    @q_url = @sqs.get_queue_url(queue_name: @q_name).queue_url
+    puts "Environment: #{@api.environment}"
+  end
+  desc 'Create SQS queue for worker'
+  task create: :config do
+    @sqs.create_queue(queue_name: @q_name)
+    puts 'Queue created:'
+    puts "  Name: #{@q_name}"
+    puts "  Region: #{@api.config.AWS_REGION}"
+    puts "  URL: #{@q_url}"
+  rescue StandardError => e
+    puts "Error creating queue: #{e}"
+  end
+  desc 'Report status of queue for worker'
+  task status: :config do
+    puts 'Queue info:'
+    puts "  Name: #{@q_name}"
+    puts "  Region: #{@api.config.AWS_REGION}"
+    puts "  URL: #{@q_url}"
+  rescue StandardError => e
+    puts "Error finding queue: #{e}"
+  end
+  desc 'Purge messages in SQS queue for worker'
+  task purge: :config do
+    @sqs.purge_queue(queue_url: @q_url)
+    puts "Queue #{@q_name} purged"
+  rescue StandardError => e
+    puts "Error purging queue: #{e}"
+  end
+end
+
+namespace :worker do
+  desc 'Run the background cloning worker in development mode'
+  task dev: :config do
+    require_relative 'config/environment' # load config info
+    sh "rerun -c --ignore 'coverage/*' -- bundle exec shoryuken -r ./workers/queue_compute_worker.rb -q #{Leaf::App.config.WORKER_QUEUE}" # rubocop:disable Layout/LineLength
+  end
 end
 
 desc 'Run application console'

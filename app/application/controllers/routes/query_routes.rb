@@ -22,7 +22,7 @@ module Leaf
           end
 
           query_request = Request::NewQuery.new.call(request_json)
-          query_result = Service::AddQuery.new.call(query_request)
+          query_result = Service::DispatchQuery.new.call(query_request)
 
           if query_result.failure?
             failed = Representer::HttpResponse.new(query_result.failure)

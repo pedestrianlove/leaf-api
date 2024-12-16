@@ -15,7 +15,7 @@ module Leaf
 
         Success(APIResponse::ApiResult.new(status: :ok, message: query))
       rescue StandardError => e
-        Failure(APIResponse::ApiResult.new(status: :bad_request, message: "Fetching query: #{e}"))
+        Failure(APIResponse::ApiResult.new(status: :not_found, message: "Fetching query: #{e}"))
       end
     end
   end

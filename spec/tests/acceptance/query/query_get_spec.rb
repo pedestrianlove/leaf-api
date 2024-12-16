@@ -17,12 +17,14 @@ describe 'Test Query Get API' do
     DatabaseHelper.wipe_database
 
     # 初始化資料庫
-    post '/queries', {
-      origin: 'National Tsing Hua University, Taiwan',
-      destination: 'National Yang Ming Chiao Tung University, Taiwan',
-      strategy: 'walking'
-    }.to_json, 'CONTENT_TYPE' => 'application/json'
-    @query_id = JSON.parse(last_response.body)['id']
+    result = Leaf::Service::AddQuery.new.call({
+                                                'id' => SecureRandom.uuid,
+                                                'origin' => 'National Tsing Hua University, Taiwan',
+                                                'destination' => 'National Yang Ming Chiao Tung University, Taiwan',
+                                                'strategy' => 'walking'
+                                              })
+
+    @query_id = result.value!.message.id
   end
 
   after do
@@ -40,13 +42,13 @@ describe 'Test Query Get API' do
     _(query_representer).must_be_instance_of Leaf::Representer::Query
   end
 
-  it 'should get a query object with a good query_id' do
-    get '/queries/i-am-a-bad-query-id', 'CONTENT_TYPE' => 'application/json'
-    _(last_response.status).must_equal 400
+  it 'should get an error with a wrong query_id' do
+    get "/queries/#{SecureRandom.uuid}", 'CONTENT_TYPE' => 'application/json'
+    _(last_response.status).must_equal 404
 
     # Check Database
     body = JSON.parse(last_response.body)
-    _(body['status']).must_include 'bad_request'
+    _(body['status']).must_include 'not_found'
     _(body['message']).must_include 'Fetching query'
   end
 end
