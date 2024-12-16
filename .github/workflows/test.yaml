@@ -15,14 +15,16 @@ jobs:
         with:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-      - name: Setup the project secrets
-        run: |
-          cp config/secrets.yaml.testing config/secrets.yaml
-
-      - name: Run the migration
+      - name: Run the migration and project tests via rake spec command
+        env:
+          GOOGLE_TOKEN: ${{ secrets.GOOGLE_TOKEN }}
+          HUGGINGFACE_API_KEY: ${{ secrets.HUGGINGFACE_API_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          WORKER_QUEUE_URL: ${{ secrets.WORKER_QUEUE_URL }}
+          DB_FILENAME: db/local/test.db
+          RACK_ENV: development
         run: |
           bundle exec rake db:migrate
-
-      - name: Run the project tests via rake spec command
-        run: |
           bundle exec rake spec

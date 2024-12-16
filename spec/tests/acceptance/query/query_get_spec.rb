@@ -42,13 +42,13 @@ describe 'Test Query Get API' do
     _(query_representer).must_be_instance_of Leaf::Representer::Query
   end
 
-  it 'should get an error with a bad query_id' do
-    get '/queries/i-am-a-bad-query-id', 'CONTENT_TYPE' => 'application/json'
-    _(last_response.status).must_equal 400
+  it 'should get an error with a wrong query_id' do
+    get "/queries/#{SecureRandom.uuid}", 'CONTENT_TYPE' => 'application/json'
+    _(last_response.status).must_equal 404
 
     # Check Database
     body = JSON.parse(last_response.body)
-    _(body['status']).must_include 'bad_request'
+    _(body['status']).must_include 'not_found'
     _(body['message']).must_include 'Fetching query'
   end
 end

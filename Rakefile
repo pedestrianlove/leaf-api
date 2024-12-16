@@ -77,7 +77,7 @@ namespace :worker do
   desc 'Run the background cloning worker in development mode'
   task dev: :config do
     require_relative 'config/environment' # load config info
-    sh "rerun -c --ignore 'coverage/*' -- bundle exec shoryuken -r ./workers/queue_compute_worker.rb -q #{Leaf::App.config.WORKER_QUEUE}"
+    sh "rerun -c --ignore 'coverage/*' -- bundle exec shoryuken -r ./workers/queue_compute_worker.rb -q #{Leaf::App.config.WORKER_QUEUE}" # rubocop:disable Layout/LineLength
   end
 end
 

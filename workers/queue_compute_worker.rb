@@ -7,6 +7,7 @@ require 'shoryuken'
 require 'shoryuken/options'
 require 'aws-sdk-sqs'
 
+# Class for worker fetching the query from SQS
 class QueryComputeWorker
   # Environment variables setup
   Figaro.application = Figaro::Application.new(
