@@ -3,6 +3,7 @@
 require 'securerandom'
 require 'dry/transaction'
 require_relative '../../presentation/responses/api_result'
+require_relative '../../../workers/progress_reporter'
 
 module Leaf
   module Service
@@ -19,6 +20,7 @@ module Leaf
       private
 
       def parse_locations(input)
+        Leaf::ProgressReporter.report_progress(Leaf::App.config, input['id'], 20, 'Parsing location...')
         location_mapper = GoogleMaps::LocationMapper.new(GoogleMaps::API, App.config.GOOGLE_TOKEN)
 
         origin = location_mapper.find(input['origin'])
@@ -31,6 +33,7 @@ module Leaf
       end
 
       def create_query(input)
+        Leaf::ProgressReporter.report_progress(Leaf::App.config, input[:id], 40, 'Creating entity...')
         query = Entity::Query.new({ id: input[:id],
                                     origin: input[:origin],
                                     destination: input[:destination],
@@ -43,6 +46,7 @@ module Leaf
 
       def compute_query(input)
         query = input[:query]
+        Leaf::ProgressReporter.report_progress(Leaf::App.config, query.id, 60, 'Computing query...')
         query.compute
         Success(query: query)
       rescue StandardError => e
@@ -51,6 +55,7 @@ module Leaf
 
       def save_query(input)
         query = input[:query]
+        Leaf::ProgressReporter.report_progress(Leaf::App.config, query.id, 80, 'Writing to database...')
         Leaf::Repository::Query.save(query)
         Success(APIResponse::ApiResult.new(status: :created, message: query))
       rescue StandardError => e

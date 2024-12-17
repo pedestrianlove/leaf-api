@@ -13,5 +13,6 @@ detectors:
     exclude:
     - Leaf::NTHUSA::API#bus_schedule
     - Leaf::GoogleMaps::TripMapper#find
+    - Leaf::ProgressReporter
 exclude_paths:
   - spec/fixture/project_info.rb # one-time test fixture creator
