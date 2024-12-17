@@ -11,6 +11,7 @@ gem 'rake', '~> 13.0'
 gem 'securerandom'
 
 # Web Application
+gem 'faye', '~> 1.4'
 gem 'logger', '~> 1.6'
 gem 'multi_json', '~> 1.15'
 gem 'puma', '~> 6.4'
