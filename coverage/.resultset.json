@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/jsl/Work/leaf-api/require_app.rb": {
+      "/home/jsl/Work/leaf-api/require_app.rb": {
         "lines": [
           null,
           null,
@@ -16,7 +16,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/config/environment.rb": {
+      "/home/jsl/Work/leaf-api/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -59,7 +59,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/domain/plan/entities/location.rb": {
+      "/home/jsl/Work/leaf-api/app/domain/plan/entities/location.rb": {
         "lines": [
           null,
           null,
@@ -87,7 +87,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/domain/plan/entities/plan.rb": {
+      "/home/jsl/Work/leaf-api/app/domain/plan/entities/plan.rb": {
         "lines": [
           null,
           null,
@@ -157,7 +157,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/domain/plan/entities/trip.rb": {
+      "/home/jsl/Work/leaf-api/app/domain/plan/entities/trip.rb": {
         "lines": [
           null,
           null,
@@ -187,7 +187,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/domain/plan/utils.rb": {
+      "/home/jsl/Work/leaf-api/app/domain/plan/utils.rb": {
         "lines": [
           null,
           null,
@@ -246,7 +246,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/domain/query/entities/query.rb": {
+      "/home/jsl/Work/leaf-api/app/domain/query/entities/query.rb": {
         "lines": [
           null,
           null,
@@ -283,7 +283,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/database/orm/location_orm.rb": {
+      "/home/jsl/Work/leaf-api/app/infrastructure/database/orm/location_orm.rb": {
         "lines": [
           null,
           null,
@@ -316,7 +316,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/database/orm/plan_orm.rb": {
+      "/home/jsl/Work/leaf-api/app/infrastructure/database/orm/plan_orm.rb": {
         "lines": [
           null,
           null,
@@ -355,7 +355,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/database/orm/trip_orm.rb": {
+      "/home/jsl/Work/leaf-api/app/infrastructure/database/orm/trip_orm.rb": {
         "lines": [
           null,
           null,
@@ -394,7 +394,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/database/repositories/for.rb": {
+      "/home/jsl/Work/leaf-api/app/infrastructure/database/repositories/for.rb": {
         "lines": [
           null,
           null,
@@ -422,7 +422,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/database/repositories/location.rb": {
+      "/home/jsl/Work/leaf-api/app/infrastructure/database/repositories/location.rb": {
         "lines": [
           null,
           null,
@@ -431,8 +431,8 @@
           null,
           1,
           1,
-          6,
-          6,
+          16,
+          16,
           null,
           null,
           1,
@@ -441,11 +441,11 @@
           null,
           null,
           1,
-          6,
+          16,
           null,
           null,
           1,
-          6,
+          16,
           null,
           null,
           null,
@@ -482,7 +482,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/database/repositories/trip.rb": {
+      "/home/jsl/Work/leaf-api/app/infrastructure/database/repositories/trip.rb": {
         "lines": [
           null,
           null,
@@ -497,29 +497,29 @@
           null,
           null,
           1,
-          2,
-          2,
+          5,
+          5,
           null,
           null,
           1,
-          3,
+          6,
           null,
-          3,
-          3,
+          6,
+          6,
           null,
-          3,
-          null,
-          null,
-          1,
-          3,
+          6,
           null,
           null,
           1,
-          3,
+          6,
           null,
           null,
           1,
-          3,
+          6,
+          null,
+          null,
+          1,
+          6,
           null,
           null,
           null,
@@ -577,7 +577,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/database/repositories/plan.rb": {
+      "/home/jsl/Work/leaf-api/app/infrastructure/database/repositories/plan.rb": {
         "lines": [
           null,
           null,
@@ -589,20 +589,20 @@
           1,
           null,
           1,
-          0,
-          0,
+          1,
+          1,
           null,
-          0,
-          0,
+          1,
+          1,
           null,
-          0,
-          null,
-          null,
+          1,
           null,
           null,
           null,
           null,
-          0,
+          null,
+          null,
+          3,
           null,
           null,
           null,
@@ -639,7 +639,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/database/repositories/query.rb": {
+      "/home/jsl/Work/leaf-api/app/infrastructure/database/repositories/query.rb": {
         "lines": [
           null,
           null,
@@ -650,16 +650,16 @@
           null,
           1,
           1,
-          0,
-          0,
+          2,
+          2,
           null,
-          0,
-          0,
-          null,
-          null,
+          2,
+          2,
           null,
           null,
-          0,
+          null,
+          null,
+          1,
           null,
           null,
           null,
@@ -673,7 +673,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/google_maps/gateways/google_maps_api.rb": {
+      "/home/jsl/Work/leaf-api/app/infrastructure/google_maps/gateways/google_maps_api.rb": {
         "lines": [
           null,
           null,
@@ -739,7 +739,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/utils.rb": {
+      "/home/jsl/Work/leaf-api/app/infrastructure/utils.rb": {
         "lines": [
           null,
           null,
@@ -767,7 +767,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/google_maps/mappers/location_mapper.rb": {
+      "/home/jsl/Work/leaf-api/app/infrastructure/google_maps/mappers/location_mapper.rb": {
         "lines": [
           null,
           null,
@@ -826,7 +826,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/google_maps/mappers/trip_mapper.rb": {
+      "/home/jsl/Work/leaf-api/app/infrastructure/google_maps/mappers/trip_mapper.rb": {
         "lines": [
           null,
           null,
@@ -893,7 +893,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/huggingface/gateways/huggingface_api.rb": {
+      "/home/jsl/Work/leaf-api/app/infrastructure/huggingface/gateways/huggingface_api.rb": {
         "lines": [
           null,
           null,
@@ -928,7 +928,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/messaging/queue.rb": {
+      "/home/jsl/Work/leaf-api/app/infrastructure/messaging/queue.rb": {
         "lines": [
           null,
           null,
@@ -978,7 +978,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/nominatim/gateways/nominatim_api.rb": {
+      "/home/jsl/Work/leaf-api/app/infrastructure/nominatim/gateways/nominatim_api.rb": {
         "lines": [
           null,
           null,
@@ -1010,7 +1010,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/infrastructure/nthusa/gateways/nthusa_api.rb": {
+      "/home/jsl/Work/leaf-api/app/infrastructure/nthusa/gateways/nthusa_api.rb": {
         "lines": [
           null,
           null,
@@ -1049,7 +1049,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/application/controllers/app.rb": {
+      "/home/jsl/Work/leaf-api/app/application/controllers/app.rb": {
         "lines": [
           null,
           null,
@@ -1083,9 +1083,9 @@
           null,
           null,
           1,
-          18,
+          20,
           null,
-          18,
+          20,
           1,
           null,
           1,
@@ -1096,7 +1096,7 @@
           1,
           null,
           null,
-          17,
+          19,
           null,
           1,
           1,
@@ -1107,7 +1107,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/application/controllers/routes/location_routes.rb": {
+      "/home/jsl/Work/leaf-api/app/application/controllers/routes/location_routes.rb": {
         "lines": [
           null,
           null,
@@ -1220,7 +1220,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/presentation/representers/location.rb": {
+      "/home/jsl/Work/leaf-api/app/presentation/representers/location.rb": {
         "lines": [
           null,
           null,
@@ -1243,7 +1243,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/application/controllers/routes/trip_routes.rb": {
+      "/home/jsl/Work/leaf-api/app/application/controllers/routes/trip_routes.rb": {
         "lines": [
           null,
           null,
@@ -1297,7 +1297,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/presentation/representers/trip.rb": {
+      "/home/jsl/Work/leaf-api/app/presentation/representers/trip.rb": {
         "lines": [
           null,
           null,
@@ -1346,7 +1346,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/application/controllers/routes/query_routes.rb": {
+      "/home/jsl/Work/leaf-api/app/application/controllers/routes/query_routes.rb": {
         "lines": [
           null,
           null,
@@ -1361,11 +1361,11 @@
           1,
           1,
           1,
-          6,
-          6,
-          null,
+          8,
           6,
           null,
+          6,
+          null,
           1,
           1,
           1,
@@ -1388,19 +1388,19 @@
           null,
           null,
           null,
-          0,
-          0,
-          0,
+          2,
+          2,
+          2,
           null,
-          0,
-          0,
-          0,
+          2,
+          1,
+          1,
           null,
           null,
-          0,
-          0,
+          1,
+          1,
           null,
-          0,
+          1,
           null,
           null,
           null,
@@ -1413,7 +1413,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/presentation/representers/query_create_result.rb": {
+      "/home/jsl/Work/leaf-api/app/presentation/representers/query_create_result.rb": {
         "lines": [
           null,
           null,
@@ -1432,7 +1432,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/presentation/representers/query.rb": {
+      "/home/jsl/Work/leaf-api/app/presentation/representers/query.rb": {
         "lines": [
           null,
           null,
@@ -1458,7 +1458,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/presentation/representers/plan.rb": {
+      "/home/jsl/Work/leaf-api/app/presentation/representers/plan.rb": {
         "lines": [
           null,
           null,
@@ -1485,7 +1485,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/presentation/responses/api_result.rb": {
+      "/home/jsl/Work/leaf-api/app/presentation/responses/api_result.rb": {
         "lines": [
           null,
           null,
@@ -1505,16 +1505,16 @@
           null,
           1,
           1,
-          10,
+          12,
           null,
-          10,
+          12,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/presentation/representers/http_response_representer.rb": {
+      "/home/jsl/Work/leaf-api/app/presentation/representers/http_response_representer.rb": {
         "lines": [
           null,
           null,
@@ -1550,14 +1550,14 @@
           null,
           null,
           1,
-          7,
+          9,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/application/forms/new_location.rb": {
+      "/home/jsl/Work/leaf-api/app/application/forms/new_location.rb": {
         "lines": [
           null,
           null,
@@ -1575,7 +1575,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/application/forms/new_query.rb": {
+      "/home/jsl/Work/leaf-api/app/application/forms/new_query.rb": {
         "lines": [
           null,
           null,
@@ -1602,7 +1602,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/application/forms/new_trip.rb": {
+      "/home/jsl/Work/leaf-api/app/application/forms/new_trip.rb": {
         "lines": [
           null,
           null,
@@ -1628,7 +1628,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/application/requests/new_location_request.rb": {
+      "/home/jsl/Work/leaf-api/app/application/requests/new_location_request.rb": {
         "lines": [
           null,
           null,
@@ -1672,7 +1672,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/application/requests/new_query_request.rb": {
+      "/home/jsl/Work/leaf-api/app/application/requests/new_query_request.rb": {
         "lines": [
           null,
           null,
@@ -1699,7 +1699,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/application/requests/new_trip_request.rb": {
+      "/home/jsl/Work/leaf-api/app/application/requests/new_trip_request.rb": {
         "lines": [
           null,
           null,
@@ -1753,7 +1753,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/application/services/add_location.rb": {
+      "/home/jsl/Work/leaf-api/app/application/services/add_location.rb": {
         "lines": [
           null,
           null,
@@ -1795,7 +1795,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/application/services/add_query.rb": {
+      "/home/jsl/Work/leaf-api/app/application/services/add_query.rb": {
         "lines": [
           null,
           null,
@@ -1865,7 +1865,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/workers/progress_reporter.rb": {
+      "/home/jsl/Work/leaf-api/workers/progress_reporter.rb": {
         "lines": [
           null,
           null,
@@ -1889,7 +1889,7 @@
           null,
           null,
           null,
-          0,
+          8,
           null,
           null,
           1,
@@ -1909,7 +1909,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/application/services/add_trip.rb": {
+      "/home/jsl/Work/leaf-api/app/application/services/add_trip.rb": {
         "lines": [
           null,
           null,
@@ -1988,7 +1988,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/application/services/dispatch_query.rb": {
+      "/home/jsl/Work/leaf-api/app/application/services/dispatch_query.rb": {
         "lines": [
           null,
           null,
@@ -2037,7 +2037,7 @@
           null
         ]
       },
-      "/Users/jsl/Work/leaf-api/app/application/services/get_query.rb": {
+      "/home/jsl/Work/leaf-api/app/application/services/get_query.rb": {
         "lines": [
           null,
           null,
@@ -2052,11 +2052,11 @@
           1,
           null,
           1,
-          0,
+          2,
           null,
-          0,
+          1,
           null,
-          0,
+          1,
           null,
           null,
           null,
@@ -2064,6 +2064,6 @@
         ]
       }
     },
-    "timestamp": 1734421039
+    "timestamp": 1734445881
   }
 }
