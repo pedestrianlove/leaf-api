@@ -25,6 +25,7 @@ jobs:
           WORKER_QUEUE_URL: ${{ secrets.WORKER_QUEUE_URL }}
           DB_FILENAME: db/local/test.db
           RACK_ENV: development
+          API_URL: http://localhost:9292
         run: |
           bundle exec rake db:migrate
           bundle exec rake spec
