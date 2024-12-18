@@ -1484,4 +1484,3129 @@ http_interactions:
           "status": "OK"
         }
   recorded_at: Wed, 04 Dec 2024 02:14:53 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=QXRR%2BQW6%20%E5%85%89%E6%98%8E%E9%87%8C%20Hsinchu%20City,%20East%20District&key=<GOOGLE_TOKEN>&mode=walking&origins=7QP2QXWW%2BCM&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:28 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '604'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=20
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"300, Taiwan, 新竹市東區QXRR+QW6\"\n
+        \  ],\n   \"origin_addresses\" : \n   [\n      \"QXWW+CM Taiwan, 新竹市東區光明里\"\n
+        \  ],\n   \"rows\" : \n   [\n      {\n         \"elements\" : \n         [\n
+        \           {\n               \"distance\" : \n               {\n                  \"text\"
+        : \"0.7 km\",\n                  \"value\" : 688\n               },\n               \"duration\"
+        : \n               {\n                  \"text\" : \"10 mins\",\n                  \"value\"
+        : 592\n               },\n               \"status\" : \"OK\"\n            }\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:28 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=QXVV%2BMGC%20%E5%85%89%E6%98%8E%E9%87%8C%20Hsinchu%20City,%20East%20District&key=<GOOGLE_TOKEN>&mode=walking&origins=7QP2QXWW%2BCM&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:28 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '603'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=27
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"300, Taiwan, 新竹市東區QXVV+MGC\"\n
+        \  ],\n   \"origin_addresses\" : \n   [\n      \"QXWW+CM Taiwan, 新竹市東區光明里\"\n
+        \  ],\n   \"rows\" : \n   [\n      {\n         \"elements\" : \n         [\n
+        \           {\n               \"distance\" : \n               {\n                  \"text\"
+        : \"0.4 km\",\n                  \"value\" : 380\n               },\n               \"duration\"
+        : \n               {\n                  \"text\" : \"5 mins\",\n                  \"value\"
+        : 327\n               },\n               \"status\" : \"OK\"\n            }\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:28 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=QXWW%2B9G4%20%E5%85%89%E6%98%8E%E9%87%8C%20Hsinchu%20City,%20East%20District&key=<GOOGLE_TOKEN>&mode=walking&origins=7QP2QXWW%2BCM&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:28 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '598'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=89
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"300, Taiwan, 新竹市東區QXWW+9G4\"\n
+        \  ],\n   \"origin_addresses\" : \n   [\n      \"QXWW+CM Taiwan, 新竹市東區光明里\"\n
+        \  ],\n   \"rows\" : \n   [\n      {\n         \"elements\" : \n         [\n
+        \           {\n               \"distance\" : \n               {\n                  \"text\"
+        : \"38 m\",\n                  \"value\" : 38\n               },\n               \"duration\"
+        : \n               {\n                  \"text\" : \"1 min\",\n                  \"value\"
+        : 32\n               },\n               \"status\" : \"OK\"\n            }\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:28 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXRR%2BQW6&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:28 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2297'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=70
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"QXRR+QW6\",\n
+        \              \"short_name\" : \"QXRR+QW6\",\n               \"types\" :
+        \n               [\n                  \"plus_code\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"QXRR+QW6, East District, Hsinchu City, Taiwan 300\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 24.7919125,\n               \"lng\" : 120.9922656\n            },\n            \"location_type\"
+        : \"GEOMETRIC_CENTER\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 24.7932614802915,\n                  \"lng\"
+        : 120.9936145802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7905635197085,\n                  \"lng\"
+        : 120.9909166197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"EjFRWFJSK1FXNiwgRWFzdCBEaXN0cmljdCwgSHNpbmNodSBDaXR5LCBUYWl3YW4gMzAwIiY6JAoKDRXyxg4VYPQdSBALGhQKEgmtFAsEDzZoNBHmKeqbEc9VzQ\",\n
+        \        \"plus_code\" : \n         {\n            \"compound_code\" : \"QXRR+QW6
+        East District, Hsinchu City\",\n            \"global_code\" : \"7QP2QXRR+QW6\"\n
+        \        },\n         \"types\" : \n         [\n            \"plus_code\"\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:28 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=QXWW%2BCM%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%85%89%E6%98%8E%E9%87%8C&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:28 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2490'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=81
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"QXWW+CM\",\n
+        \              \"short_name\" : \"QXWW+CM\",\n               \"types\" : \n
+        \              [\n                  \"plus_code\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"光明里\",\n               \"short_name\"
+        : \"光明里\",\n               \"types\" : \n               [\n                  \"administrative_area_level_3\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"東區\",\n               \"short_name\" : \"東區\",\n
+        \              \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"新竹市\",\n               \"short_name\" : \"新竹市\",\n
+        \              \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"300, Taiwan, 新竹市東區QXWW+CM\",\n         \"geometry\" : \n         {\n            \"location\"
+        : \n            {\n               \"lat\" : 24.7960625,\n               \"lng\"
+        : 120.9966875\n            },\n            \"location_type\" : \"GEOMETRIC_CENTER\",\n
+        \           \"viewport\" : \n            {\n               \"northeast\" :
+        \n               {\n                  \"lat\" : 24.7974114802915,\n                  \"lng\"
+        : 120.9980364802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7947135197085,\n                  \"lng\"
+        : 120.9953385197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"EiMzMDAsIFRhaXdhbiwg5paw56u55biC5p2x5Y2AUVhXVytDTSImOiQKCg0xlMcOFRuhHkgQChoUChIJXW0bawk2aDQRlSR_EpFgF9k\",\n
+        \        \"plus_code\" : \n         {\n            \"compound_code\" : \"QXWW+CM
+        新竹市東區光明里\",\n            \"global_code\" : \"7QP2QXWW+CM\"\n         },\n
+        \        \"types\" : \n         [\n            \"plus_code\"\n         ]\n
+        \     }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:28 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=QXWW%2BCM%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%85%89%E6%98%8E%E9%87%8C&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:28 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2490'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=42
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"QXWW+CM\",\n
+        \              \"short_name\" : \"QXWW+CM\",\n               \"types\" : \n
+        \              [\n                  \"plus_code\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"光明里\",\n               \"short_name\"
+        : \"光明里\",\n               \"types\" : \n               [\n                  \"administrative_area_level_3\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"東區\",\n               \"short_name\" : \"東區\",\n
+        \              \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"新竹市\",\n               \"short_name\" : \"新竹市\",\n
+        \              \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"300, Taiwan, 新竹市東區QXWW+CM\",\n         \"geometry\" : \n         {\n            \"location\"
+        : \n            {\n               \"lat\" : 24.7960625,\n               \"lng\"
+        : 120.9966875\n            },\n            \"location_type\" : \"GEOMETRIC_CENTER\",\n
+        \           \"viewport\" : \n            {\n               \"northeast\" :
+        \n               {\n                  \"lat\" : 24.7974114802915,\n                  \"lng\"
+        : 120.9980364802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7947135197085,\n                  \"lng\"
+        : 120.9953385197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"EiMzMDAsIFRhaXdhbiwg5paw56u55biC5p2x5Y2AUVhXVytDTSImOiQKCg0xlMcOFRuhHkgQChoUChIJXW0bawk2aDQRlSR_EpFgF9k\",\n
+        \        \"plus_code\" : \n         {\n            \"compound_code\" : \"QXWW+CM
+        新竹市東區光明里\",\n            \"global_code\" : \"7QP2QXWW+CM\"\n         },\n
+        \        \"types\" : \n         [\n            \"plus_code\"\n         ]\n
+        \     }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:28 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXRR%2BQW6&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Wed, 01 Jan 2025 08:05:29 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - fcd973cd9ce0f5ee6215f683bf83e176
+      Date:
+      - Wed, 18 Dec 2024 08:05:29 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '537'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QP2QXRR+QW",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 24.792,
+                  "lng": 120.99237500000004
+                },
+                "southwest": {
+                  "lat": 24.791875000000005,
+                  "lng": 120.99225000000001
+                }
+              },
+              "location": {
+                "lat": 24.791937500000003,
+                "lng": 120.99231250000003
+              }
+            },
+            "local_code": "QXRR+QW",
+            "locality": {
+              "local_address": "Taiwan, 新竹市東區光明里"
+            }
+          },
+          "status": "OK"
+        }
+  recorded_at: Wed, 18 Dec 2024 08:05:29 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=QXWW%2BCM%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%85%89%E6%98%8E%E9%87%8C&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Wed, 01 Jan 2025 08:05:29 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - 7639601212f35ed8d681ef6fd320406c
+      Date:
+      - Wed, 18 Dec 2024 08:05:29 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '541'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QP2QXWW+CM",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 24.796125000000004,
+                  "lng": 120.99675000000002
+                },
+                "southwest": {
+                  "lat": 24.796000000000006,
+                  "lng": 120.996625
+                }
+              },
+              "location": {
+                "lat": 24.796062500000005,
+                "lng": 120.99668750000001
+              }
+            },
+            "local_code": "QXWW+CM",
+            "locality": {
+              "local_address": "Taiwan, 新竹市東區光明里"
+            }
+          },
+          "status": "OK"
+        }
+  recorded_at: Wed, 18 Dec 2024 08:05:29 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=QXWW%2BCM%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%85%89%E6%98%8E%E9%87%8C&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Wed, 01 Jan 2025 08:05:29 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - 3f75d6ac0ab145fec874498646782675
+      Date:
+      - Wed, 18 Dec 2024 08:05:29 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '541'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QP2QXWW+CM",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 24.796125000000004,
+                  "lng": 120.99675000000002
+                },
+                "southwest": {
+                  "lat": 24.796000000000006,
+                  "lng": 120.996625
+                }
+              },
+              "location": {
+                "lat": 24.796062500000005,
+                "lng": 120.99668750000001
+              }
+            },
+            "local_code": "QXWW+CM",
+            "locality": {
+              "local_address": "Taiwan, 新竹市東區光明里"
+            }
+          },
+          "status": "OK"
+        }
+  recorded_at: Wed, 18 Dec 2024 08:05:29 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=QXQR%2B8X8%20%E5%85%89%E6%98%8E%E9%87%8C%20Hsinchu%20City,%20East%20District&key=<GOOGLE_TOKEN>&mode=driving&origins=QXRR%2BQW6%20%E5%85%89%E6%98%8E%E9%87%8C%20Hsinchu%20City,%20East%20District&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:29 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '597'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=18
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"300, Taiwan, 新竹市東區QXQR+8X8\"\n
+        \  ],\n   \"origin_addresses\" : \n   [\n      \"300, Taiwan, 新竹市東區QXRR+QW6\"\n
+        \  ],\n   \"rows\" : \n   [\n      {\n         \"elements\" : \n         [\n
+        \           {\n               \"distance\" : \n               {\n                  \"text\"
+        : \"0.4 km\",\n                  \"value\" : 413\n               },\n               \"duration\"
+        : \n               {\n                  \"text\" : \"1 min\",\n                  \"value\"
+        : 70\n               },\n               \"status\" : \"OK\"\n            }\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:29 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXVV%2BMGC&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:29 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2297'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=40
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"QXVV+MGC\",\n
+        \              \"short_name\" : \"QXVV+MGC\",\n               \"types\" :
+        \n               [\n                  \"plus_code\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"QXVV+MGC, East District, Hsinchu City, Taiwan 300\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 24.7941875,\n               \"lng\" : 120.9937656\n            },\n            \"location_type\"
+        : \"GEOMETRIC_CENTER\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 24.7955364802915,\n                  \"lng\"
+        : 120.9951145802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7928385197085,\n                  \"lng\"
+        : 120.9924166197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"EjFRWFZWK01HQywgRWFzdCBEaXN0cmljdCwgSHNpbmNodSBDaXR5LCBUYWl3YW4gMzAwIiY6JAoKDfNKxw4V-C4eSBALGhQKEgmtFAsEDzZoNBHmKeqbEc9VzQ\",\n
+        \        \"plus_code\" : \n         {\n            \"compound_code\" : \"QXVV+MGC
+        East District, Hsinchu City\",\n            \"global_code\" : \"7QP2QXVV+MGC\"\n
+        \        },\n         \"types\" : \n         [\n            \"plus_code\"\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:29 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXRR%2BQW6&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:29 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2297'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=16
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"QXRR+QW6\",\n
+        \              \"short_name\" : \"QXRR+QW6\",\n               \"types\" :
+        \n               [\n                  \"plus_code\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"QXRR+QW6, East District, Hsinchu City, Taiwan 300\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 24.7919125,\n               \"lng\" : 120.9922656\n            },\n            \"location_type\"
+        : \"GEOMETRIC_CENTER\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 24.7932614802915,\n                  \"lng\"
+        : 120.9936145802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7905635197085,\n                  \"lng\"
+        : 120.9909166197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"EjFRWFJSK1FXNiwgRWFzdCBEaXN0cmljdCwgSHNpbmNodSBDaXR5LCBUYWl3YW4gMzAwIiY6JAoKDRXyxg4VYPQdSBALGhQKEgmtFAsEDzZoNBHmKeqbEc9VzQ\",\n
+        \        \"plus_code\" : \n         {\n            \"compound_code\" : \"QXRR+QW6
+        East District, Hsinchu City\",\n            \"global_code\" : \"7QP2QXRR+QW6\"\n
+        \        },\n         \"types\" : \n         [\n            \"plus_code\"\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:29 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXWW%2B9G4&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:29 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2297'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=72
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"QXWW+9G4\",\n
+        \              \"short_name\" : \"QXWW+9G4\",\n               \"types\" :
+        \n               [\n                  \"plus_code\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"QXWW+9G4, East District, Hsinchu City, Taiwan 300\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 24.7958875,\n               \"lng\" : 120.9963281\n            },\n            \"location_type\"
+        : \"GEOMETRIC_CENTER\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 24.7972364802915,\n                  \"lng\"
+        : 120.9976770802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7945385197085,\n                  \"lng\"
+        : 120.9949791197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"EjFRWFdXKzlHNCwgRWFzdCBEaXN0cmljdCwgSHNpbmNodSBDaXR5LCBUYWl3YW4gMzAwIiY6JAoKDVuNxw4VEZMeSBALGhQKEgmtFAsEDzZoNBHmKeqbEc9VzQ\",\n
+        \        \"plus_code\" : \n         {\n            \"compound_code\" : \"QXWW+9G4
+        East District, Hsinchu City\",\n            \"global_code\" : \"7QP2QXWW+9G4\"\n
+        \        },\n         \"types\" : \n         [\n            \"plus_code\"\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:29 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXRR%2BQW6&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Wed, 01 Jan 2025 08:05:29 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - 652ad6f21cf8bf84671f1cf116679d17
+      Date:
+      - Wed, 18 Dec 2024 08:05:29 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '537'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QP2QXRR+QW",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 24.792,
+                  "lng": 120.99237500000004
+                },
+                "southwest": {
+                  "lat": 24.791875000000005,
+                  "lng": 120.99225000000001
+                }
+              },
+              "location": {
+                "lat": 24.791937500000003,
+                "lng": 120.99231250000003
+              }
+            },
+            "local_code": "QXRR+QW",
+            "locality": {
+              "local_address": "Taiwan, 新竹市東區光明里"
+            }
+          },
+          "status": "OK"
+        }
+  recorded_at: Wed, 18 Dec 2024 08:05:29 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXQR%2B8X8&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:29 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2297'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=20
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"QXQR+8X8\",\n
+        \              \"short_name\" : \"QXQR+8X8\",\n               \"types\" :
+        \n               [\n                  \"plus_code\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"QXQR+8X8, East District, Hsinchu City, Taiwan 300\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 24.7882875,\n               \"lng\" : 120.9924531\n            },\n            \"location_type\"
+        : \"GEOMETRIC_CENTER\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 24.7896364802915,\n                  \"lng\"
+        : 120.9938020802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7869385197085,\n                  \"lng\"
+        : 120.9911041197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"EjFRWFFSKzhYOCwgRWFzdCBEaXN0cmljdCwgSHNpbmNodSBDaXR5LCBUYWl3YW4gMzAwIiY6JAoKDXtkxg4Vs_sdSBALGhQKEgmtFAsEDzZoNBHmKeqbEc9VzQ\",\n
+        \        \"plus_code\" : \n         {\n            \"compound_code\" : \"QXQR+8X8
+        East District, Hsinchu City\",\n            \"global_code\" : \"7QP2QXQR+8X8\"\n
+        \        },\n         \"types\" : \n         [\n            \"plus_code\"\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:29 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXVV%2BMGC&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Wed, 01 Jan 2025 08:05:29 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - f199bb2ec0806e524cd108809e4797df
+      Date:
+      - Wed, 18 Dec 2024 08:05:29 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '549'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QP2QXVV+MG",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 24.794250000000005,
+                  "lng": 120.99387500000006
+                },
+                "southwest": {
+                  "lat": 24.794125000000008,
+                  "lng": 120.99375000000003
+                }
+              },
+              "location": {
+                "lat": 24.794187500000007,
+                "lng": 120.99381250000005
+              }
+            },
+            "local_code": "QXVV+MG",
+            "locality": {
+              "local_address": "Taiwan, 新竹市東區光明里"
+            }
+          },
+          "status": "OK"
+        }
+  recorded_at: Wed, 18 Dec 2024 08:05:29 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXWW%2B9G4&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Wed, 01 Jan 2025 08:05:29 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - '09dc3c06e75a0820e5020465cc315c50'
+      Date:
+      - Wed, 18 Dec 2024 08:05:29 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '549'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QP2QXWW+9G",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 24.795999999999992,
+                  "lng": 120.99637500000006
+                },
+                "southwest": {
+                  "lat": 24.795874999999995,
+                  "lng": 120.99625000000003
+                }
+              },
+              "location": {
+                "lat": 24.795937499999994,
+                "lng": 120.99631250000004
+              }
+            },
+            "local_code": "QXWW+9G",
+            "locality": {
+              "local_address": "Taiwan, 新竹市東區光明里"
+            }
+          },
+          "status": "OK"
+        }
+  recorded_at: Wed, 18 Dec 2024 08:05:29 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=QXQR%2B8X8%20%E5%85%89%E6%98%8E%E9%87%8C%20Hsinchu%20City,%20East%20District&key=<GOOGLE_TOKEN>&mode=driving&origins=QXWW%2B9G4%20%E5%85%89%E6%98%8E%E9%87%8C%20Hsinchu%20City,%20East%20District&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:29 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '600'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=17
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"300, Taiwan, 新竹市東區QXQR+8X8\"\n
+        \  ],\n   \"origin_addresses\" : \n   [\n      \"300, Taiwan, 新竹市東區QXWW+9G4\"\n
+        \  ],\n   \"rows\" : \n   [\n      {\n         \"elements\" : \n         [\n
+        \           {\n               \"distance\" : \n               {\n                  \"text\"
+        : \"1.1 km\",\n                  \"value\" : 1061\n               },\n               \"duration\"
+        : \n               {\n                  \"text\" : \"3 mins\",\n                  \"value\"
+        : 192\n               },\n               \"status\" : \"OK\"\n            }\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:29 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=QXQR%2B8X8%20%E5%85%89%E6%98%8E%E9%87%8C%20Hsinchu%20City,%20East%20District&key=<GOOGLE_TOKEN>&mode=driving&origins=QXVV%2BMGC%20%E5%85%89%E6%98%8E%E9%87%8C%20Hsinchu%20City,%20East%20District&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:29 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '599'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=45
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"300, Taiwan, 新竹市東區QXQR+8X8\"\n
+        \  ],\n   \"origin_addresses\" : \n   [\n      \"300, Taiwan, 新竹市東區QXVV+MGC\"\n
+        \  ],\n   \"rows\" : \n   [\n      {\n         \"elements\" : \n         [\n
+        \           {\n               \"distance\" : \n               {\n                  \"text\"
+        : \"0.7 km\",\n                  \"value\" : 720\n               },\n               \"duration\"
+        : \n               {\n                  \"text\" : \"2 mins\",\n                  \"value\"
+        : 128\n               },\n               \"status\" : \"OK\"\n            }\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:29 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXWW%2B9G4&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:29 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2297'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=15
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"QXWW+9G4\",\n
+        \              \"short_name\" : \"QXWW+9G4\",\n               \"types\" :
+        \n               [\n                  \"plus_code\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"QXWW+9G4, East District, Hsinchu City, Taiwan 300\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 24.7958875,\n               \"lng\" : 120.9963281\n            },\n            \"location_type\"
+        : \"GEOMETRIC_CENTER\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 24.7972364802915,\n                  \"lng\"
+        : 120.9976770802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7945385197085,\n                  \"lng\"
+        : 120.9949791197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"EjFRWFdXKzlHNCwgRWFzdCBEaXN0cmljdCwgSHNpbmNodSBDaXR5LCBUYWl3YW4gMzAwIiY6JAoKDVuNxw4VEZMeSBALGhQKEgmtFAsEDzZoNBHmKeqbEc9VzQ\",\n
+        \        \"plus_code\" : \n         {\n            \"compound_code\" : \"QXWW+9G4
+        East District, Hsinchu City\",\n            \"global_code\" : \"7QP2QXWW+9G4\"\n
+        \        },\n         \"types\" : \n         [\n            \"plus_code\"\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:29 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXVV%2BMGC&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:29 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2297'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=13
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"QXVV+MGC\",\n
+        \              \"short_name\" : \"QXVV+MGC\",\n               \"types\" :
+        \n               [\n                  \"plus_code\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"QXVV+MGC, East District, Hsinchu City, Taiwan 300\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 24.7941875,\n               \"lng\" : 120.9937656\n            },\n            \"location_type\"
+        : \"GEOMETRIC_CENTER\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 24.7955364802915,\n                  \"lng\"
+        : 120.9951145802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7928385197085,\n                  \"lng\"
+        : 120.9924166197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"EjFRWFZWK01HQywgRWFzdCBEaXN0cmljdCwgSHNpbmNodSBDaXR5LCBUYWl3YW4gMzAwIiY6JAoKDfNKxw4V-C4eSBALGhQKEgmtFAsEDzZoNBHmKeqbEc9VzQ\",\n
+        \        \"plus_code\" : \n         {\n            \"compound_code\" : \"QXVV+MGC
+        East District, Hsinchu City\",\n            \"global_code\" : \"7QP2QXVV+MGC\"\n
+        \        },\n         \"types\" : \n         [\n            \"plus_code\"\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:30 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXQR%2B8X8&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Wed, 01 Jan 2025 08:05:29 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - 666dc54d9155186ab7bb31e4cb39f7d7
+      Date:
+      - Wed, 18 Dec 2024 08:05:29 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '530'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QP2QXQR+8X",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 24.788374999999988,
+                  "lng": 120.9925
+                },
+                "southwest": {
+                  "lat": 24.78824999999999,
+                  "lng": 120.99237499999998
+                }
+              },
+              "location": {
+                "lat": 24.78831249999999,
+                "lng": 120.9924375
+              }
+            },
+            "local_code": "QXQR+8X",
+            "locality": {
+              "local_address": "Taiwan, 新竹市東區光明里"
+            }
+          },
+          "status": "OK"
+        }
+  recorded_at: Wed, 18 Dec 2024 08:05:30 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=7QP2QXPW%2BQX&key=<GOOGLE_TOKEN>&mode=walking&origins=QXQR%2B8X8%20%E5%85%89%E6%98%8E%E9%87%8C%20Hsinchu%20City,%20East%20District&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:30 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '605'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=18
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"QXPW+QX Taiwan, 新竹市東區光明里\"\n
+        \  ],\n   \"origin_addresses\" : \n   [\n      \"300, Taiwan, 新竹市東區QXQR+8X8\"\n
+        \  ],\n   \"rows\" : \n   [\n      {\n         \"elements\" : \n         [\n
+        \           {\n               \"distance\" : \n               {\n                  \"text\"
+        : \"1.1 km\",\n                  \"value\" : 1093\n               },\n               \"duration\"
+        : \n               {\n                  \"text\" : \"16 mins\",\n                  \"value\"
+        : 943\n               },\n               \"status\" : \"OK\"\n            }\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:30 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXQR%2B8X8&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:30 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2297'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=12
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"QXQR+8X8\",\n
+        \              \"short_name\" : \"QXQR+8X8\",\n               \"types\" :
+        \n               [\n                  \"plus_code\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"QXQR+8X8, East District, Hsinchu City, Taiwan 300\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 24.7882875,\n               \"lng\" : 120.9924531\n            },\n            \"location_type\"
+        : \"GEOMETRIC_CENTER\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 24.7896364802915,\n                  \"lng\"
+        : 120.9938020802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7869385197085,\n                  \"lng\"
+        : 120.9911041197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"EjFRWFFSKzhYOCwgRWFzdCBEaXN0cmljdCwgSHNpbmNodSBDaXR5LCBUYWl3YW4gMzAwIiY6JAoKDXtkxg4Vs_sdSBALGhQKEgmtFAsEDzZoNBHmKeqbEc9VzQ\",\n
+        \        \"plus_code\" : \n         {\n            \"compound_code\" : \"QXQR+8X8
+        East District, Hsinchu City\",\n            \"global_code\" : \"7QP2QXQR+8X8\"\n
+        \        },\n         \"types\" : \n         [\n            \"plus_code\"\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:30 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXWW%2B9G4&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Wed, 01 Jan 2025 08:05:30 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - 3521ce72bb347ed39fe1fbc2b9795a79
+      Date:
+      - Wed, 18 Dec 2024 08:05:30 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '549'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QP2QXWW+9G",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 24.795999999999992,
+                  "lng": 120.99637500000006
+                },
+                "southwest": {
+                  "lat": 24.795874999999995,
+                  "lng": 120.99625000000003
+                }
+              },
+              "location": {
+                "lat": 24.795937499999994,
+                "lng": 120.99631250000004
+              }
+            },
+            "local_code": "QXWW+9G",
+            "locality": {
+              "local_address": "Taiwan, 新竹市東區光明里"
+            }
+          },
+          "status": "OK"
+        }
+  recorded_at: Wed, 18 Dec 2024 08:05:30 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXVV%2BMGC&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Wed, 01 Jan 2025 08:05:30 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - 466997d6b9001b9a2bf59b6d5bbc33a2
+      Date:
+      - Wed, 18 Dec 2024 08:05:30 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '549'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QP2QXVV+MG",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 24.794250000000005,
+                  "lng": 120.99387500000006
+                },
+                "southwest": {
+                  "lat": 24.794125000000008,
+                  "lng": 120.99375000000003
+                }
+              },
+              "location": {
+                "lat": 24.794187500000007,
+                "lng": 120.99381250000005
+              }
+            },
+            "local_code": "QXVV+MG",
+            "locality": {
+              "local_address": "Taiwan, 新竹市東區光明里"
+            }
+          },
+          "status": "OK"
+        }
+  recorded_at: Wed, 18 Dec 2024 08:05:30 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXQR%2B8X8&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:30 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2297'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=17
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"QXQR+8X8\",\n
+        \              \"short_name\" : \"QXQR+8X8\",\n               \"types\" :
+        \n               [\n                  \"plus_code\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"QXQR+8X8, East District, Hsinchu City, Taiwan 300\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 24.7882875,\n               \"lng\" : 120.9924531\n            },\n            \"location_type\"
+        : \"GEOMETRIC_CENTER\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 24.7896364802915,\n                  \"lng\"
+        : 120.9938020802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7869385197085,\n                  \"lng\"
+        : 120.9911041197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"EjFRWFFSKzhYOCwgRWFzdCBEaXN0cmljdCwgSHNpbmNodSBDaXR5LCBUYWl3YW4gMzAwIiY6JAoKDXtkxg4Vs_sdSBALGhQKEgmtFAsEDzZoNBHmKeqbEc9VzQ\",\n
+        \        \"plus_code\" : \n         {\n            \"compound_code\" : \"QXQR+8X8
+        East District, Hsinchu City\",\n            \"global_code\" : \"7QP2QXQR+8X8\"\n
+        \        },\n         \"types\" : \n         [\n            \"plus_code\"\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:30 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXQR%2B8X8&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:30 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2297'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=28
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"QXQR+8X8\",\n
+        \              \"short_name\" : \"QXQR+8X8\",\n               \"types\" :
+        \n               [\n                  \"plus_code\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"QXQR+8X8, East District, Hsinchu City, Taiwan 300\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 24.7882875,\n               \"lng\" : 120.9924531\n            },\n            \"location_type\"
+        : \"GEOMETRIC_CENTER\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 24.7896364802915,\n                  \"lng\"
+        : 120.9938020802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7869385197085,\n                  \"lng\"
+        : 120.9911041197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"EjFRWFFSKzhYOCwgRWFzdCBEaXN0cmljdCwgSHNpbmNodSBDaXR5LCBUYWl3YW4gMzAwIiY6JAoKDXtkxg4Vs_sdSBALGhQKEgmtFAsEDzZoNBHmKeqbEc9VzQ\",\n
+        \        \"plus_code\" : \n         {\n            \"compound_code\" : \"QXQR+8X8
+        East District, Hsinchu City\",\n            \"global_code\" : \"7QP2QXQR+8X8\"\n
+        \        },\n         \"types\" : \n         [\n            \"plus_code\"\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:30 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXQR%2B8X8&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Wed, 01 Jan 2025 08:05:30 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - 5daff457eccb53371715dbfe19b0836f
+      Date:
+      - Wed, 18 Dec 2024 08:05:30 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '530'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QP2QXQR+8X",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 24.788374999999988,
+                  "lng": 120.9925
+                },
+                "southwest": {
+                  "lat": 24.78824999999999,
+                  "lng": 120.99237499999998
+                }
+              },
+              "location": {
+                "lat": 24.78831249999999,
+                "lng": 120.9924375
+              }
+            },
+            "local_code": "QXQR+8X",
+            "locality": {
+              "local_address": "Taiwan, 新竹市東區光明里"
+            }
+          },
+          "status": "OK"
+        }
+  recorded_at: Wed, 18 Dec 2024 08:05:30 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXQR%2B8X8&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Wed, 01 Jan 2025 08:05:30 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - 876634ed97f8587aec3e1ab9086261b3
+      Date:
+      - Wed, 18 Dec 2024 08:05:30 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '530'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QP2QXQR+8X",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 24.788374999999988,
+                  "lng": 120.9925
+                },
+                "southwest": {
+                  "lat": 24.78824999999999,
+                  "lng": 120.99237499999998
+                }
+              },
+              "location": {
+                "lat": 24.78831249999999,
+                "lng": 120.9924375
+              }
+            },
+            "local_code": "QXQR+8X",
+            "locality": {
+              "local_address": "Taiwan, 新竹市東區光明里"
+            }
+          },
+          "status": "OK"
+        }
+  recorded_at: Wed, 18 Dec 2024 08:05:30 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXQR%2B8X8&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Wed, 01 Jan 2025 08:05:30 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - 69b553b04e71847ac72c385f90e50b96
+      Date:
+      - Wed, 18 Dec 2024 08:05:30 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '530'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QP2QXQR+8X",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 24.788374999999988,
+                  "lng": 120.9925
+                },
+                "southwest": {
+                  "lat": 24.78824999999999,
+                  "lng": 120.99237499999998
+                }
+              },
+              "location": {
+                "lat": 24.78831249999999,
+                "lng": 120.9924375
+              }
+            },
+            "local_code": "QXQR+8X",
+            "locality": {
+              "local_address": "Taiwan, 新竹市東區光明里"
+            }
+          },
+          "status": "OK"
+        }
+  recorded_at: Wed, 18 Dec 2024 08:05:30 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=7QP2QXPW%2BQX&key=<GOOGLE_TOKEN>&mode=walking&origins=QXQR%2B8X8%20%E5%85%89%E6%98%8E%E9%87%8C%20Hsinchu%20City,%20East%20District&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:30 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '605'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=22
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"QXPW+QX Taiwan, 新竹市東區光明里\"\n
+        \  ],\n   \"origin_addresses\" : \n   [\n      \"300, Taiwan, 新竹市東區QXQR+8X8\"\n
+        \  ],\n   \"rows\" : \n   [\n      {\n         \"elements\" : \n         [\n
+        \           {\n               \"distance\" : \n               {\n                  \"text\"
+        : \"1.1 km\",\n                  \"value\" : 1093\n               },\n               \"duration\"
+        : \n               {\n                  \"text\" : \"16 mins\",\n                  \"value\"
+        : 943\n               },\n               \"status\" : \"OK\"\n            }\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:30 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=7QP2QXPW%2BQX&key=<GOOGLE_TOKEN>&mode=walking&origins=QXQR%2B8X8%20%E5%85%89%E6%98%8E%E9%87%8C%20Hsinchu%20City,%20East%20District&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:30 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifddsmnwc:377:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifddsmnwc:377:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '605'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=33
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"destination_addresses\" : \n   [\n      \"QXPW+QX Taiwan, 新竹市東區光明里\"\n
+        \  ],\n   \"origin_addresses\" : \n   [\n      \"300, Taiwan, 新竹市東區QXQR+8X8\"\n
+        \  ],\n   \"rows\" : \n   [\n      {\n         \"elements\" : \n         [\n
+        \           {\n               \"distance\" : \n               {\n                  \"text\"
+        : \"1.1 km\",\n                  \"value\" : 1093\n               },\n               \"duration\"
+        : \n               {\n                  \"text\" : \"16 mins\",\n                  \"value\"
+        : 943\n               },\n               \"status\" : \"OK\"\n            }\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:30 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXQR%2B8X8&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:30 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2297'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=22
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"QXQR+8X8\",\n
+        \              \"short_name\" : \"QXQR+8X8\",\n               \"types\" :
+        \n               [\n                  \"plus_code\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"QXQR+8X8, East District, Hsinchu City, Taiwan 300\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 24.7882875,\n               \"lng\" : 120.9924531\n            },\n            \"location_type\"
+        : \"GEOMETRIC_CENTER\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 24.7896364802915,\n                  \"lng\"
+        : 120.9938020802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7869385197085,\n                  \"lng\"
+        : 120.9911041197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"EjFRWFFSKzhYOCwgRWFzdCBEaXN0cmljdCwgSHNpbmNodSBDaXR5LCBUYWl3YW4gMzAwIiY6JAoKDXtkxg4Vs_sdSBALGhQKEgmtFAsEDzZoNBHmKeqbEc9VzQ\",\n
+        \        \"plus_code\" : \n         {\n            \"compound_code\" : \"QXQR+8X8
+        East District, Hsinchu City\",\n            \"global_code\" : \"7QP2QXQR+8X8\"\n
+        \        },\n         \"types\" : \n         [\n            \"plus_code\"\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:30 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXQR%2B8X8&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:30 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2297'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=15
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"QXQR+8X8\",\n
+        \              \"short_name\" : \"QXQR+8X8\",\n               \"types\" :
+        \n               [\n                  \"plus_code\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"East District\",\n               \"short_name\"
+        : \"East District\",\n               \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Hsinchu City\",\n               \"short_name\"
+        : \"Hsinchu City\",\n               \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"QXQR+8X8, East District, Hsinchu City, Taiwan 300\",\n         \"geometry\"
+        : \n         {\n            \"location\" : \n            {\n               \"lat\"
+        : 24.7882875,\n               \"lng\" : 120.9924531\n            },\n            \"location_type\"
+        : \"GEOMETRIC_CENTER\",\n            \"viewport\" : \n            {\n               \"northeast\"
+        : \n               {\n                  \"lat\" : 24.7896364802915,\n                  \"lng\"
+        : 120.9938020802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7869385197085,\n                  \"lng\"
+        : 120.9911041197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"EjFRWFFSKzhYOCwgRWFzdCBEaXN0cmljdCwgSHNpbmNodSBDaXR5LCBUYWl3YW4gMzAwIiY6JAoKDXtkxg4Vs_sdSBALGhQKEgmtFAsEDzZoNBHmKeqbEc9VzQ\",\n
+        \        \"plus_code\" : \n         {\n            \"compound_code\" : \"QXQR+8X8
+        East District, Hsinchu City\",\n            \"global_code\" : \"7QP2QXQR+8X8\"\n
+        \        },\n         \"types\" : \n         [\n            \"plus_code\"\n
+        \        ]\n      }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:30 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXQR%2B8X8&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Wed, 01 Jan 2025 08:05:31 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - f474d88da371c1105a57bd78090be05c
+      Date:
+      - Wed, 18 Dec 2024 08:05:31 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '530'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QP2QXQR+8X",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 24.788374999999988,
+                  "lng": 120.9925
+                },
+                "southwest": {
+                  "lat": 24.78824999999999,
+                  "lng": 120.99237499999998
+                }
+              },
+              "location": {
+                "lat": 24.78831249999999,
+                "lng": 120.9924375
+              }
+            },
+            "local_code": "QXQR+8X",
+            "locality": {
+              "local_address": "Taiwan, 新竹市東區光明里"
+            }
+          },
+          "status": "OK"
+        }
+  recorded_at: Wed, 18 Dec 2024 08:05:31 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=300,%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80QXQR%2B8X8&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Wed, 01 Jan 2025 08:05:31 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - 9930a23f310a072b47dc476b56d3ab9d
+      Date:
+      - Wed, 18 Dec 2024 08:05:31 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '530'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QP2QXQR+8X",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 24.788374999999988,
+                  "lng": 120.9925
+                },
+                "southwest": {
+                  "lat": 24.78824999999999,
+                  "lng": 120.99237499999998
+                }
+              },
+              "location": {
+                "lat": 24.78831249999999,
+                "lng": 120.9924375
+              }
+            },
+            "local_code": "QXQR+8X",
+            "locality": {
+              "local_address": "Taiwan, 新竹市東區光明里"
+            }
+          },
+          "status": "OK"
+        }
+  recorded_at: Wed, 18 Dec 2024 08:05:31 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=QXPW%2BQX%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%85%89%E6%98%8E%E9%87%8C&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:31 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2490'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=14
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"QXPW+QX\",\n
+        \              \"short_name\" : \"QXPW+QX\",\n               \"types\" : \n
+        \              [\n                  \"plus_code\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"光明里\",\n               \"short_name\"
+        : \"光明里\",\n               \"types\" : \n               [\n                  \"administrative_area_level_3\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"東區\",\n               \"short_name\" : \"東區\",\n
+        \              \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"新竹市\",\n               \"short_name\" : \"新竹市\",\n
+        \              \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"300, Taiwan, 新竹市東區QXPW+QX\",\n         \"geometry\" : \n         {\n            \"location\"
+        : \n            {\n               \"lat\" : 24.7869375,\n               \"lng\"
+        : 120.9974375\n            },\n            \"location_type\" : \"GEOMETRIC_CENTER\",\n
+        \           \"viewport\" : \n            {\n               \"northeast\" :
+        \n               {\n                  \"lat\" : 24.7882864802915,\n                  \"lng\"
+        : 120.9987864802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7855885197085,\n                  \"lng\"
+        : 120.9960885197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"EiMzMDAsIFRhaXdhbiwg5paw56u55biC5p2x5Y2AUVhQVytRWCImOiQKCg2_L8YOFWe-HkgQChoUChIJXW0bawk2aDQRlSR_EpFgF9k\",\n
+        \        \"plus_code\" : \n         {\n            \"compound_code\" : \"QXPW+QX
+        新竹市東區光明里\",\n            \"global_code\" : \"7QP2QXPW+QX\"\n         },\n
+        \        \"types\" : \n         [\n            \"plus_code\"\n         ]\n
+        \     }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:31 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=QXPW%2BQX%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%85%89%E6%98%8E%E9%87%8C&key=<GOOGLE_TOKEN>&region=tw
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 18 Dec 2024 08:05:31 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Goog-Maps-Metro-Area:
+      - Hsinchu City
+      Content-Security-Policy-Report-Only:
+      - script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/msaifdggmnwc:229:0
+      Cross-Origin-Opener-Policy-Report-Only:
+      - same-origin; report-to=coop_reporting
+      Report-To:
+      - '{"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/msaifdggmnwc:229:0"}],}'
+      Server:
+      - mafe
+      Content-Length:
+      - '2490'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=23
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n   \"results\" : \n   [\n      {\n         \"address_components\"
+        : \n         [\n            {\n               \"long_name\" : \"QXPW+QX\",\n
+        \              \"short_name\" : \"QXPW+QX\",\n               \"types\" : \n
+        \              [\n                  \"plus_code\"\n               ]\n            },\n
+        \           {\n               \"long_name\" : \"光明里\",\n               \"short_name\"
+        : \"光明里\",\n               \"types\" : \n               [\n                  \"administrative_area_level_3\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"東區\",\n               \"short_name\" : \"東區\",\n
+        \              \"types\" : \n               [\n                  \"administrative_area_level_2\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"新竹市\",\n               \"short_name\" : \"新竹市\",\n
+        \              \"types\" : \n               [\n                  \"administrative_area_level_1\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"Taiwan\",\n               \"short_name\"
+        : \"TW\",\n               \"types\" : \n               [\n                  \"country\",\n
+        \                 \"political\"\n               ]\n            },\n            {\n
+        \              \"long_name\" : \"300\",\n               \"short_name\" : \"300\",\n
+        \              \"types\" : \n               [\n                  \"postal_code\"\n
+        \              ]\n            }\n         ],\n         \"formatted_address\"
+        : \"300, Taiwan, 新竹市東區QXPW+QX\",\n         \"geometry\" : \n         {\n            \"location\"
+        : \n            {\n               \"lat\" : 24.7869375,\n               \"lng\"
+        : 120.9974375\n            },\n            \"location_type\" : \"GEOMETRIC_CENTER\",\n
+        \           \"viewport\" : \n            {\n               \"northeast\" :
+        \n               {\n                  \"lat\" : 24.7882864802915,\n                  \"lng\"
+        : 120.9987864802915\n               },\n               \"southwest\" : \n
+        \              {\n                  \"lat\" : 24.7855885197085,\n                  \"lng\"
+        : 120.9960885197085\n               }\n            }\n         },\n         \"place_id\"
+        : \"EiMzMDAsIFRhaXdhbiwg5paw56u55biC5p2x5Y2AUVhQVytRWCImOiQKCg2_L8YOFWe-HkgQChoUChIJXW0bawk2aDQRlSR_EpFgF9k\",\n
+        \        \"plus_code\" : \n         {\n            \"compound_code\" : \"QXPW+QX
+        新竹市東區光明里\",\n            \"global_code\" : \"7QP2QXPW+QX\"\n         },\n
+        \        \"types\" : \n         [\n            \"plus_code\"\n         ]\n
+        \     }\n   ],\n   \"status\" : \"OK\"\n}"
+  recorded_at: Wed, 18 Dec 2024 08:05:31 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=QXPW%2BQX%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%85%89%E6%98%8E%E9%87%8C&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Wed, 01 Jan 2025 08:05:31 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - d254f9f5409852e1d069d6e1843f096b
+      Date:
+      - Wed, 18 Dec 2024 08:05:31 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '539'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QP2QXPW+QX",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 24.786999999999992,
+                  "lng": 120.9975
+                },
+                "southwest": {
+                  "lat": 24.786874999999995,
+                  "lng": 120.99737499999998
+                }
+              },
+              "location": {
+                "lat": 24.786937499999993,
+                "lng": 120.99743749999999
+              }
+            },
+            "local_code": "QXPW+QX",
+            "locality": {
+              "local_address": "Taiwan, 新竹市東區光明里"
+            }
+          },
+          "status": "OK"
+        }
+  recorded_at: Wed, 18 Dec 2024 08:05:31 GMT
+- request:
+    method: get
+    uri: https://plus.codes/api?address=QXPW%2BQX%20Taiwan,%20%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%85%89%E6%98%8E%E9%87%8C&key=<GOOGLE_TOKEN>
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - plus.codes
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=1209600
+      Content-Type:
+      - application/json; charset=UTF-8
+      Expires:
+      - Wed, 01 Jan 2025 08:05:32 UTC
+      X-Appengine-Log-Flush-Count:
+      - '1'
+      X-Cloud-Trace-Context:
+      - bb6cb1cfb1e253ae1774662d62c9ecb2
+      Date:
+      - Wed, 18 Dec 2024 08:05:32 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '539'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "plus_code": {
+            "global_code": "7QP2QXPW+QX",
+            "geometry": {
+              "bounds": {
+                "northeast": {
+                  "lat": 24.786999999999992,
+                  "lng": 120.9975
+                },
+                "southwest": {
+                  "lat": 24.786874999999995,
+                  "lng": 120.99737499999998
+                }
+              },
+              "location": {
+                "lat": 24.786937499999993,
+                "lng": 120.99743749999999
+              }
+            },
+            "local_code": "QXPW+QX",
+            "locality": {
+              "local_address": "Taiwan, 新竹市東區光明里"
+            }
+          },
+          "status": "OK"
+        }
+  recorded_at: Wed, 18 Dec 2024 08:05:32 GMT
 recorded_with: VCR 6.3.1
