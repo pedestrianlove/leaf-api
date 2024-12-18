@@ -24,7 +24,14 @@ describe 'Test Query Get API' do
                                                 'strategy' => 'walking'
                                               })
 
-    @query_id = result.value!.message.id
+    @query = result.value!.message
+    @query.plans.each do |plan|
+      _(plan.arrive_at).must_be_instance_of Time
+      _(plan.arrive_at).wont_be_nil
+      _(plan.leave_at).must_be_instance_of Time
+      _(plan.leave_at).wont_be_nil
+    end
+    @query_id = @query.id
   end
 
   after do
