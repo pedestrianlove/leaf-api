@@ -21,6 +21,8 @@ module Leaf
                            destination: Location.find_by_id(db_record.destination_id),
                            duration: db_record.duration,
                            distance: db_record.distance,
+                           arrive_at: db_record.arrive_at,
+                           leave_at: db_record.leave_at,
                            trips: trip_record.map { |trip_rec| Trip.find_by_id(trip_rec[:id]) }
                          })
       end
