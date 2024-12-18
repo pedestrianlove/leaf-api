@@ -33,7 +33,7 @@ module Leaf
       def self.save(plan, query_id = nil)
         origin = Database::LocationOrm.find_or_create(plan.origin.to_attr_hash)
         destination = Database::LocationOrm.find_or_create(plan.destination.to_attr_hash)
-        db_plan = Database::PlanOrm.find_or_create(plan.to_attr_hash
+        db_plan = Database::PlanOrm.create(plan.to_attr_hash
           .except(:origin, :destination, :trips)
           .merge({
                    query_id: query_id,
@@ -42,9 +42,9 @@ module Leaf
                  }))
 
         plan.trips.each do |trip|
-          origin = Database::LocationOrm.find_or_create(plan.origin.to_attr_hash)
-          destination = Database::LocationOrm.find_or_create(plan.destination.to_attr_hash)
-          Database::TripOrm.find_or_create(trip.to_attr_hash
+          origin = Database::LocationOrm.find_or_create(trip.origin.to_attr_hash)
+          destination = Database::LocationOrm.find_or_create(trip.destination.to_attr_hash)
+          Database::TripOrm.create(trip.to_attr_hash
             .except(:origin, :destination)
             .merge({
                      plan_id: db_plan.id,

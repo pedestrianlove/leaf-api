@@ -31,6 +31,7 @@ describe 'Test Query Get API' do
       _(plan.arrive_at).wont_be_nil
       _(plan.leave_at).must_be_instance_of Time
       _(plan.leave_at).wont_be_nil
+      _(plan.trips.length).must_equal 3
     end
     @query_id = @query.id
   end
@@ -55,6 +56,7 @@ describe 'Test Query Get API' do
       _(plan.leave_at).must_be_instance_of String
       _(Time.parse(plan.leave_at)).must_be_instance_of Time
       _(plan.leave_at).wont_be_nil
+      _(plan.trips.length).must_equal 3
     end
   end
 

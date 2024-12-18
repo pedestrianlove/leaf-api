@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'location'
+require_relative 'plan'
 
 module Leaf
   module Repository

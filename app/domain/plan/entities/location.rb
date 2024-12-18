@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'ostruct'
 require 'dry-types'
 require 'dry-struct'
 

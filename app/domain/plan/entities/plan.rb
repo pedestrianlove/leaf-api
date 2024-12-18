@@ -33,26 +33,28 @@ module Leaf
       def compute(initial_bus_stop, final_bus_stop)
         trip_mapper = Leaf::GoogleMaps::TripMapper.new(GoogleMaps::API, Leaf::App.config.GOOGLE_TOKEN)
 
-        # 從起點到車站
-        trips.append(trip_mapper.find(
-                       origin.plus_code,
-                       initial_bus_stop.plus_code,
-                       strategy
-                     ))
+        trip_array = []
 
-        # 從車站到終點站
-        trips.append(trip_mapper.find(
-                       initial_bus_stop.plus_code,
-                       final_bus_stop.plus_code,
-                       'driving'
-                     ))
+        # 從起點到車站
+        trip_array.append(trip_mapper.find(
+                            origin.plus_code,
+                            initial_bus_stop.plus_code,
+                            strategy
+                          ))
+
+        # FIXME: 從車站到終點站
+        trip_array.append(trip_mapper.find(
+                            initial_bus_stop.plus_code,
+                            final_bus_stop.plus_code,
+                            'driving'
+                          ))
 
         # 從終點站到目的地
-        trips.append(trip_mapper.find(
-                       final_bus_stop.plus_code,
-                       destination.plus_code,
-                       'walking'
-                     ))
+        trip_array.append(trip_mapper.find(
+                            final_bus_stop.plus_code,
+                            destination.plus_code,
+                            'walking'
+                          ))
 
         new_distance = trips.map(&:distance).sum
         new_duration = trips.map(&:duration).sum
@@ -64,7 +66,7 @@ module Leaf
           origin: origin,
           destination: destination,
           strategy: strategy,
-          trips: trips,
+          trips: trip_array,
           distance: new_distance,
           duration: new_duration,
           leave_at: leave_at,
