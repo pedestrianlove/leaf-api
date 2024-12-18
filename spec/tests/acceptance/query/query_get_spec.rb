@@ -23,7 +23,6 @@ describe 'Test Query Get API' do
                                                 'destination' => 'National Yang Ming Chiao Tung University, Taiwan',
                                                 'strategy' => 'walking'
                                               })
-    skip('Broken test, but work in production.')
 
     @query_id = result.value!.message.id
   end
