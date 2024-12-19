@@ -57,6 +57,10 @@ describe 'Test Query Get API' do
       _(Time.parse(plan.leave_at)).must_be_instance_of Time
       _(plan.leave_at).wont_be_nil
       _(plan.trips.length).must_equal 3
+      _(plan.duration).must_be_instance_of Integer
+      _(plan.distance).must_be_instance_of Integer
+      _(plan.duration).wont_equal 0
+      _(plan.distance).wont_equal 0
     end
   end
 

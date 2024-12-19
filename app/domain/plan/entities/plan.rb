@@ -75,8 +75,9 @@ module Leaf
           duration: final_trip.duration
         )
 
-        new_distance = trips.map(&:distance).sum
-        new_duration = trips.map(&:duration).sum
+        trip_list = [initial_trip, bus_trip, final_trip]
+        new_distance = trip_list.map(&:distance).sum
+        new_duration = trip_list.map(&:duration).sum
         leave_at = schedules.first.leave_at - initial_trip.duration
         arrive_at = schedules.first.arrive_at + final_trip.duration
 
@@ -85,7 +86,7 @@ module Leaf
           origin: origin,
           destination: destination,
           strategy: strategy,
-          trips: [initial_trip, bus_trip, final_trip],
+          trips: trip_list,
           distance: new_distance,
           duration: new_duration,
           leave_at: leave_at,
