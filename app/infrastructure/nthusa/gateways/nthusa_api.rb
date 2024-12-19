@@ -28,7 +28,22 @@ module Leaf
                                day: day
                              })
 
-        Response.new(response).handle_error('by NTHUSA API')
+        Response.new(response).handle_error('by NTHUSA API::bus_stop_schedule')
+      end
+
+      # Given type, direction and day, obtain the detailed schedule.
+      # Refer to: https://api.nthusa.tw/docs#/Buses/get_bus_detailed_schedule_buses_detailed__get
+      # @param  bus_type   [String]  Possible values: ['all', 'main', 'nanda'].
+      # @param  direction  [String]  Possible values: ['up', 'down']
+      # @option day        [String]  Possible values: ['all', 'weekday', 'weekend', 'current']
+      def bus_detailed_schedule(bus_type, direction, day)
+        response = @http.get('/buses/detailed/', params: {
+                               bus_type: bus_type,
+                               direction: direction,
+                               day: day
+                             })
+
+        Response.new(response).handle_error('by NTHUSA API::bus_detailed_schedule')
       end
     end
   end

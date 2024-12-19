@@ -48,6 +48,7 @@ module Leaf
                             final_bus_stop.plus_code,
                             'driving'
                           ))
+        # FIXME: 從車站到終點站
 
         # 從終點站到目的地
         trip_array.append(trip_mapper.find(
