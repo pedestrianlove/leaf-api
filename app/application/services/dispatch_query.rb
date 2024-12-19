@@ -3,6 +3,7 @@
 require 'securerandom'
 require 'dry/transaction'
 require 'json'
+require 'concurrent'
 require_relative '../../presentation/responses/api_result'
 require_relative '../../infrastructure/messaging/queue'
 
@@ -13,10 +14,27 @@ module Leaf
     class DispatchQuery
       include Dry::Transaction
 
+      step :check_bus
       step :parse_input
       step :dispatch_query
 
       private
+
+      def check_bus(input) # rubocop:disable Metrics/MethodLength
+        schedules = %w[up down].map do |direction|
+          Concurrent::Promise.execute { Leaf::NTHUSA::API.new.bus_detailed_schedule('main', direction, 'current') }
+        end.map(&:value)
+
+        if schedules.all?(&:empty?)
+          return Failure(APIResponse::ApiResult.new(status: :internal_error,
+                                                    message: 'Checking service: out of service bruh.'))
+        end
+
+        Success(input)
+      rescue StandardError
+        Failure(APIResponse::ApiResult.new(status: :bad_request,
+                                           message: 'Checking service: Failed to connect to API'))
+      end
 
       def parse_input(input)
         if input.success?
