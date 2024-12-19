@@ -1478,4 +1478,100 @@ http_interactions:
           "status": "OK"
         }
   recorded_at: Tue, 03 Dec 2024 16:22:23 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/buses/detailed/?bus_type=main&day=current&direction=down
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Dec 2024 05:26:27 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1800'
+      Connection:
+      - keep-alive
+      X-Process-Time:
+      - '0.002784252166748047'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=P6XeuLdq6qpG%2BYgekd87ZnodoPrmJalh%2FJg5HLD7F%2F9YJc69mJAmYWO96QBTksNWhjlw%2Bxuq%2FlxE8Gmicd0f%2B9Wq38e%2BiDIOMz%2FHrRjwQ%2B%2BFkA%2FasvL3Vwo6rFg8mKrs"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f44fa54a9137ca3-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=137069&min_rtt=136791&rtt_var=38778&sent=5&recv=7&lost=0&retrans=0&sent_bytes=2297&recv_bytes=785&delivery_rate=20896&cwnd=252&unsent_bytes=0&cid=063d7ebe04619bb8&ts=797&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"dep_info":{"time":"13:27","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"stops_time":[{"stop_name":"台積館","time":"13:27"},{"stop_name":"南門停車場","time":"13:28"},{"stop_name":"奕園停車場","time":"13:30"},{"stop_name":"楓林小徑","time":"13:31"},{"stop_name":"綜二館","time":"13:32"},{"stop_name":"北校門口","time":"13:33"}]},{"dep_info":{"time":"13:32","description":"","route":"校園公車","dep_stop":"台積館","line":"green"},"stops_time":[{"stop_name":"台積館","time":"13:32"},{"stop_name":"人社院/生科館","time":"13:34"},{"stop_name":"楓林小徑","time":"13:36"},{"stop_name":"綜二館","time":"13:37"},{"stop_name":"北校門口","time":"13:38"}]},{"dep_info":{"time":"13:42","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"stops_time":[{"stop_name":"台積館","time":"13:42"},{"stop_name":"南門停車場","time":"13:43"},{"stop_name":"奕園停車場","time":"13:45"},{"stop_name":"楓林小徑","time":"13:46"},{"stop_name":"綜二館","time":"13:47"},{"stop_name":"北校門口","time":"13:48"}]},{"dep_info":{"time":"13:52","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"stops_time":[{"stop_name":"台積館","time":"13:52"},{"stop_name":"南門停車場","time":"13:53"},{"stop_name":"奕園停車場","time":"13:55"},{"stop_name":"楓林小徑","time":"13:56"},{"stop_name":"綜二館","time":"13:57"},{"stop_name":"北校門口","time":"13:58"}]},{"dep_info":{"time":"13:52","description":"","route":"校園公車","dep_stop":"台積館","line":"green"},"stops_time":[{"stop_name":"台積館","time":"13:52"},{"stop_name":"人社院/生科館","time":"13:54"},{"stop_name":"楓林小徑","time":"13:56"},{"stop_name":"綜二館","time":"13:57"}]}]'
+  recorded_at: Thu, 19 Dec 2024 05:26:27 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/buses/detailed/?bus_type=main&day=current&direction=down
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Dec 2024 05:26:27 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1800'
+      Connection:
+      - keep-alive
+      X-Process-Time:
+      - '0.0026025772094726562'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=alXPuCkCAdqttuNhAdsFJbzngXyzR%2B%2BwDOyeJzjvV5SHG3YQMiWhFVYcY34yLCJKQ6DUA00MIbL7sis5Je9G1Gstw6mD%2BkLH6o%2FvlPtDsG1sLOQOT3AmC9fqnVIPT5aL"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f44fa553a5e7c2d-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=131255&min_rtt=131039&rtt_var=37263&sent=5&recv=7&lost=0&retrans=0&sent_bytes=2296&recv_bytes=785&delivery_rate=21748&cwnd=251&unsent_bytes=0&cid=ef2d71a4a62073e7&ts=831&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"dep_info":{"time":"13:27","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"stops_time":[{"stop_name":"台積館","time":"13:27"},{"stop_name":"南門停車場","time":"13:28"},{"stop_name":"奕園停車場","time":"13:30"},{"stop_name":"楓林小徑","time":"13:31"},{"stop_name":"綜二館","time":"13:32"},{"stop_name":"北校門口","time":"13:33"}]},{"dep_info":{"time":"13:32","description":"","route":"校園公車","dep_stop":"台積館","line":"green"},"stops_time":[{"stop_name":"台積館","time":"13:32"},{"stop_name":"人社院/生科館","time":"13:34"},{"stop_name":"楓林小徑","time":"13:36"},{"stop_name":"綜二館","time":"13:37"},{"stop_name":"北校門口","time":"13:38"}]},{"dep_info":{"time":"13:42","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"stops_time":[{"stop_name":"台積館","time":"13:42"},{"stop_name":"南門停車場","time":"13:43"},{"stop_name":"奕園停車場","time":"13:45"},{"stop_name":"楓林小徑","time":"13:46"},{"stop_name":"綜二館","time":"13:47"},{"stop_name":"北校門口","time":"13:48"}]},{"dep_info":{"time":"13:52","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"stops_time":[{"stop_name":"台積館","time":"13:52"},{"stop_name":"南門停車場","time":"13:53"},{"stop_name":"奕園停車場","time":"13:55"},{"stop_name":"楓林小徑","time":"13:56"},{"stop_name":"綜二館","time":"13:57"},{"stop_name":"北校門口","time":"13:58"}]},{"dep_info":{"time":"13:52","description":"","route":"校園公車","dep_stop":"台積館","line":"green"},"stops_time":[{"stop_name":"台積館","time":"13:52"},{"stop_name":"人社院/生科館","time":"13:54"},{"stop_name":"楓林小徑","time":"13:56"},{"stop_name":"綜二館","time":"13:57"}]}]'
+  recorded_at: Thu, 19 Dec 2024 05:26:27 GMT
 recorded_with: VCR 6.3.1
