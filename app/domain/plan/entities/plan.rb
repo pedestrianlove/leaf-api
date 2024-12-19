@@ -3,6 +3,7 @@
 require 'dry-types'
 require 'dry-struct'
 require 'time'
+require 'concurrent'
 
 require_relative 'location'
 require_relative 'trip'
@@ -31,15 +32,42 @@ module Leaf
       # rubocop:disable Metrics/AbcSize
       # rubocop:disable Metrics/MethodLength
       def compute(initial_bus_stop, final_bus_stop)
-        trip_mapper = Leaf::GoogleMaps::TripMapper.new(GoogleMaps::API, Leaf::App.config.GOOGLE_TOKEN)
-        schedule_mapper = Leaf::NTHUSA::ScheduleMapper.new(Leaf::NTHUSA::API)
-
         # 從起點到車站
-        initial_trip = trip_mapper.find(
-          origin.plus_code,
-          initial_bus_stop.plus_code,
-          strategy
-        )
+        initial_trip_future = Concurrent::Future.execute do
+          trip_mapper = Leaf::GoogleMaps::TripMapper.new(GoogleMaps::API, Leaf::App.config.GOOGLE_TOKEN)
+          trip_mapper.find(
+            origin.plus_code,
+            initial_bus_stop.plus_code,
+            strategy
+          )
+        end
+
+        # 起點到終點站的車程
+        schedules_future = Concurrent::Future.execute do
+          schedule_mapper = Leaf::NTHUSA::ScheduleMapper.new(Leaf::NTHUSA::API)
+          schedule_mapper.find(initial_bus_stop.name, final_bus_stop.name)
+        end
+        tmp_bus_trip_future = Concurrent::Future.execute do
+          trip_mapper = Leaf::GoogleMaps::TripMapper.new(GoogleMaps::API, Leaf::App.config.GOOGLE_TOKEN)
+          trip_mapper.find(initial_bus_stop.plus_code, final_bus_stop.plus_code, 'driving')
+        end
+
+        # 從終點站到目的地
+        final_trip_future = Concurrent::Future.execute do
+          trip_mapper = Leaf::GoogleMaps::TripMapper.new(GoogleMaps::API, Leaf::App.config.GOOGLE_TOKEN)
+          trip_mapper.find(
+            final_bus_stop.plus_code,
+            destination.plus_code,
+            'walking'
+          )
+        end
+
+        # Collect the API result
+        initial_trip = initial_trip_future.value!
+        schedules = schedules_future.value!
+        tmp_bus_trip = tmp_bus_trip_future.value!
+        final_trip = final_trip_future.value!
+
         initial_trip = Trip.new(
           origin: initial_trip.origin,
           destination: initial_bus_stop,
@@ -47,25 +75,12 @@ module Leaf
           distance: initial_trip.distance,
           duration: initial_trip.duration
         )
-
-        # Compute the bus schedule
-        schedules = schedule_mapper.find(initial_bus_stop.name, final_bus_stop.name)
-
-        # Construct bus_trip entity
-        tmp_bus_trip = trip_mapper.find(initial_bus_stop.plus_code, final_bus_stop.plus_code, 'driving')
         bus_trip = Trip.new(
           origin: initial_bus_stop,
           destination: final_bus_stop,
           strategy: 'driving',
           distance: tmp_bus_trip.distance,
           duration: (schedules.first.arrive_at - schedules.first.leave_at).round
-        )
-
-        # 從終點站到目的地
-        final_trip = trip_mapper.find(
-          final_bus_stop.plus_code,
-          destination.plus_code,
-          'walking'
         )
         final_trip = Trip.new(
           origin: final_bus_stop,
