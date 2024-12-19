@@ -68,6 +68,13 @@ module Leaf
         tmp_bus_trip = tmp_bus_trip_future.value!
         final_trip = final_trip_future.value!
 
+        selected_schedule = schedules.find do |schedule|
+          current_time = ::Time.now
+          real_leave_time = schedule.leave_at - (initial_trip.duration * 0.9)
+          real_leave_time >= current_time
+        end
+        selected_schedule = schedules.first if selected_schedule.nil?
+
         initial_trip = Trip.new(
           origin: initial_trip.origin,
           destination: initial_bus_stop,
@@ -80,7 +87,7 @@ module Leaf
           destination: final_bus_stop,
           strategy: 'driving',
           distance: tmp_bus_trip.distance,
-          duration: (schedules.first.arrive_at - schedules.first.leave_at).round
+          duration: (selected_schedule.arrive_at - selected_schedule.leave_at).round
         )
         final_trip = Trip.new(
           origin: final_bus_stop,
@@ -93,8 +100,8 @@ module Leaf
         trip_list = [initial_trip, bus_trip, final_trip]
         new_distance = trip_list.map(&:distance).sum
         new_duration = trip_list.map(&:duration).sum
-        leave_at = schedules.first.leave_at - initial_trip.duration
-        arrive_at = schedules.first.arrive_at + final_trip.duration
+        leave_at = selected_schedule.leave_at - initial_trip.duration
+        arrive_at = selected_schedule.arrive_at + final_trip.duration
 
         new(
           id: id,
