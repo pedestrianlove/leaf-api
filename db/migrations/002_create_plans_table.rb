@@ -14,6 +14,8 @@ Sequel.migration do
       Integer       :duration, null: true
       Integer       :distance, null: true
 
+      DateTime      :leave_at, null: true
+      DateTime      :arrive_at, null: true
       DateTime      :created_at
       DateTime      :updated_at
 

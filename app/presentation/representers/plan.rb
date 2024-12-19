@@ -17,6 +17,8 @@ module Leaf
       property :destination, extend: Representer::Location, class: OpenStruct
       property :duration
       property :distance
+      property :leave_at
+      property :arrive_at
       collection :trips, extend: Representer::Trip, class: OpenStruct
     end
   end
