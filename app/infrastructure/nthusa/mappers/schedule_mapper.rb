@@ -29,7 +29,7 @@ module Leaf
       end
 
       # Function to find intersection and filter invalid entries
-      def filter_schedule(start_stop, start_data, start_detail, end_stop) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
+      def filter_schedule(start_stop, start_data, start_detail, end_stop) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength,Metrics/CyclomaticComplexity
         # Filter out relevant detail entries
         result = start_detail.select do |detail|
           # find the entry that matches one of the start_data array's entry attribute: entry['bus_info]
