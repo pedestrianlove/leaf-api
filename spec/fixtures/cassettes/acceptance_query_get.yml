@@ -4609,4 +4609,580 @@ http_interactions:
           "status": "OK"
         }
   recorded_at: Wed, 18 Dec 2024 08:05:32 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/buses/stops/%E6%A5%93%E6%9E%97%E5%B0%8F%E5%BE%91/?bus_type=main&day=current&direction=up
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Dec 2024 05:23:28 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '632'
+      Connection:
+      - keep-alive
+      X-Process-Time:
+      - '0.002324342727661133'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=JZ%2BI4u9%2FW2Lga%2Fzp7O86HPzEaXzfkeCULg%2FXvMXXgWHi%2FEy2garuWSOkliPy%2BlhX3Fg2A5Kw5gPHHf0LWTkj9G4gcaLZ1uh2TETEERl%2B0H8DY7%2BfNzL%2B4U67Qw3B07ZX"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f44f5f62c992b73-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=132482&min_rtt=131937&rtt_var=38053&sent=5&recv=7&lost=0&retrans=0&sent_bytes=2295&recv_bytes=817&delivery_rate=21449&cwnd=252&unsent_bytes=0&cid=be706ffe68297040&ts=819&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"bus_info":{"time":"13:25","description":"","route":"校園公車","dep_stop":"校門","line":"green"},"arrive_time":"13:27"},{"bus_info":{"time":"13:35","description":"","route":"校園公車","dep_stop":"校門","line":"red"},"arrive_time":"13:37"},{"bus_info":{"time":"13:45","description":"","route":"校園公車","dep_stop":"綜二","line":"green"},"arrive_time":"13:46"},{"bus_info":{"time":"13:45","description":"","route":"校園公車","dep_stop":"校門","line":"red"},"arrive_time":"13:47"},{"bus_info":{"time":"13:55","description":"","route":"校園公車","dep_stop":"綜二","line":"green"},"arrive_time":"13:56"}]'
+  recorded_at: Thu, 19 Dec 2024 05:23:28 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/buses/stops/%E5%8C%97%E6%A0%A1%E9%96%80%E5%8F%A3/?bus_type=main&day=current&direction=up
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Dec 2024 05:23:28 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '630'
+      Connection:
+      - keep-alive
+      X-Process-Time:
+      - '0.002688884735107422'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=U%2FuFqjeCW%2B4B8g22t5Kelbq02F41OLRHgTz94UhnY%2FtNSflpRYRQIC5NDQlxnbuFKt0PsSDR7ofzXIjSJTxcXBC6vLvkWmSABDurphZKuqjLZ%2B9fQkpREB4RXX3ThRKF"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f44f5f63b1ae9e5-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=137038&min_rtt=136796&rtt_var=38772&sent=5&recv=7&lost=0&retrans=0&sent_bytes=2296&recv_bytes=817&delivery_rate=20893&cwnd=252&unsent_bytes=0&cid=2414775f71b1fbdd&ts=839&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"bus_info":{"time":"13:25","description":"","route":"校園公車","dep_stop":"校門","line":"green"},"arrive_time":"13:25"},{"bus_info":{"time":"13:35","description":"","route":"校園公車","dep_stop":"校門","line":"red"},"arrive_time":"13:35"},{"bus_info":{"time":"13:45","description":"","route":"校園公車","dep_stop":"校門","line":"red"},"arrive_time":"13:45"},{"bus_info":{"time":"13:55","description":"","route":"校園公車","dep_stop":"校門","line":"red"},"arrive_time":"13:55"},{"bus_info":{"time":"14:00","description":"","route":"校園公車","dep_stop":"校門","line":"green"},"arrive_time":"14:00"}]'
+  recorded_at: Thu, 19 Dec 2024 05:23:28 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/buses/stops/%E7%B6%9C%E4%BA%8C%E9%A4%A8/?bus_type=main&day=current&direction=up
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Dec 2024 05:23:28 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '632'
+      Connection:
+      - keep-alive
+      X-Process-Time:
+      - '0.06591129302978516'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=LYrFmmr1%2FfpaG%2FM3cGkjRErMFD9f9voUcqZ3qzmqRX1hY1ehmtV3OnDDqb1Z6jMeZDx46o8%2F3bsY1BlemN7W%2FtRJceeb21I%2FWrFYDpJuQ9hIOW8OfTQTyFzdxQbOQ59e"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f44f5f63c8a2b61-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=137051&min_rtt=136864&rtt_var=38762&sent=5&recv=7&lost=0&retrans=0&sent_bytes=2295&recv_bytes=808&delivery_rate=20891&cwnd=246&unsent_bytes=0&cid=5d0debc551e889b4&ts=878&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"bus_info":{"time":"13:25","description":"","route":"校園公車","dep_stop":"校門","line":"green"},"arrive_time":"13:26"},{"bus_info":{"time":"13:35","description":"","route":"校園公車","dep_stop":"校門","line":"red"},"arrive_time":"13:36"},{"bus_info":{"time":"13:45","description":"","route":"校園公車","dep_stop":"綜二","line":"green"},"arrive_time":"13:45"},{"bus_info":{"time":"13:45","description":"","route":"校園公車","dep_stop":"校門","line":"red"},"arrive_time":"13:46"},{"bus_info":{"time":"13:55","description":"","route":"校園公車","dep_stop":"綜二","line":"green"},"arrive_time":"13:55"}]'
+  recorded_at: Thu, 19 Dec 2024 05:23:28 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/buses/stops/%E6%A5%93%E6%9E%97%E5%B0%8F%E5%BE%91/?bus_type=main&day=current&direction=down
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Dec 2024 05:23:29 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '645'
+      Connection:
+      - keep-alive
+      X-Process-Time:
+      - '0.0021371841430664062'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=4TceDAJiHNJ2NpxAwb8c%2FFwA8uwouucickncovGUaIlJtPqsyJsfcA1NkqOKtWd1WvKHj4rOVtQUPIZU%2BPoxlIQ7kyrokPXL2%2FvIJM8WOXvgcQRumlbNlHL0bsLhy%2Bpm"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f44f5fa2aa22b73-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=132793&min_rtt=131937&rtt_var=21946&sent=9&recv=10&lost=0&retrans=0&sent_bytes=4294&recv_bytes=1045&delivery_rate=32280&cwnd=255&unsent_bytes=0&cid=be706ffe68297040&ts=1141&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"bus_info":{"time":"13:22","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"arrive_time":"13:26"},{"bus_info":{"time":"13:22","description":"","route":"校園公車","dep_stop":"台積館","line":"green"},"arrive_time":"13:26"},{"bus_info":{"time":"13:27","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"arrive_time":"13:31"},{"bus_info":{"time":"13:32","description":"","route":"校園公車","dep_stop":"台積館","line":"green"},"arrive_time":"13:36"},{"bus_info":{"time":"13:42","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"arrive_time":"13:46"}]'
+  recorded_at: Thu, 19 Dec 2024 05:23:29 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/buses/stops/%E5%8C%97%E6%A0%A1%E9%96%80%E5%8F%A3/?bus_type=main&day=current&direction=down
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Dec 2024 05:23:29 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '658'
+      Connection:
+      - keep-alive
+      X-Process-Time:
+      - '0.002285480499267578'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=miUjMeRTISIz2cQDUiQlrZOBnkrifFpp5yMZg9lOf1HQCPxbvGJ1npikzJp%2BUFytuDvJHR%2ByoLs%2Fxg5H33n6GbxWOekDL4Kt2srNMMwa8W28aNWqivgyyRsFExE4xWoM"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f44f5fa59fde9e5-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=137142&min_rtt=136796&rtt_var=22048&sent=9&recv=10&lost=0&retrans=0&sent_bytes=4283&recv_bytes=1045&delivery_rate=31320&cwnd=255&unsent_bytes=0&cid=2414775f71b1fbdd&ts=1201&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"bus_info":{"time":"13:17","description":"週六有行駛","route":"校園公車","dep_stop":"台積館","line":"red"},"arrive_time":"13:23"},{"bus_info":{"time":"13:22","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"arrive_time":"13:28"},{"bus_info":{"time":"13:27","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"arrive_time":"13:33"},{"bus_info":{"time":"13:32","description":"","route":"校園公車","dep_stop":"台積館","line":"green"},"arrive_time":"13:38"},{"bus_info":{"time":"13:42","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"arrive_time":"13:48"}]'
+  recorded_at: Thu, 19 Dec 2024 05:23:29 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/buses/stops/%E7%B6%9C%E4%BA%8C%E9%A4%A8/?bus_type=main&day=current&direction=down
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Dec 2024 05:23:29 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '645'
+      Connection:
+      - keep-alive
+      X-Process-Time:
+      - '0.0026297569274902344'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=lYZAqL96K00QmKUd0OuZYbKIHrWC7eAO29R7Uk3lBXeWCfcxuBjPed9lFhGUmLUNQ2sHa1sTLlMuplyeXfZkP9dWM462p4x6sTYstE51yoYFowy47cXnjd7u2jlx54OG"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f44f5fa99e72b61-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=137212&min_rtt=136665&rtt_var=22294&sent=9&recv=10&lost=0&retrans=0&sent_bytes=4285&recv_bytes=1027&delivery_rate=31151&cwnd=249&unsent_bytes=0&cid=5d0debc551e889b4&ts=1203&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"bus_info":{"time":"13:22","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"arrive_time":"13:27"},{"bus_info":{"time":"13:22","description":"","route":"校園公車","dep_stop":"台積館","line":"green"},"arrive_time":"13:27"},{"bus_info":{"time":"13:27","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"arrive_time":"13:32"},{"bus_info":{"time":"13:32","description":"","route":"校園公車","dep_stop":"台積館","line":"green"},"arrive_time":"13:37"},{"bus_info":{"time":"13:42","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"arrive_time":"13:47"}]'
+  recorded_at: Thu, 19 Dec 2024 05:23:29 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/buses/detailed/?bus_type=main&day=current&direction=up
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Dec 2024 05:23:29 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1742'
+      Connection:
+      - keep-alive
+      X-Process-Time:
+      - '0.003293752670288086'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=GUQoTlogHbPPffFqzXkRKUZKlmC78FBoudJOjv59soonPbA0Oljo5i2AdgRaaBahoWXV1%2Fp8u%2BBrRc4YUjmHrSZ8j4L0yJVbbWuFh607oNfm6vR%2FaHft%2Fy%2BdOQVamyj5"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f44f5fc2da32b73-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=132666&min_rtt=131766&rtt_var=12539&sent=12&recv=13&lost=0&retrans=0&sent_bytes=5802&recv_bytes=1237&delivery_rate=32280&cwnd=257&unsent_bytes=0&cid=be706ffe68297040&ts=1471&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"dep_info":{"time":"13:25","description":"","route":"校園公車","dep_stop":"校門","line":"green"},"stops_time":[{"stop_name":"北校門口","time":"13:25"},{"stop_name":"綜二館","time":"13:26"},{"stop_name":"楓林小徑","time":"13:27"},{"stop_name":"奕園停車場","time":"13:28"},{"stop_name":"南門停車場","time":"13:30"},{"stop_name":"台積館","time":"13:31"}]},{"dep_info":{"time":"13:35","description":"","route":"校園公車","dep_stop":"校門","line":"red"},"stops_time":[{"stop_name":"北校門口","time":"13:35"},{"stop_name":"綜二館","time":"13:36"},{"stop_name":"楓林小徑","time":"13:37"},{"stop_name":"人社院/生科館","time":"13:39"},{"stop_name":"台積館","time":"13:41"}]},{"dep_info":{"time":"13:45","description":"","route":"校園公車","dep_stop":"校門","line":"red"},"stops_time":[{"stop_name":"北校門口","time":"13:45"},{"stop_name":"綜二館","time":"13:46"},{"stop_name":"楓林小徑","time":"13:47"},{"stop_name":"人社院/生科館","time":"13:49"},{"stop_name":"台積館","time":"13:51"}]},{"dep_info":{"time":"13:45","description":"","route":"校園公車","dep_stop":"綜二","line":"green"},"stops_time":[{"stop_name":"綜二館","time":"13:45"},{"stop_name":"楓林小徑","time":"13:46"},{"stop_name":"奕園停車場","time":"13:47"},{"stop_name":"南門停車場","time":"13:49"},{"stop_name":"台積館","time":"13:50"}]},{"dep_info":{"time":"13:55","description":"","route":"校園公車","dep_stop":"校門","line":"red"},"stops_time":[{"stop_name":"北校門口","time":"13:55"},{"stop_name":"綜二館","time":"13:56"},{"stop_name":"楓林小徑","time":"13:57"},{"stop_name":"人社院/生科館","time":"13:59"},{"stop_name":"台積館","time":"14:01"}]}]'
+  recorded_at: Thu, 19 Dec 2024 05:23:29 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/buses/detailed/?bus_type=main&day=current&direction=up
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Dec 2024 05:23:29 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1742'
+      Connection:
+      - keep-alive
+      X-Process-Time:
+      - '0.0029337406158447266'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=ajmDV8vVJy0IIUg7cywUvggvfY6pDmmBTRO8F8cIxkBumE20JhpNNvpjkfCSCkDHuX71MoM1J5hgF4Lmz9Kgqd6U93O8RdpRgNalScYzPaU7RinvoaRNU3nhebDWbmA9"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f44f5fcaa87e9e5-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=138132&min_rtt=136796&rtt_var=14118&sent=12&recv=13&lost=0&retrans=0&sent_bytes=5801&recv_bytes=1237&delivery_rate=31320&cwnd=257&unsent_bytes=0&cid=2414775f71b1fbdd&ts=1527&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"dep_info":{"time":"13:25","description":"","route":"校園公車","dep_stop":"校門","line":"green"},"stops_time":[{"stop_name":"北校門口","time":"13:25"},{"stop_name":"綜二館","time":"13:26"},{"stop_name":"楓林小徑","time":"13:27"},{"stop_name":"奕園停車場","time":"13:28"},{"stop_name":"南門停車場","time":"13:30"},{"stop_name":"台積館","time":"13:31"}]},{"dep_info":{"time":"13:35","description":"","route":"校園公車","dep_stop":"校門","line":"red"},"stops_time":[{"stop_name":"北校門口","time":"13:35"},{"stop_name":"綜二館","time":"13:36"},{"stop_name":"楓林小徑","time":"13:37"},{"stop_name":"人社院/生科館","time":"13:39"},{"stop_name":"台積館","time":"13:41"}]},{"dep_info":{"time":"13:45","description":"","route":"校園公車","dep_stop":"校門","line":"red"},"stops_time":[{"stop_name":"北校門口","time":"13:45"},{"stop_name":"綜二館","time":"13:46"},{"stop_name":"楓林小徑","time":"13:47"},{"stop_name":"人社院/生科館","time":"13:49"},{"stop_name":"台積館","time":"13:51"}]},{"dep_info":{"time":"13:45","description":"","route":"校園公車","dep_stop":"綜二","line":"green"},"stops_time":[{"stop_name":"綜二館","time":"13:45"},{"stop_name":"楓林小徑","time":"13:46"},{"stop_name":"奕園停車場","time":"13:47"},{"stop_name":"南門停車場","time":"13:49"},{"stop_name":"台積館","time":"13:50"}]},{"dep_info":{"time":"13:55","description":"","route":"校園公車","dep_stop":"校門","line":"red"},"stops_time":[{"stop_name":"北校門口","time":"13:55"},{"stop_name":"綜二館","time":"13:56"},{"stop_name":"楓林小徑","time":"13:57"},{"stop_name":"人社院/生科館","time":"13:59"},{"stop_name":"台積館","time":"14:01"}]}]'
+  recorded_at: Thu, 19 Dec 2024 05:23:29 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/buses/detailed/?bus_type=main&day=current&direction=up
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Dec 2024 05:23:29 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1742'
+      Connection:
+      - keep-alive
+      X-Process-Time:
+      - '0.002779722213745117'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=h2K6b4QPzbaVeyX%2BS49UKbKwuK2ArQUbieCyRsTZxaX%2FOzKyGwwuzkiwCpJG3GiBFRKRlGY4mtPcQ8tIBwalvrmRY4IEYPHProR6BKCVDTKFkO9YQnvGXTm2v5vlyL4%2B"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f44f5fcad1c2b61-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=137696&min_rtt=136665&rtt_var=13379&sent=12&recv=13&lost=0&retrans=0&sent_bytes=5785&recv_bytes=1219&delivery_rate=31151&cwnd=251&unsent_bytes=0&cid=5d0debc551e889b4&ts=1555&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"dep_info":{"time":"13:25","description":"","route":"校園公車","dep_stop":"校門","line":"green"},"stops_time":[{"stop_name":"北校門口","time":"13:25"},{"stop_name":"綜二館","time":"13:26"},{"stop_name":"楓林小徑","time":"13:27"},{"stop_name":"奕園停車場","time":"13:28"},{"stop_name":"南門停車場","time":"13:30"},{"stop_name":"台積館","time":"13:31"}]},{"dep_info":{"time":"13:35","description":"","route":"校園公車","dep_stop":"校門","line":"red"},"stops_time":[{"stop_name":"北校門口","time":"13:35"},{"stop_name":"綜二館","time":"13:36"},{"stop_name":"楓林小徑","time":"13:37"},{"stop_name":"人社院/生科館","time":"13:39"},{"stop_name":"台積館","time":"13:41"}]},{"dep_info":{"time":"13:45","description":"","route":"校園公車","dep_stop":"校門","line":"red"},"stops_time":[{"stop_name":"北校門口","time":"13:45"},{"stop_name":"綜二館","time":"13:46"},{"stop_name":"楓林小徑","time":"13:47"},{"stop_name":"人社院/生科館","time":"13:49"},{"stop_name":"台積館","time":"13:51"}]},{"dep_info":{"time":"13:45","description":"","route":"校園公車","dep_stop":"綜二","line":"green"},"stops_time":[{"stop_name":"綜二館","time":"13:45"},{"stop_name":"楓林小徑","time":"13:46"},{"stop_name":"奕園停車場","time":"13:47"},{"stop_name":"南門停車場","time":"13:49"},{"stop_name":"台積館","time":"13:50"}]},{"dep_info":{"time":"13:55","description":"","route":"校園公車","dep_stop":"校門","line":"red"},"stops_time":[{"stop_name":"北校門口","time":"13:55"},{"stop_name":"綜二館","time":"13:56"},{"stop_name":"楓林小徑","time":"13:57"},{"stop_name":"人社院/生科館","time":"13:59"},{"stop_name":"台積館","time":"14:01"}]}]'
+  recorded_at: Thu, 19 Dec 2024 05:23:29 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/buses/detailed/?bus_type=main&day=current&direction=down
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Dec 2024 05:23:29 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1800'
+      Connection:
+      - keep-alive
+      X-Process-Time:
+      - '0.0028581619262695312'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=C%2BUGvwb8f%2BZfI%2FZhMwdVnIrjGoemYq9dLL%2Bb1f5t%2FOB4Q3N4AEBKj%2FAwMqT1UNz%2BjikBnqp65U0WhpvnKZb%2FmNTQM220FJv9iaLfqLc%2FP8dkNkXtOVqBTlOk6U%2FLirWM"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f44f5fe38ad2b73-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=132541&min_rtt=131606&rtt_var=7267&sent=15&recv=16&lost=0&retrans=0&sent_bytes=8410&recv_bytes=1431&delivery_rate=32280&cwnd=258&unsent_bytes=0&cid=be706ffe68297040&ts=1800&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"dep_info":{"time":"13:27","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"stops_time":[{"stop_name":"台積館","time":"13:27"},{"stop_name":"南門停車場","time":"13:28"},{"stop_name":"奕園停車場","time":"13:30"},{"stop_name":"楓林小徑","time":"13:31"},{"stop_name":"綜二館","time":"13:32"},{"stop_name":"北校門口","time":"13:33"}]},{"dep_info":{"time":"13:32","description":"","route":"校園公車","dep_stop":"台積館","line":"green"},"stops_time":[{"stop_name":"台積館","time":"13:32"},{"stop_name":"人社院/生科館","time":"13:34"},{"stop_name":"楓林小徑","time":"13:36"},{"stop_name":"綜二館","time":"13:37"},{"stop_name":"北校門口","time":"13:38"}]},{"dep_info":{"time":"13:42","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"stops_time":[{"stop_name":"台積館","time":"13:42"},{"stop_name":"南門停車場","time":"13:43"},{"stop_name":"奕園停車場","time":"13:45"},{"stop_name":"楓林小徑","time":"13:46"},{"stop_name":"綜二館","time":"13:47"},{"stop_name":"北校門口","time":"13:48"}]},{"dep_info":{"time":"13:52","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"stops_time":[{"stop_name":"台積館","time":"13:52"},{"stop_name":"南門停車場","time":"13:53"},{"stop_name":"奕園停車場","time":"13:55"},{"stop_name":"楓林小徑","time":"13:56"},{"stop_name":"綜二館","time":"13:57"},{"stop_name":"北校門口","time":"13:58"}]},{"dep_info":{"time":"13:52","description":"","route":"校園公車","dep_stop":"台積館","line":"green"},"stops_time":[{"stop_name":"台積館","time":"13:52"},{"stop_name":"人社院/生科館","time":"13:54"},{"stop_name":"楓林小徑","time":"13:56"},{"stop_name":"綜二館","time":"13:57"}]}]'
+  recorded_at: Thu, 19 Dec 2024 05:23:29 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/buses/detailed/?bus_type=main&day=current&direction=down
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Dec 2024 05:23:29 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1800'
+      Connection:
+      - keep-alive
+      X-Process-Time:
+      - '0.002830982208251953'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=Ai0VG6WqYniG8Lv5kmk7U1skxwCmWIuEJpoxSFqtwenj070%2Fl9%2Bn9zZo2B4IakFbmhogYRRbXIftXEOXpQKnty8pYgbKlJ0zqVEIlFQOUlAf3rLvBp%2F6k0V%2Fc4yzCv%2Fj"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f44f5feaa14e9e5-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=138159&min_rtt=136662&rtt_var=8638&sent=15&recv=16&lost=0&retrans=0&sent_bytes=8400&recv_bytes=1431&delivery_rate=31320&cwnd=258&unsent_bytes=0&cid=2414775f71b1fbdd&ts=1850&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"dep_info":{"time":"13:27","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"stops_time":[{"stop_name":"台積館","time":"13:27"},{"stop_name":"南門停車場","time":"13:28"},{"stop_name":"奕園停車場","time":"13:30"},{"stop_name":"楓林小徑","time":"13:31"},{"stop_name":"綜二館","time":"13:32"},{"stop_name":"北校門口","time":"13:33"}]},{"dep_info":{"time":"13:32","description":"","route":"校園公車","dep_stop":"台積館","line":"green"},"stops_time":[{"stop_name":"台積館","time":"13:32"},{"stop_name":"人社院/生科館","time":"13:34"},{"stop_name":"楓林小徑","time":"13:36"},{"stop_name":"綜二館","time":"13:37"},{"stop_name":"北校門口","time":"13:38"}]},{"dep_info":{"time":"13:42","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"stops_time":[{"stop_name":"台積館","time":"13:42"},{"stop_name":"南門停車場","time":"13:43"},{"stop_name":"奕園停車場","time":"13:45"},{"stop_name":"楓林小徑","time":"13:46"},{"stop_name":"綜二館","time":"13:47"},{"stop_name":"北校門口","time":"13:48"}]},{"dep_info":{"time":"13:52","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"stops_time":[{"stop_name":"台積館","time":"13:52"},{"stop_name":"南門停車場","time":"13:53"},{"stop_name":"奕園停車場","time":"13:55"},{"stop_name":"楓林小徑","time":"13:56"},{"stop_name":"綜二館","time":"13:57"},{"stop_name":"北校門口","time":"13:58"}]},{"dep_info":{"time":"13:52","description":"","route":"校園公車","dep_stop":"台積館","line":"green"},"stops_time":[{"stop_name":"台積館","time":"13:52"},{"stop_name":"人社院/生科館","time":"13:54"},{"stop_name":"楓林小徑","time":"13:56"},{"stop_name":"綜二館","time":"13:57"}]}]'
+  recorded_at: Thu, 19 Dec 2024 05:23:29 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/buses/detailed/?bus_type=main&day=current&direction=down
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - Keep-Alive
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 Dec 2024 05:26:46 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1800'
+      Connection:
+      - keep-alive
+      X-Process-Time:
+      - '0.002989053726196289'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=05de2yn7moNuwOEy4tSbVbGDbiC4%2FHD%2FOJhimvDEM%2FUz27lQO8hztDzbH2VZ1BWhQuyOY2IcW6xCR6NjGNm6DeQ4UZ2JVMhxRrkZkBplqsISZ061tZTCP8PTQIVEppun"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f44facb9e5ccba7-LAX
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=136038&min_rtt=135988&rtt_var=51095&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2296&recv_bytes=785&delivery_rate=21116&cwnd=251&unsent_bytes=0&cid=0a9f6bfa30e0c87a&ts=815&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"dep_info":{"time":"13:27","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"stops_time":[{"stop_name":"台積館","time":"13:27"},{"stop_name":"南門停車場","time":"13:28"},{"stop_name":"奕園停車場","time":"13:30"},{"stop_name":"楓林小徑","time":"13:31"},{"stop_name":"綜二館","time":"13:32"},{"stop_name":"北校門口","time":"13:33"}]},{"dep_info":{"time":"13:32","description":"","route":"校園公車","dep_stop":"台積館","line":"green"},"stops_time":[{"stop_name":"台積館","time":"13:32"},{"stop_name":"人社院/生科館","time":"13:34"},{"stop_name":"楓林小徑","time":"13:36"},{"stop_name":"綜二館","time":"13:37"},{"stop_name":"北校門口","time":"13:38"}]},{"dep_info":{"time":"13:42","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"stops_time":[{"stop_name":"台積館","time":"13:42"},{"stop_name":"南門停車場","time":"13:43"},{"stop_name":"奕園停車場","time":"13:45"},{"stop_name":"楓林小徑","time":"13:46"},{"stop_name":"綜二館","time":"13:47"},{"stop_name":"北校門口","time":"13:48"}]},{"dep_info":{"time":"13:52","description":"","route":"校園公車","dep_stop":"台積館","line":"red"},"stops_time":[{"stop_name":"台積館","time":"13:52"},{"stop_name":"南門停車場","time":"13:53"},{"stop_name":"奕園停車場","time":"13:55"},{"stop_name":"楓林小徑","time":"13:56"},{"stop_name":"綜二館","time":"13:57"},{"stop_name":"北校門口","time":"13:58"}]},{"dep_info":{"time":"13:52","description":"","route":"校園公車","dep_stop":"台積館","line":"green"},"stops_time":[{"stop_name":"台積館","time":"13:52"},{"stop_name":"人社院/生科館","time":"13:54"},{"stop_name":"楓林小徑","time":"13:56"},{"stop_name":"綜二館","time":"13:57"}]}]'
+  recorded_at: Thu, 19 Dec 2024 05:26:46 GMT
 recorded_with: VCR 6.3.1

@@ -39,7 +39,7 @@ module Leaf
             qualified_end_stop_info = detail['stops_time'].find do |stop_info|
               stop_info['stop_name'] == end_stop
             end
-            detail['final_arrive_time'] = qualified_end_stop_info['time']
+            detail['final_arrive_time'] = qualified_end_stop_info['time'] unless qualified_end_stop_info.nil?
 
             data['bus_info'] == detail['dep_info']
           end
@@ -47,7 +47,8 @@ module Leaf
 
         # Filter out invalid entries
         result.select do |entry|
-          time_in_order?(entry['arrive_time'], entry['final_arrive_time'])
+          entry['arrive_time'] && entry['final_arrive_time'] && time_in_order?(entry['arrive_time'],
+                                                                               entry['final_arrive_time'])
         end
       end
 
